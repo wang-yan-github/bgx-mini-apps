@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "平台推广",
+  "usingComponents": {
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-white-space": "/pages/vux/white-space/index"
+  }
+}

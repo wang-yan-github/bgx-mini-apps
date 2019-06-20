@@ -1,0 +1,112 @@
+/* pages/creditLife/lawService/index.wxss */
+page {
+  font-size: 28rpx;
+  color: #666666;
+}
+.header {
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+  font-size: 32rpx;
+}
+.hd_item {
+  display: inline-block;
+  height: 100rpx;
+  width: 50%;
+  line-height: 100rpx;
+  text-align: center;
+}
+.hd_item_active {
+  color: #ec4141;
+}
+.focusLines {
+  width: 100%;
+  position: relative;
+  height: 2rpx;
+}
+.focus_line {
+  width: 80rpx;
+  height: 2rpx;
+  border-top: 2rpx solid transparent;
+  position: absolute;
+  top: 0;
+}
+.focus_line_active {
+  border-top: 2rpx solid #ec4141;
+}
+.focus_line1 { left: 147.5rpx; }
+.focus_line2 { right: 147.5rpx; }
+
+.main {
+  width: 1500rpx;
+  height: auto;
+
+}
+/* 法律常识 */
+.lawSence {
+  color: #222222;
+}
+/* 法律援助 */
+.lawHelp {
+  height: 480rpx;
+  margin-top: 12rpx;
+  background-color: #ffffff;
+  padding: 0 30rpx;
+}
+.lawHelp:first-child {
+  margin-top: 0rpx;
+} 
+.p_item {
+  border-bottom: 1rpx solid #eeeeee;
+  padding: 30rpx 0;
+}
+.p_intro {
+  position: relative;
+  height: 150rpx;
+  width: 100%;
+}
+
+.face {
+  width: 130rpx;
+  height: 130rpx;
+  display: inline-block;
+  margin-right: 12rpx;
+}
+.p_intro_text {
+  display: inline-block;
+  position: relative;
+  top: -15rpx;
+}
+.face image {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.p_price {
+  margin-top: 20rpx;
+}
+.p_price_title, .p_name{
+  color: #222222;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.p_price_item {
+  line-height: 50rpx;
+  /* border: 1rpx red solid; */
+}
+/* 预约按钮 */
+.yyBtn {
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ec4141;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 10rpx;
+}
+/* swiper {
+  height: 1000rpx;
+} */

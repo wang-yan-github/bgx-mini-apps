@@ -1,0 +1,44 @@
+<!--pages/mine/wallet/wallet.wxml-->
+<view class='top'>
+  <wux-row>
+    <wux-col span="4">
+      <view class='swap'>
+        <image src='/pages/icons/chongzhi.png'></image>
+        <view>充值</view>
+      </view>
+    </wux-col>
+    <wux-col span="4">
+      <view class='swap'>
+        <image src='/pages/icons/yue.png'></image>
+        <view>余额</view>
+      </view>
+    </wux-col>
+    <wux-col span="4">
+      <view class='swap'>
+        <image src='/pages/icons/tixian.png'></image>
+        <view>提现</view>
+      </view>
+    </wux-col>
+  </wux-row>
+  <view class='yue'>0.00</view>
+</view>
+
+<view class='top2'>
+  <view class='top2_1'>
+    <view class='desc'>可提现余额</view>
+    <view class='money'>0.00</view>
+  </view>
+  <view class='top2_2'>
+    <view class='desc'>不可提现余额</view>
+    <view class='money'>0.00</view>
+  </view>
+</view>
+
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <wux-cell isLink title="账户明细" extra=""></wux-cell>
+  <wux-cell isLink title="我的银行卡" extra=""></wux-cell>
+  <wux-cell isLink title="我的白条" extra=""></wux-cell>
+  <wux-cell isLink title="支付设置" extra=""></wux-cell>
+</wux-cell-group>

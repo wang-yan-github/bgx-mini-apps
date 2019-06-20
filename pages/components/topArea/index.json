@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-cascader": "/pages/vux/cascader/index"
+  }
+}

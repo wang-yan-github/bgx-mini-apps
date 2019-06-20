@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "登录",
+  "usingComponents": {
+    "wux-divider": "/pages/vux/divider/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index"
+  }
+}

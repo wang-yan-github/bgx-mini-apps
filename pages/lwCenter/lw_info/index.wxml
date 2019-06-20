@@ -1,0 +1,108 @@
+<!--pages/bgxCenter/fillInfo1/index.wxml-->
+<!-- 性别选择id -->
+<wux-select id="wux-select-sex" />
+<!-- 出生日期id -->
+<wux-calendar id="wux-calendar" />
+<!-- 民族 -->
+<wux-select id="wux-select-nation" />
+<!-- 学历 -->
+<wux-select id="wux-select-edu" />
+
+<block wx:if="{{ isLinked }}">
+<view class='page'>
+  <!-- 个人信息 -->
+  <view class='personInfo'>
+    <view class='common_title' bindtap='openGrxx'>
+      <image mode='scaleToFill' class='title_img' src="../../icons/jbxx.png"/>
+      <text class='title'>个人信息</text>
+      <!-- <text hidden="{{ showGrxx }}" class='showYwxx'>(点击编写)</text> -->
+      <image mode='scaleToFill' class='link_you' src="../../icons/gengduo.png"/>
+    </view>
+    <view class='showInfo gexxShowInfo'>
+      <view class='face'>
+        <image mode='scaleToFill' class='face_image' bindtap='onPrevFace' src="{{face}}"/>
+      </view>
+      <!-- <view class='editPhone' hover-class='editPhone_active' bindtap='onEditphone'>
+        <text class='phone'>{{ personInfo.phone }}</text>
+        <image class='phone_img' src="../../icons/bianji.png"></image>
+      </view> -->
+      <view wx:if="{{ personInfo.dutyName }}" >姓名：<text>{{ personInfo.dutyName }}</text>
+      </view>
+      <view wx:if="{{ personInfo.nickName }}" >昵称：<text>{{ personInfo.nickName }}</text>
+      </view>
+      <view wx:if="{{ personInfo.sex }}">性别：<text>{{ personInfo.sex }}</text>
+      </view>
+      <view wx:if="{{ personInfo.birthday }}">出生日期：<text>{{ personInfo.birthday }}</text>
+      </view>
+      <view wx:if="{{ personInfo.nation }}">民族：<text>{{ nation }}</text>
+      </view>
+      <view wx:if="{{ personInfo.residence }}" >老家：<text>{{ personInfo.residence }}</text>
+      </view>
+      <view wx:if="{{ personInfo.education }}" >文化程度：<text>{{ education }}</text>
+      </view>
+      
+    </view>
+  </view>
+
+  <!-- 业务信息 -->
+  <view class='yewuInfo'>
+    <view class='common_title' bindtap='openYwxx'>
+      <image mode='scaleToFill' class='title_img' src="../../icons/ywxx.png"/>
+      <text class='title'>业务信息</text>
+      <!-- <text class='showYwxx'>(请点击填写您的业务信息)</text> -->
+      <image mode='scaleToFill' class='link_you' src="../../icons/gengduo.png"/>
+    </view>
+    <view class='showInfo'>
+      <view wx:if="{{ wokerInfo.consType }}" >工种：
+        <text>{{ consType }}</text>
+      </view>
+      <view wx:if="{{ wokerInfo.level }}">级别：
+        <text>{{ level }}</text>
+      </view>
+      <view wx:if="{{ wokerInfo.workTime }}">从业时间：
+        <text>{{ wokerInfo.workTime }}年</text>
+      </view>
+      <view wx:if="{{ wokerInfo.salary }}">期望薪资：
+        <text>{{ salary }}</text>
+      </view>
+      <view wx:if="{{ wokerInfo.workAddress }}">可施工地：
+        <text>{{ wokerInfo.workAddress }}</text>
+      </view>
+      <view wx:if="{{ wokerInfo.certificate.length > 0 }}" >技能证书：</view>
+      <view class='certificate'>
+        <block wx:for="{{ wokerInfo.certificate }}" wx:key="{{ item }}">
+          <image bindtap='onPrevCertificate' data-index='{{ index }}' mode='scaleToFill' class='certificate_img' src="{{ item }}"/>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- 项目业绩 -->
+  <view class='projectInfo'>
+    <view class='common_title'>
+      <image class='xmyj_img' src="../../icons/xmyj.png"/>
+      <text class='xmyj_text'>项目业绩</text>
+      <text class='xmyj_add' bindtap='onAddXmyj'>添加</text>
+    </view>
+
+    <view class='yj_line'>
+      <wux-timeline>
+        <block wx:for="{{ achieveInfo }}" wx:key="*this.content">
+          <wux-timeline-item dotStyle="border-color: #ec4141; color: #ec4141" content="{{ item.startTime }} 至 {{ item.endTime }}">
+          <view class='showInfo showInfo_yj'>
+            <view class="xm_name" bindtap='openXmyj' data-id="{{ item.achieveId }}" data-index="{{ index }}">
+              <text>{{ item.name }}</text>
+              <image mode='scaleToFill' class='link_you' src="../../icons/gengduo.png"/>
+            </view>
+          </view>
+
+        </wux-timeline-item>
+        </block>
+
+      </wux-timeline>
+
+     </view>
+  </view>
+
+</view>
+</block>

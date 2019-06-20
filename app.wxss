@@ -1,0 +1,32 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+page {
+  background-color: #eee;
+  font-size: 30rpx;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.userAgreement {
+  color: #ec4141;
+  font-size: 28rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 215px;
+}
+

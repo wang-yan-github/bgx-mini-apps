@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-input-number": "../../vux/input-number/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index"
+  }
+}

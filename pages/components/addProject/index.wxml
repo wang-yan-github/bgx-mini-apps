@@ -1,0 +1,41 @@
+<!--pages/components/addProject/index.wxml-->
+<!-- 项目开始时间 -->
+<wux-calendar id="wux-calendar" />
+
+<view>
+  <wux-cell-group>
+    <wux-cell hover-class="none">
+      <wux-input label="项目名称" must_text controlled bind:change="onName" value='{{ name }}' focus='{{ name_focus }}' placeholder="请输入项目名称"></wux-input>
+    </wux-cell>
+
+    <wux-cell title="开始时间" is-link must_text extra="{{ startTime }}" bind:click="openCalendar1"></wux-cell>
+
+    <wux-cell title="结束时间" is-link must_text extra="{{ endTime }}" bind:click="openCalendar2"></wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="项目金额" must_text type='digit' placeholder="请输入项目金额" controlled value="{{ money }}" bind:change="getMoney" extra="(万)"></wux-input>
+    </wux-cell>
+
+    <area-cascader areaNum="3" regionCode="{{ region_code }}" bind:myeventArea="onGetArea" areaName="项目地址"></area-cascader>
+
+    <wux-cell>
+       <wux-input label="施工内容" maxlength='200' must_text  placeholder="请输入施工内容" controlled value="{{ content }}" bind:change="getContent"></wux-input>
+      <!-- <textarea auto-height  cursor-spacing="15" maxlength='200' bindinput="getContent" value='{{ content }}' placeholder="请对施工内容进行描述..." /> -->
+      <!-- <view class='calcLen'>{{ textLength }}/200</view> -->
+    </wux-cell>
+    <wux-cell is-link title="工作图片" img="{{ workImgs_arr }}" extra_img="extra_img" bind:click="onUpWorkImgs"></wux-cell>
+
+  </wux-cell-group>
+
+   <!-- 编辑保存 -->
+  <view class='bottom'>
+    <wux-wing-blank>
+      <view hidden="{{ isNewAdd == '0' }}" class="bottomBtns1 width_49">
+        <wux-button block outline size="default" type="assertive" bind:click="onDelete">删除该项目业绩</wux-button>
+      </view>
+      <view class="bottomBtns2 {{ isNewAdd == '0' ? 'width_100': 'width_49' }}">
+        <wux-button block size="default" type="assertive" bind:click="onSave">保 存</wux-button>
+      </view>
+    </wux-wing-blank>
+  </view>
+</view>

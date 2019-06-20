@@ -1,0 +1,34 @@
+<block wx:if="{{ creditImage.length > 0 }}">
+  <view class='cell_title1'>已添加资产证明：</view>
+  <wux-white-space />
+  <view class='imgs_box'>
+    <view class='zczm_imgs'>
+      <block wx:for="{{  creditImage }}" wx:key="{{ item }}">
+        <image class='item_img' src="{{ item.creditImage }}" data-index='{{index}}' bindtap='onPreviewOldImg'>
+          <text class='item_text'>{{ item.creditCertification }}</text>
+        </image>
+      </block>
+    </view>
+  </view>
+</block>
+
+<view class='cell_title2'>本次添加资产证明：</view>
+<view class='imgs_box'>
+  <view class='zczm_imgs'>
+    <block wx:for="{{  newFiles_arr }}" wx:key="{{ item }}">
+      <image mode="scaleToFill" class='item_img new' src="{{ item }}" data-index='{{index}}' bindtap='onPreviewNewImg'></image>
+    </block>
+    <view class='zczm_btn' bindtap='onUpZczm'>
+      <image mode="scaleToFill" class='add_icon' src='/pages/icons/add_icon.png'></image>
+    </view>
+  </view>
+</view>
+
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+
+<wux-wing-blank>
+  <wux-button block type="assertive" bind:click='onSubmit' disabled="{{disabled}}">提 交</wux-button>
+  <view class='cn_text'>我们承诺您提供的照片将予以保护，不会用于其他用途。</view>
+</wux-wing-blank>

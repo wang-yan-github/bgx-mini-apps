@@ -1,0 +1,38 @@
+<button class="wux-class wux-cell {{ isLast ? 'wux-cell--last' : '' }} {{ isLink ? 'wux-cell--access' : '' }} {{ disabled ? 'wux-cell--disabled' : '' }} {{ extra_red ? 'extra_red' : '' }} {{ extra_img ? 'extra_img' : '' }} {{ m30 ? 'm30' : '' }} "
+  disabled="{{ disabled }}" open-type="{{ openType }}" hover-class="{{ !disabled ? hoverClass : 'none' }}" hover-stop-propagation="{{ hoverStopPropagation }}" hover-start-time="{{ hoverStartTime }}" hover-stay-time="{{ hoverStayTime }}" lang="{{ lang }}"
+  bindgetuserinfo="bindgetuserinfo" session-from="{{ sessionFrom }}" send-message-title="{{ sendMessageTitle }}" send-message-path="{{ sendMessagePath }}" send-message-img="{{ sendMessageImg }}" show-message-card="{{ showMessageCard }}" bindcontact="bindcontact"
+  bindgetphonenumber="bindgetphonenumber" app-parameter="{{ appParameter }}" binderror="onError" bindopensetting="bindopensetting" bindtap="onTap">
+  <view class="wux-cell__hd">
+    <block wx:if="{{ thumb }}">
+      <image class="wux-cell__thumb" src="{{ thumb }}" />
+    </block>
+    <block wx:else>
+      <slot name="header"></slot>
+    </block>
+  </view>
+  <view class="wux-cell__bd">
+    <view wx:if="{{ title }}" class="wux-cell__text  userAgreement {{m30}}">{{ title }}
+      <block wx:if="{{ must_text }}">
+        <text class='must_text'>*</text>
+      </block>
+    </view>
+    <view wx:if="{{ label }}" class="wux-cell__desc {{m30}}">{{ label }}</view>
+    <slot></slot>
+  </view>
+  <view class="wux-cell__ft">
+    <block wx:if="{{ extra }}">
+      <text class="{{extra_red}}">{{ extra }}</text>
+    </block>
+    <block wx:elif="{{ img }}">
+      <block wx:for="{{img}}" wx:for-item="it">
+        <image class='{{extra_img}}' src='{{it}}'></image>
+      </block>
+    </block>
+    <!-- <block wx:elif="{{ input }}">
+      <input class='{{extra_input}}' 	bindinput="oninput" placeholder='{{placeholder}}'></input>
+    </block> -->
+    <block wx:else>
+      <slot name="footer"></slot>
+    </block>
+  </view>
+</button>

@@ -1,0 +1,15 @@
+/* textarea{
+  height: 600rpx;
+  width: 100%;
+  padding: 20rpx;
+  background-color: #fff;
+} */
+page {
+  font-size: 32rpx;
+}
+.page {
+  background-color: #ffffff;
+}
+.btn {
+  width: 100%;
+}

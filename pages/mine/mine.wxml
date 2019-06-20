@@ -1,0 +1,76 @@
+<!--pages/mine/mine.wxml-->
+<view class='header'>
+  <view class='fl'>
+    <image src='{{touxiang}}'></image>
+  </view>
+  <view class='fr' catchtap='infoMore'>
+    <view class='fr_t'>
+      <text class='name'>{{name}}({{role?role:'游客'}})</text>
+    </view>
+    <view class='fr_b'>
+      <text class='tel'>{{phone}}</text>
+      <image class='info_more' src='/pages/icons/more_write.png'></image>
+      <text class="tip" wx:if='{{perfectStatus == 100}}'>未完善信息</text>
+      <text class="tip" wx:if='{{perfectStatus == 101}}'>信息待审核</text>
+    </view>
+  </view>
+</view>
+
+<wux-grids col='{{itemNumber}}'>
+  <block wx:if="{{isfbf}}">
+    <wux-grid thumb="/pages/icons/wodefabu.png" bind:click="fbxm" label="发布项目" />
+  </block>
+  <wux-grid bind:click="xmgl">
+    <image src='/pages/icons/project_m.png'></image>
+    <view>项目订单</view>
+    <block wx:if="{{x_total}}">
+      <text class='count'> {{x_total}}</text>
+    </block>
+  </wux-grid>
+  <block wx:if="{{islw}}">
+    <wux-grid bind:click="lwgl">
+      <image src='/pages/icons/lw_m.png'></image>
+      <view>劳务订单</view>
+      <block wx:if="{{l_total}}">
+        <text class='count'> {{l_total}}</text>
+      </block>
+    </wux-grid>
+  </block>
+  <block wx:if="{{isbgx}}">
+    <wux-grid thumb="/pages/icons/team_m.png" label="班组管理" bind:click="team" />
+  </block>
+  <wux-grid thumb="/pages/icons/task_m.png" label="包管管" bind:click="bgg" />
+</wux-grids>
+
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <wux-cell thumb="/pages/icons/idcard3.png" m30="m30" is-link title="实名认证" label="提升身份可信度" extra_red="extra_red" extra="{{authentica}}" bind:click="certification"></wux-cell>
+  <wux-cell thumb="/pages/icons/xinyong.png" m30="m30" is-link title="江湖信用" bind:click="credibility"></wux-cell>
+</wux-cell-group>
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <wux-cell m30="m30" thumb="/pages/icons/wallet.png" is-link title="我的钱包" bind:click="wallet"></wux-cell>
+</wux-cell-group>
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <wux-cell m30="m30" thumb="/pages/icons/expand.png" is-link title="平台推广" extra_red="extra_red" extra="推广获得现金红包" bind:click="expand">
+  </wux-cell>
+</wux-cell-group>
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <wux-cell m30="m30" thumb="/pages/icons/tiezi.png" bind:click="myDiscover" is-link title="我的贴子" extra=""></wux-cell>
+  <wux-cell m30="m30" thumb="/pages/icons/shoucang.png" bind:click="myCollection" is-link title="我的收藏" extra=""></wux-cell>
+</wux-cell-group>
+
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <wux-cell m30="m30" thumb="/pages/icons/qiehuanjiaose.png" is-link title="切换角色" bind:click="switchRoles"></wux-cell>
+  <wux-cell m30="m30" thumb="/pages/icons/shezhi.png" is-link title="设置" bind:click="setting"></wux-cell>
+</wux-cell-group>
+<wux-white-space />
+<wux-white-space />

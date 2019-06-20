@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "合同信息",
+  "usingComponents": {
+    "wux-cell-group": "../../vux/cell-group/index",
+    "wux-cell": "../../vux/cell/index",
+    "wux-button": "../../vux/button/index",
+    "wux-textarea": "../../vux/textarea/index",
+    "wux-wing-blank": "../../vux/wing-blank/index"
+  }
+}

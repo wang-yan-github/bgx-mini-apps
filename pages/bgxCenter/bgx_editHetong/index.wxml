@@ -1,0 +1,28 @@
+<view class='title'>上传时间：</view>
+<view class='content'>{{time}}</view>
+<view class='title'>项目合同：</view>
+<view class='hetong'>
+  <view class="weui-grids">
+    <block wx:for="{{images}}" wx:key="*this">
+      <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" id="{{item.img}}" catchtap='previewImage' src="{{item.img}}" />
+      </navigator>
+    </block>
+  </view>
+</view>
+<view class='title'>反馈信息：</view>
+<view class='content'>{{fankui}}</view>
+
+<wux-white-space />
+<wux-wing-blank>
+  <view class="weui-cells__title">上传正确的项目合同：</view>
+</wux-wing-blank>
+<wux-white-space />
+<wux-upload list-type="picture-card" file-list="{{ fileList }}" url="{{fileUrl}}" formData='{{formData}}' bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview" bind:remove='onRemove'>
+  <text style='font-size:30rpx;color:#666;'>上传</text>
+</wux-upload>
+
+<wux-white-space />
+<wux-wing-blank>
+  <wux-button block type="assertive" bind:click="editSubmit">提交</wux-button>
+</wux-wing-blank>

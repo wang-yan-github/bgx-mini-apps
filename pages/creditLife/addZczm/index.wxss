@@ -1,0 +1,80 @@
+/* pages/bgxCenter/bgx_upHetong.wxss */
+page {
+  font-size: 32rpx;
+}
+.cell_title1 {
+  font-size: 34rpx;
+  height: 60rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-bottom: 10rpx;
+  color: #ec4141;
+}
+.cell_title2 {
+  font-size: 34rpx;
+  height: 60rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-bottom: 10rpx;
+}
+.cn_text {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #888888;
+}
+.imgs_box {
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+  padding-bottom: 20rpx;
+}
+.zczm_imgs {
+  width: 100%;
+}
+
+.item_img {
+  width: 165rpx;
+  height: 165rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+.new {
+  display: block;
+  float: left;
+}
+.item_text {
+  position: absolute;
+  top: 60rpx;
+  left: 45rpx;
+  font-size: 26rpx;
+  padding: 0 5rpx;
+  border-radius: 5rpx;
+  color: #666666;
+  background: #eeeeee;
+}
+.zczm_btn {
+  width: 165rpx;
+  height: 165rpx;
+  line-height: 165rpx;
+  text-align: center;
+  background-color: #ffffff;
+  margin-left: 10rpx;
+  float: left;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+  border: 1rpx dashed #dddddd;
+}
+.add_icon {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 52.5rpx;
+  top: 52.5rpx;
+}

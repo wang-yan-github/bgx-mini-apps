@@ -1,0 +1,102 @@
+/* pages/components/sidebar/index.wxss */
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.page_title {
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  background-color: #dddddd;
+}
+.side_ttitle {
+  display: inline;
+  padding-left: 15rpx;
+  border-left: 6rpx solid #f40616;
+}
+
+.beizhu {
+  font-size: 22rpx;
+  font-weight: normal;
+}
+
+.modal-content {
+  /* display: flex;
+  flex-direction: column; */
+  height: 100%;
+  width: 80%;
+  background-color: #fff;
+  float: right;
+  overflow-y: auto;
+}
+
+.modal-btn-wrapper {
+  /* position: absolute;
+  bottom: 0;
+  right: 0; */
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 2rpx solid #ddd;
+}
+.modal-btn-pos {
+  width: 80%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.main-content {
+  padding-bottom: 20rpx;
+}
+.confirm-btn {
+  float: left;
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #f40616;
+}
+
+.reset {
+  box-sizing: border-box;
+  border-right: 1rpx solid #ddd;
+  color: #888;
+}
+
+.checkbox {
+  display: inline-block;
+  width: 135rpx;
+  height: 52rpx;
+  color: #666;
+  text-align: center;
+  line-height: 52rpx;
+  font-size: 24rpx;
+  margin-top: 12rpx;
+  border-radius: 8rpx;
+  margin-left: 10rpx;
+  border: 1rpx solid #dddddd;
+  overflow: hidden;
+}
+
+.checked {
+  color: #f40616;
+  background: #fff;
+  border: 1rpx solid #f40616;
+}
+
+.checked_false {
+  color: #666;
+  border: 1rpx solid #eee;
+}
+
+.checkbox checkbox {
+  display: none;
+}

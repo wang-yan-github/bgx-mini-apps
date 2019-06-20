@@ -1,0 +1,42 @@
+<!--pages/components/selfModal/index.wxml-->
+<!-- <block wx:if="{{ checkboxArr.length > 0}}"> -->
+
+<view class='mask' wx:if='{{show}}' catchtap='clickMask'>
+  <scroll-view scroll-y="true" class='modal-content' scroll-with-animation="true">
+    <view class='page_title'>
+      <text class='side_ttitle'>{{ sideText }}</text>
+      <text class='beizhu' wx:if="{{ showBz }}"> (最多可多选 {{ selectNum }} 个),再次点击可取消</text>
+    </view>
+    <view class='main-content'>
+      <!-- 主体内容 -->
+
+      <!-- 多选 -->
+      <block wx:if="{{ radioCheckbox }}">
+        <checkbox-group bindchange="checkboxChange">
+          <block wx:for="{{checkboxArr}}" wx:key="item.name">
+            <label class="checkbox {{item.checked ? 'checked':'checked_false'}}" catchtap="checkbox" data-index="{{index}}">
+              <checkbox value="{{item.name}}/{{item.skey}}" checked="{{item.checked}}" />{{item.name }}
+            </label>
+          </block>
+        </checkbox-group>
+      </block>
+
+      <!-- 单选 -->
+      <block wx:else>
+        <radio-group bindchange="radioChange">
+          <block wx:for="{{checkboxArr}}" wx:key="item.name">
+            <label class="checkbox {{item.checked ? 'checked':'checked_false'}}" catchtap="radio" data-index="{{index}}">
+              <checkbox value="{{item.name}}/{{item.skey}}" checked="{{item.checked}}" />{{item.name}}
+            </label>
+          </block>
+        </radio-group>
+      </block>
+    </view>
+
+    <view class="modal-btn-wrapper modal-btn-pos">
+      <view class='confirm-btn reset' catchtap='onReset'>重置</view>
+      <view class='confirm-btn' catchtap='onConfirm'>确定</view>
+    </view>
+  </scroll-view>
+</view>
+<!-- </block> -->

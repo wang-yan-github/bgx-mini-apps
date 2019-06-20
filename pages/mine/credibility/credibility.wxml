@@ -1,0 +1,88 @@
+<!--pages/mine/credibility/credibility.wxml-->
+<view class='top'>
+  <view class='circle'>
+    <wux-circle sAngle="90" percent="50" background-color="#666" color="#fff" size="200"></wux-circle>
+    <view class='credibility_score'>
+      <view class="text2">您的江湖信用积分</view>
+      <view class="text1">500</view>
+      <view class="text2">信用良好</view>
+    </view>
+  </view>
+  <view class='text3'>评估时间: 2018-12-21</view>
+  <view class='text4'>
+    <view class='t4_l'>
+      <image src='/pages/icons/xinyong1.png'></image>
+    </view>
+    <view class='t4_r'>
+      <view class="t4_r_t">你已击败50%的江湖同辈</view>
+      <view class="t4_r_b">提升江湖信用积分，让更多雇主发现您的亮点</view>
+    </view>
+  </view>
+</view>
+
+<view class='CreditPrivileges'>
+  <view class='title'>
+    信用特权
+  </view>
+  <view class='Privileges'>
+    <view class='Privileges_item'>
+      <view class='Privileges_l'>
+        <image src='/pages/icons/xinyong2.png'></image>
+      </view>
+      <view class='Privileges_r'>
+        <view class="Privileges_r_t1">预约优先显示</view>
+        <view class="Privileges_r_t2">750分可享</view>
+      </view>
+    </view>
+    <view class='Privileges_item'>
+      <view class='Privileges_l'>
+        <image src='/pages/icons/xinyong3.png'></image>
+      </view>
+      <view class='Privileges_r'>
+        <view class="Privileges_r_t1">白条超值优惠劵</view>
+        <view class="Privileges_r_t2">800分可享</view>
+      </view>
+    </view>
+    <view class='Privileges_item'>
+      <view class='Privileges_l'>
+        <image src='/pages/icons/xinyong4.png'></image>
+      </view>
+      <view class='Privileges_r'>
+        <view class="Privileges_r_t1">活动报名优先</view>
+        <view class="Privileges_r_t2">实名认证后可享</view>
+      </view>
+    </view>
+    <view class='Privileges_item'>
+      <view class='Privileges_l'>
+        <image src='/pages/icons/xinyong5.png'></image>
+      </view>
+      <view class='Privileges_r'>
+        <view class="Privileges_r_t1">实名认证标识</view>
+        <view class="Privileges_r_t2">实名认证后可享</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 留白 -->
+<wux-white-space />
+<wux-white-space />
+<!-- 提升信用 -->
+<view class='creditEnhancement'>
+  <view class='title'>提升信用</view>
+  <wux-cell-group>
+    <wux-cell is-link title="手机号码认证" extra="已认证"></wux-cell>
+    <wux-cell is-link title="实名认证" extra="去认证" bind:click="certification"></wux-cell>
+    <wux-cell is-link title="征信证明" img='{{img}}' extra_img="extra_img"></wux-cell>
+    <wux-cell is-link title="资产证明" extra="去上传"></wux-cell>
+    <wux-cell is-link title="添加项目经验" extra="去更新"></wux-cell>
+    <wux-cell is-link title="填写个人评价" extra="已评价"></wux-cell>
+    <wux-cell is-link title="上传资质证书" extra="去上传"></wux-cell>
+    <wux-cell is-link title="项目经历认证" extra="邀请江湖同行帮我认证"></wux-cell>
+  </wux-cell-group>
+</view>
+
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />

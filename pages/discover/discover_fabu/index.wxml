@@ -1,0 +1,40 @@
+<view class="huati">
+  #话题#
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <block wx:if='{{index == 0}}'>请选择</block>{{array[index]}}
+    </view>
+  </picker>
+</view>
+<wux-white-space />
+<view class='content'>
+  <wux-textarea hasCount maxlength='200' rows="8" cursorSpacing="80" bind:change="info" placeholder="分享您的新鲜事吧！" />
+</view>
+
+<wux-white-space />
+<view class='address' catchtap='getUserLocation'>
+  <image class='addr' src='/pages/icons/addr.png'></image>
+  {{address}}
+</view>
+<wux-white-space />
+<view class='uploadSwap'>
+  <!-- 上传图片 -->
+  <block wx:if="{{isPic}}">
+    <wux-upload count='9' list-type="picture-card" file-list="{{ fileList }}" url="{{fileUrl}}" formData='{{formData}}' bind:before="before" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview"
+      bind:remove='onRemove'>
+      <text style='font-size:30rpx;color:#666;'>上传图片</text>
+    </wux-upload>
+  </block>
+
+  <!-- <block wx:if="{{!isPic}}">
+    <wux-upload count='9' list-type="picture-card" file-list="{{ fileList }}" url="{{fileUrl}}" formData='{{formData}}' bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview" bind:remove='onRemove'>
+      <text style='font-size:30rpx;color:#666;'>上传视频</text>
+    </wux-upload>
+  </block> -->
+</view>
+
+<view class='bottom'>
+  <wux-wing-blank>
+    <wux-button block type="assertive" bind:click='submit'>发布</wux-button>
+  </wux-wing-blank>
+</view>

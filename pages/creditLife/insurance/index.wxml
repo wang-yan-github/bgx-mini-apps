@@ -1,0 +1,16 @@
+<!--pages/creditLife/insurance/index.wxml-->
+<view class='page'>
+  <block wx:for="{{ dataList }}" wx:key="*this.name">
+  <view class='item'>
+    <view class='face'>
+      <image src='{{ item.img }}'></image>
+    </view>
+    <view class='p_intro_text'>
+      <view class='p_name'>{{ item.name }}</view>
+      <view class='p_text1'>{{ item.text1 }}</view>
+      <view class='p_text2'>{{ item.text2 }}</view>
+      <view class='yyBtn'>{{ item.btnText }}</view>
+    </view>
+  </view>
+  </block>
+</view>

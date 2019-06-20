@@ -1,0 +1,88 @@
+<!--pages/materialCenter/index/index.wxml-->
+<view class='page'>
+  <!--banner页 -->
+  <swiper style='height: 350rpx;' indicator-active-color="#ffffff" indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 功能按钮 -->
+  <view class="page_bd">
+    <wux-grids col="4">
+      <block wx:for="{{ buttonList }}" wx:key="id">
+        <wux-grid thumb="{{ item.img }}" data-index="{{ index }}" bind:click="openButton" label="{{ item.name }}" />
+      </block>
+    </wux-grids>
+  </view>
+
+  <!-- 热门商品、热门订单 -->
+  <!-- tabs标签页 -->
+  <view class='page_bd'>
+    <wux-tabs wux-class="bordered" controlled theme="assertive" current="{{ key }}" bindchange="onTabsChange">
+      <block wx:for="{{ tabs }}" wx:key="key">
+        <wux-tab key="{{ item.key }}" data-index="{{ index }}" title="{{ item.title }}"></wux-tab>
+      </block>
+    </wux-tabs>
+    <swiper style="height:{{ h_tab }}rpx;" current="{{ index }}" bindchange="onSwiperChange">
+      <block wx:for="{{ tabs }}" wx:for-item="list" wx:key="key">
+        <swiper-item>
+          <block wx:if="{{ list.key=='tab1' }}">
+            <view wx:if="{{ list.dataList.length > 0}}">
+              <view class='item1' wx:for="{{ list.dataList }}" wx:for-item="prod1" wx:key="name"  data-spid="{{ prod1.sp_id}}" bindtap='onClickSp'>
+                <view class='item_unit'>
+                  <view class='prod1_img_box'>
+                    <image class='prod1_img' mode='widthFix' src='{{ prod1.sp_img }}'></image>
+                  </view>
+                  <view class='prod1_content'>
+                    <view class='prod1_name'>{{ prod1.sp_name }}</view>
+                    <view class='prod1_version'>{{ prod1.sp_version }}</view>
+                    <view class='prod1_sold'>已售：{{ prod1.sp_sold }}</view>
+                    <view class='prod1_area'>供货商：{{ prod1.sp_supplier }}</view>
+                  </view>
+                  <view class='prod1_price'>
+                    <view class='prod1_now_price'>
+                      <text class='prod1_now_p'>¥{{ prod1.sp_new_price }}</text>
+                    </view>
+                    <view class='prod1_org_price'>¥{{ prod1.sp_old_price }}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view wx:else>
+              <view class='noOrder'>
+                <image class='noOrder_img' src="/pages/icons/noOrder.png"></image>
+                <view class='noOrder_text'>您还没有相关订单</view>
+              </view>
+            </view>
+          </block>
+          <block wx:if="{{ list.key=='tab2' }}">
+            <view wx:if="{{ list.dataList.length > 0}}">
+               <view class='item2' wx:for="{{ list.dataList }}" wx:for-item="prod2" wx:key="name">
+               <view class='item_unit2'  data-spid="{{ prod2.sp_id}}" bindtap='onClickOrder'>
+                  <view class='prod2_content'>
+                    <view class='prod2_name'>{{ prod2.sp_name }}</view>
+                    <view class='prod2_buyNum'>采购件数：{{ prod2.sp_purchase_num }}</view>
+                    <view class='prod2_abortTime'>报价截止：{{ prod2.sp_abort_time }}</view>
+                  </view>
+                  <view class="prod2_status {{ prod2.sp_order_status == '报价中'? 'bg_green': ''}}">{{ prod2.sp_order_status }}</view>
+               </view>
+               </view>
+            </view>
+            <view wx:else>
+              <view class='noOrder'>
+                <image class='noOrder_img' src="/pages/icons/noOrder.png"></image>
+                <view class='noOrder_text'>您还没有相关订单</view>
+              </view>
+            </view>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='noMore'>------没有更多了------</view>
+  </view>
+</view>
+<!-- 悬浮钮 -->
+<wux-fab-button position="bottomRight" theme="assertive" direction="vertical" buttons="{{ buttons }}" bind:change="onChangeFb" bind:click="onClickFb" />

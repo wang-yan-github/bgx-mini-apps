@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "修改手机号",
+  "usingComponents": {
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-input": "/pages/vux/input/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-divider": "/pages/vux/divider/index",
+    "wux-checkbox-group": "/pages/vux/checkbox-group/index",
+    "wux-checkbox": "/pages/vux/checkbox/index"
+  }
+}

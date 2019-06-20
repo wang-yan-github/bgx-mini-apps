@@ -1,0 +1,33 @@
+<!--pages/materialCenter/evaluateList/index.wxml-->
+<view class='page'>
+  <!-- 评价 -->
+  <view class='evaluate'>
+    <view class='evaluate_type_box'>
+      <view class='evaluate_type' style="height: {{ e_height }}; overflow: {{ e_overflow }} ">
+        <block wx:for="{{ evaluateArr }}" wx:key="id">
+          <view class="evaluate_item {{ currPlun == index ?  'item_active' : '' }}" data-index="{{ index }}" bindtap='onCurrPlun'>{{ item.text }}（{{ item.num }}）</view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view class='evaluate_list'>
+  <block wx:for="{{ evaluateList }}" wx:key="phone">
+    <view class='list_item'>
+      <view class='item_info'>
+        <image class='item_face' src="{{ item.img }}"></image>
+        <view class='item_text'>
+          <text class='item_phone'>{{ item.phone }}</text>
+          <text class='item_score'>{{ item.score }}</text>分
+          <text class='item_level'>{{ item.rater }}</text>
+          <text class='item_time'>{{ item.time }}</text>
+        </view>
+      </view>
+      <view class='item_content'>
+        {{ item.content }}
+      </view>
+    </view>
+    </block>
+  </view>
+
+</view>

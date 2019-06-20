@@ -1,0 +1,289 @@
+/* pages/materialCenter/deviceDetail/index.wxss */
+
+page {
+  font-size: 26rpx;
+}
+
+.banner {
+  width: 100%;
+  height: 350rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.page_bd {
+  /* margin-top: 20rpx; */
+  background-color: #fff;
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+}
+
+.price {
+  color: #ec4141;
+}
+
+.price_big {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.device_name {
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin-top: 10rpx;
+}
+
+.youhui {
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+}
+
+.yhtext_1 {
+  margin-right: 10rpx;
+  color: #666;
+}
+
+.fuwu {
+  line-height: 80rpx;
+}
+
+.fuwu_icon {
+  width: 32rpx;
+  height: 32rpx;
+  position: relative;
+  top: 5rpx;
+  left: 0rpx;
+}
+
+.fuwu_text1 {
+  margin-left: 30rpx;
+}
+
+.fuwu_text2 {
+  margin-left: 10rpx;
+}
+
+/* 评论区 */
+
+.evaluate_box {
+  max-height: 495rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  padding-top: 0rpx;
+  overflow: hidden;
+}
+
+.evaluate_title {
+  line-height: 80rpx;
+  height: 80rpx;
+  position: relative;
+}
+
+.red_line {
+  width: 0;
+  height: 26rpx;
+  border-left: 5rpx solid red;
+  position: absolute;
+  left: 0;
+  top: 28rpx;
+}
+
+.evaluate_title1 {
+  position: absolute;
+  left: 15rpx;
+  font-size: 30rpx;
+}
+
+.evaluate_more {
+  width: 130rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  right: 0rpx;
+}
+
+.evaluate_title2 {
+  position: absolute;
+  left: 0rpx;
+}
+
+.evaluate_img {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 28rpx;
+}
+
+.evaluate_item {
+  border-top: 1rpx solid #ddd;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+
+.item_info {
+  height: 100rpx;
+  position: relative;
+}
+
+.item_face {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 10rpx;
+}
+
+.item_text {
+  position: absolute;
+  left: 90rpx;
+  width: 600rpx;
+  line-height: 100rpx;
+}
+
+.item_score, .item_level {
+  margin-left: 15rpx;
+}
+
+.item_score {
+  margin-left: 15rpx;
+  color: #fa8300;
+}
+
+.item_level {
+  margin-left: 15rpx;
+  color: #f33;
+}
+
+.item_time {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  color: #666;
+}
+
+.item_content {
+  margin-top: 20rpx;
+  line-height: 50rpx;
+}
+
+/* 设备详情 */
+
+.detail {
+  background-color: #fff;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.detail_title {
+  line-height: 80rpx;
+  height: 80rpx;
+  /* font-weight: 600; */
+  position: relative;
+}
+
+.detail_text {
+  /* font-size: 24rpx; */
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+
+.detail_text_title {
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.item1 {
+  height: 50rpx;
+}
+.bgc_eeee {
+  background-color: #eee;
+}
+.odd_center2 {
+  height: 420rpx;
+  font-size: 24rpx;
+}
+.tem {
+  float: left;
+  width: 20%;
+  line-height: 50rpx;
+  text-align: center;
+}
+.tem:first-child {
+  width: 40%;
+}
+.desc_item3 {
+  text-align: center;
+  line-height: 50rpx;
+}
+.s_center {
+  text-align: center;
+  line-height: 50rpx;
+}
+.red_color {
+  color: #ec4141;
+}
+/* 详情图片描述 */
+
+.item_imgs {
+  background-color: #fff;
+  /* padding-left: 30rpx;
+  padding-right: 30rpx; */
+  margin-top: 20rpx;
+}
+
+.item_img {
+  width: 100%;
+}
+
+/* 底部按钮 */
+
+.fixed_bottom {
+  height: 86rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: -2rpx;
+  left: 0rpx;
+  z-index: 10;
+  border-top: 1rpx solid #ddd;
+  background-color: #fff;
+}
+
+.bottom_img {
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 8rpx;
+}
+
+.shoucang, .lianxi {
+  width: 25%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.xiadan {
+  width: 50%;
+  float: left;
+  background-color: #ec4141;
+  height: 86rpx;
+  line-height: 86rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.xiadan_active {
+  background-color: #e62e00;
+}

@@ -1,0 +1,54 @@
+/* pages/discover/discover_fabu/index.wxss */
+
+.huati {
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+picker {
+  display: inline-block;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.weui-uploader {
+  margin-top: 20rpx;
+}
+
+.btn {
+  margin-top: 20rpx;
+  color: #555;
+}
+
+.address {
+  height: 80rpx;
+  background-color: #fff;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #666;
+  padding-left: 40rpx;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+}
+
+.addr {
+  height: 50rpx;
+  width: 50rpx;
+  float: left;
+  margin-right: 40rpx;
+  position: relative;
+  top: 15rpx;
+}
+
+.weui-cells__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}

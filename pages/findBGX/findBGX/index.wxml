@@ -1,0 +1,82 @@
+<!--pages/findBGX/findBGX/index.wxml-->
+<view class='{{locks > 0?"bodyLock":""}}'>
+  <!--搜索控件-->
+  <wux-search-bar value="{{ searchText}}" auto="{{ false }}" placeholder="姓名" bind:change="searchTextonChange" bind:clear="searchTextonClear" />
+
+  <!-- 搜索栏 -->
+  <import src='../../template/filter_temp/index.wxml' />
+  <view id="swiper-tab">
+    <!-- tab展示 -->
+    <template is='swiper-tab' data='{{tabList,currentTab}}'> </template>
+    <swiper current="{{currentTab}}" duration="1000" class="swiper-item" style='display:{{displays}}'>
+      <!--单项选择-->
+      <template is='tab_item1' data='{{tab_item1,_res1,clickOne1}}'></template>
+      <!--区域左右结构-->
+      <template is='citys1' data='{{selected_index1,selected_index2,cityleft,citycenter}}'></template>
+      <!--单项选择-->
+      <template is='tab_item2' data='{{tab_item2,_res2,clickOne2}}'></template>
+      <!--更多筛选-->
+      <swiper-item>
+        <view class="shaixuankuang">
+          <template is="shaixuan_item" data='{{shaixuan,shaixuan_}}'></template>
+          <view class="qingkong">
+            <span bindtap="qingchu">清除条件</span>
+            <p bindtap="queren">确认</p>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 背景幕 -->
+  <wux-backdrop id="backdrop" bindtap="hideNav" />
+
+  <!-- 劳务列表 -->
+  <view wx:for='{{lwList}}'>
+    <wux-wing-blank size="small">
+      <template is="lwList" data="{{item}}"></template>
+    </wux-wing-blank>
+  </view>
+  <wux-white-space />
+  <wux-white-space />
+</view>
+<view class='isbottom'>--没有更多内容--</view>
+
+<template name="lwList">
+  <view class='lw_item' data-wid='{{item.w_id}}' data-type='{{item.type}}' bindtap='item_click'>
+    <view class='lw_t'>
+      <view class='lw_t_l'>
+        <image src="{{item.head_portrait?item.head_portrait+'?x-oss-process=style/thumb':'/pages/icons/touxiang.png'}}"></image>
+      </view>
+      <view class='lw_t_r'>
+        <view class='lw_t_r_t'>
+          {{item.duty_name}}
+          <text class="{{item.authentica?'yirenzheng':'weirenzheng'}}">{{item.authentica?'已实名':'未实名'}}</text>
+        </view>
+        <view class='lw_t_r_b'>
+          <block wx:if="{{item.age}}">
+            {{item.age}}岁
+            <text class='line'>|</text>
+          </block>
+          {{item.worker_status?'忙碌':'空闲'}}
+          <text class='line'>|</text> 江湖信用{{item.credit_score}}
+        </view>
+      </view>
+    </view>
+    <view class='lw_b'>
+      <image class="info" src='/pages/icons/gengduo.png'></image>
+      <view class='lw_b_t'>从业时间：{{item.work_time?item.work_time:"0"}}年
+        <text class='nbsp'></text>
+        <text hidden='{{item.type == 3 ||item.type == 5}}'>熟悉行业：{{item.technical_type}}</text>
+        <text wx:if="{{item.type == 3 ||item.type == 5}}">工种：{{item.cons_type}}</text>
+      </view>
+      <!-- <block wx:if="{{type == 3}}">
+          <view class='lw_b_t'>
+            
+          </view>
+        </block> -->
+      <!-- <view class='lw_b_b'>可施工地： {{item.region?item.region:'无'}}</view> -->
+      <view class='lw_b_b'>可施工地： {{item.work_address}}</view>
+    </view>
+  </view>
+</template>

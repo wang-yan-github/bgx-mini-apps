@@ -1,0 +1,26 @@
+<!--pages/mine/team/newTeam/newTeam.wxml-->
+<wux-cell-group>
+  <wux-cell>
+    <wux-input label="姓名"  must_text placeholder="{{name}}" bind:change="name" />
+  </wux-cell>
+  <!-- 工种 -->
+  <wux-cell title="{{ consType_title }}" must_text is-link extra="{{ consType_text }}" bind:click="openGongz"></wux-cell>
+  <wux-cell>
+    <wux-input label="电话" type="number"  must_text placeholder="{{phone}}" bind:change="phone" />
+  </wux-cell>
+  <wux-cell is-link title="头像" img="{{img}}" extra_img="extra_img" bind:click="settingTX"></wux-cell>
+  <wux-cell is-link title="分组" extra="{{value1}}" bind:click="switchRoles"></wux-cell>
+</wux-cell-group>
+
+<view class='bottom'>
+  <wux-wing-blank>
+    <wux-button block type="assertive" bind:click="teamAdd">提交</wux-button>
+  </wux-wing-blank>
+</view>
+
+
+<!-- 所需工种 -->
+<sidebar show="{{ showGongz }}" selectVal="{{ consType_text }}" class="sidebar" checkboxArr="{{ consType_list }}" bind:myevent="showGongzArr" sideText="{{ consType_title }}" selectNum="{{ gongzNum }}"></sidebar>
+
+<!-- 选择班组 -->
+<wux-select id="wux-select1" />

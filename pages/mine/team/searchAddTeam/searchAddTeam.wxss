@@ -1,0 +1,73 @@
+/* pages/mine/team/searchAddTeam/searchAddTeam.wxss */
+
+.item {
+  height: 120rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.item_l {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.item_l image {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  top: 10rpx;
+  left: 20rpx;
+}
+
+.item_r {
+  width: 80%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.item_r_title {
+  font-size: 30rpx;
+  padding-top: 20rpx;
+}
+
+.item_r_phone {
+  font-size: 28rpx;
+  padding-top: 10rpx;
+  color: #666;
+}
+
+.item_r_add {
+  position: absolute;
+  font-size: 60rpx;
+  right: 20rpx;
+  top: 10rpx;
+  color: #ec4141;
+}
+
+.teamClass {
+  width: 600rpx;
+  background-color: #fff;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-left: -300rpx;
+  border: 1rpx solid #ec4141;
+  border-radius: 10rpx; 
+  z-index: 1001;
+}
+.title{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #ec4141;
+  color: #fff;
+}
+
+.item_{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-top: 1rpx solid #ec4141;
+}

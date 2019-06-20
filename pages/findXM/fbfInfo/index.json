@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "发包方详情",
+  "usingComponents": {
+    "wux-tabs": "/pages/vux/tabs/index",
+    "wux-tab": "/pages/vux/tab/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-row": "/pages/vux/row/index",
+    "wux-col": "/pages/vux/col/index",
+    "wux-rater": "/pages/vux/rater/index"
+  }
+}

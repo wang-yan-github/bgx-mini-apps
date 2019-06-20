@@ -1,0 +1,55 @@
+<!--pages/mine/switchRoles/switchRoles.wxml-->
+<view class='swap'>
+  <view class='item' data-text='1' bindtap='click_'>
+    <view class='fl'>
+      <image src='/pages/icons/fabu_icon.png'></image>
+    </view>
+    <view class='fr'>
+      <view class='fr_t'>
+        <text class='title'>发包方</text>
+      </view>
+      <view class='fr_b'>
+        <text class='describle'>发布项目、找包工头</text>
+      </view>
+    </view>
+  </view>
+  <view class='item' data-text='2' bindtap='click_'>
+    <view class='fl'>
+      <image src='/pages/icons/bgx_icon.png'></image>
+    </view>
+    <view class='fr'>
+      <view class='fr_t'>
+        <text class='title'>包工侠</text>
+      </view>
+      <view class='fr_b'>
+        <text class='describle'>找项目、找劳务、打白条</text>
+      </view>
+    </view>
+  </view>
+  <view class='item' data-text='3' bindtap='click_'>
+    <view class='fl'>
+      <image src='/pages/icons/worker1_icon.png'></image>
+    </view>
+    <view class='fr'>
+      <view class='fr_t'>
+        <text class='title'>劳务</text>
+      </view>
+      <view class='fr_b'>
+        <text class='describle'>找工作、找项目，空闲找活</text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='item' data-text='材料商' bindtap='click_'>
+    <view class='fl'>
+      <image src='/pages/images/cailiao_icon.png'></image>
+    </view>
+    <view class='fr'>
+      <view class='fr_t'>
+        <text class='title'>材料商</text>
+      </view>
+      <view class='fr_b'>
+        <text class='describle'>订单报价</text>
+      </view>
+    </view>
+  </view> -->
+</view>

@@ -1,0 +1,7 @@
+/* pages/mine/team/newTeam/newTeam.wxss */
+page{
+  font-size: 28rpx;
+}
+.bottom{
+  background-color: #eee;
+}

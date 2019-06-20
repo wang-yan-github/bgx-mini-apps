@@ -1,0 +1,76 @@
+<!--pages/findXM/findXM/index.wxml-->
+<view class='{{locks > 0?"bodyLock":""}}'>
+  <!--搜索控件-->
+  <wux-search-bar value="{{searchText}}" auto="{{ false }}" placeholder="项目名称" bind:change="searchTextonChange" bind:clear="searchTextonClear" />
+
+  <!-- 搜索栏 -->
+  <import src='../../template/filter_temp/index.wxml' />
+  <view id="swiper-tab">
+    <!-- tab展示 -->
+    <template is='swiper-tab' data='{{tabList,currentTab}}'> </template>
+    <swiper current="{{currentTab}}" duration="1000" class="swiper-item" style='display:{{displays}}'>
+      <!--单项选择-->
+      <template is='tab_item1' data='{{tab_item1,_res1,clickOne1}}'></template>
+      <!--区域左右结构-->
+      <template is='citys1' data='{{selected_index1,selected_index2,cityleft,citycenter}}'></template>
+      <!--单项选择-->
+      <template is='tab_item2' data='{{tab_item2,_res2,clickOne2}}'></template>
+      <!--更多筛选-->
+      <swiper-item>
+        <view class="shaixuankuang">
+          <template is="shaixuan_item" data='{{shaixuan,shaixuan_}}'></template>
+          <view class="qingkong">
+            <span bindtap="qingchu">清除条件</span>
+            <p bindtap="queren">确认</p>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+
+
+
+  <!-- 背景幕 -->
+  <wux-backdrop id="backdrop" bindtap="hideNav" />
+
+
+  <!--项目列表-->
+  <block wx:for="{{xmlist}}">
+    <wux-wing-blank size="small">
+      <template is="xmlist" data="{{item1:item}}">
+      </template>
+    </wux-wing-blank>
+  </block>
+
+  <wux-white-space />
+  <wux-white-space />
+</view>
+
+
+<template name="xmlist">
+  <view class='xmlist' data-pid='{{item1.p_id}}' bindtap='click_item'>
+    <view class='xmName'>{{item1.p_name}}
+      <!-- <text class='gcClass_'>{{item.technical_type}}</text> -->
+    </view>
+    <view class='labelSwap'>
+      <text wx:if="{{item1.fidelity==1}}" class="xmLabel">项目保真</text>
+      <text wx:if="{{item1.inProject==1}}" class="xmLabel">一手信息</text>
+      <text class="xmLabel">{{item1.projectType==2?"企业发布":"个人发布"}}</text>
+      <text class="xmLabel">{{item1.technical_type}}</text>
+    </view>
+    <view class='xmItem'>
+      <text decode>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：&nbsp;&nbsp;</text>{{item1.p_column_price == 0?"面议":item1.p_column_price }}
+      <text wx:if="{{item1.p_column_price != 0}}">万</text>
+    </view>
+    <view class='xmItem'>
+      <text decode>区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;域：&nbsp;&nbsp;</text>{{item1.region}}</view>
+    <view wx:if="{{item1.endDate}}" class='xmItem'>
+      <text decode>截至时间：&nbsp;&nbsp;</text>{{item1.endDate}}</view>
+    <view class='xmItem comp'>
+      <image src='{{item1.headPortrait?item1.headPortrait+"?x-oss-process=style/thumb":"/pages/icons/touxiang.png"}}'></image>
+      {{item1.name}}
+      <text class='time_'>{{item1.add_time}}</text>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,66 @@
+<!--pages/materialCenter/fabuOrder/index.wxml-->
+<!-- 报价时间 -->
+<wux-calendar id="wux-calendar" />
+
+<view class='page'>
+  <wux-cell-group>
+    <wux-cell hover-class="none">
+      <wux-input label="采购项目" bind:change="onItemName" controlled value='{{ itemName }}' bind:focus="onNameFocus" placeholder="请输入项目名称"></wux-input>
+    </wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="联系人" bind:change="onLinkman" controlled value='{{ linkman }}' bind:focus="onLinkmanFocus" placeholder="请输入联系人姓名"></wux-input>
+    </wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="手机号码" bind:change="onItemPhone" type="number" controlled value='{{ itemPhone }}' bind:focus="onPhoneFocus" placeholder="请输入联系人电话"></wux-input>
+    </wux-cell>
+
+    <wux-cell title="截止时间" is-link extra="{{ quoteTime }}" bind:click="openCalendar"></wux-cell>
+
+    <area-cascader areaNum="3" areaName="收货地区" bind:myeventArea="onGetArea" address="{{ region_code }}"></area-cascader>
+
+    <wux-cell hover-class="none">
+      <wux-input label="交货地址" value='{{ address }}' bind:change="onAddress" focus='{{ addressFocus }}' controlled placeholder="请输入详细交货地址" />
+    </wux-cell>
+  </wux-cell-group>
+
+  <view class='list_title'>
+    <view class='red_line'></view>
+    <view class='list_title_text'>采购详情</view>
+    <view class='addcl' bindtap='addMaterial'>+添加材料</view>
+  </view>
+
+  <!-- 采购列表 -->
+  <view class="buyList" wx:if="{{ buyList.length > 0}}">
+    <block wx:for="{{ buyList }}" wx:key="label">
+      <view class='buyItem'>
+        <view class="buyItemTitle {{ item.isShow ? 'borderDashed' : 'noBorderDashed'}}" data-index='{{ index }}' bindtap='openCurrItem'>
+          <view class='cl_name' data-index='0'>
+            {{ index + 1 }}. {{ item.itemName }}
+            <view class="{{ item.isShow ? 'triangle-up' : 'triangle-down'}}"></view>
+          </view>
+          <view class='edit_item' data-index='{{ index }}' catchtap='onEditItem'>修改</view>
+          <view class='delete_item' data-index='{{ index }}' catchtap='onDeleteItem'>删除</view>
+        </view>
+        <view wx:if="{{ item.isShow }}" class='buyItemDetail'>
+          <view>材料名称：{{ item.itemName }} </view>
+          <view>所属行业：{{ item.hangye }}</view>
+          <view>材料规格：{{ item.guige }}</view>
+          <view>材料品牌：{{ item.pinpai }}</view>
+          <view>收货时间：{{ item.getTime }}</view>
+          <view>采购类型：{{ item.buyType }}</view>
+          <view>采购数量：{{ item.buyNum }}</view>
+          <view>备注：{{ item.bzText }}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<wux-white-space body-style="height: 75px"/>
+ <!-- 编辑保存 -->
+  <view class='bottom'>
+    <wux-wing-blank>
+      <wux-button block size="default" type="assertive" bind:click="onSave">提交</wux-button>
+    </wux-wing-blank>
+  </view>

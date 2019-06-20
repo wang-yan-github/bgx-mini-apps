@@ -1,0 +1,5 @@
+/* pages/bgxCenter/fillInfo3/index.wxss */
+page {
+  background-color: #ffffff;
+  font-size: 32rpx;
+}

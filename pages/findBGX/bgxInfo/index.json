@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "包工侠详情页",
+  "usingComponents": {
+    "wux-tabs": "/pages/vux/tabs/index",
+    "wux-tab": "/pages/vux/tab/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-grids": "/pages/vux/grids/index",
+    "wux-grid": "/pages/vux/grid/index",
+    "wux-timeline": "/pages/vux/timeline/index",
+    "wux-timeline-item": "/pages/vux/timeline-item/index",
+    "wux-textarea": "/pages/vux/textarea/index",
+    "wux-row": "/pages/vux/row/index",
+    "wux-col": "/pages/vux/col/index",
+    "wux-rater": "/pages/vux/rater/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-actionsheet": "/pages/vux/actionsheet/index"
+  }
+}

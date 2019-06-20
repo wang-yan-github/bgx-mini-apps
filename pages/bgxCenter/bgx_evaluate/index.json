@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "评价",
+  "usingComponents": {
+    "wux-cell-group": "../../vux/cell-group/index",
+    "wux-cell": "../../vux/cell/index",
+    "wux-rater": "../../vux/rater/index",
+    "wux-button": "../../vux/button/index",
+    "wux-textarea": "../../vux/textarea/index",
+    "wux-wing-blank": "../../vux/wing-blank/index",
+    "wux-white-space": "../../vux/white-space/index"
+  }
+}

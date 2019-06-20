@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "设置页面",
+  "usingComponents": {
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-select": "/pages/vux/select/index"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "发帖",
+  "usingComponents": {
+    "wux-upload": "/pages/vux/upload/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-icon": "/pages/vux/icon/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-textarea": "/pages/vux/textarea/index"
+  }
+}

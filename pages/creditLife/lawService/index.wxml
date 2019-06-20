@@ -1,0 +1,95 @@
+<!--pages/creditLife/lawService/index.wxml-->
+<view class='page'>
+  <!-- 顶部导航 -->
+  <!-- <view class='header'>
+    <view class="hd_item {{ itemIndex == '0' ? 'hd_item_active': ''}}" data-item='0' bindtap="onClickItem">法律援助</view>
+    <view class="hd_item {{ itemIndex == '1' ? 'hd_item_active': ''}}" data-item='1' bindtap="onClickItem">法律常识</view>
+  </view>
+  <view class='focusLines'>
+    <view class="focus_line focus_line1 {{ itemIndex == '0' ? 'focus_line_active': ''}}"></view>
+    <view class="focus_line focus_line2 {{ itemIndex == '1' ? 'focus_line_active': ''}}"></view>
+  </view> -->
+
+
+  <!-- <view class='main'>
+    <block wx:for="{{ dataList }}" wx:key="*this.face">
+      <view class='lawHelp' wx:if="{{ isShow }}">
+        <view class='p_item'>
+          <view class='p_intro'>
+            <view class='face'>
+              <image mode='scaleToFill' src='{{ item.face }}'></image>
+            </view>
+            <view class='p_intro_text'>
+              <view class='p_name'>{{ item.name }}</view>
+              <view class='p_text'>{{ item.company }}</view>
+              <view class='p_text'>{{ item.beGoodAt }}</view>
+            </view>
+            <view class='yyBtn'>立即预约</view>
+          </view>
+          <view class='p_price'>
+            <view class='p_price_title'>费用说明：</view>
+            <view class='p_price_item'>{{ item.price_text1 }}</view>
+            <view class='p_price_item'>{{ item.price_text2 }}</view>
+            <view class='p_price_item'>{{ item.price_text3 }}</view>
+            <view class='p_price_item'>{{ item.price_text4 }}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='lawSence' hidden="{{ isShow }}">
+      <wux-cell-group>
+        <wux-cell title="劳动法" is-link bind:click="openLdLaw"></wux-cell>
+        <wux-cell title="生产法" is-link bind:click="openScLaw"></wux-cell>
+        <wux-cell title="施工安全法" is-link bind:click="openSgaqLaw"></wux-cell>
+      </wux-cell-group>
+    </view>
+  </view> -->
+
+  <!-- tabs标签页 -->
+  <wux-tabs wux-class="bordered" controlled theme="assertive" current="{{ key }}" bindchange="onTabsChange">
+    <block wx:for="{{ tabs }}" wx:key="key">
+      <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
+    </block>
+  </wux-tabs>
+  <swiper style="height:{{ index == 0 ? h_tab1 : h_tab2}}rpx;" current="{{ index }}" bindchange="onSwiperChange">
+    <block wx:for="{{ tabs }}" wx:key="key">
+      <!-- 法律援助 -->
+      <swiper-item>
+        <block wx:if="{{ item.key=='tab1' }}">
+          <view class='lawHelp' wx:for="{{ item.dataList }}" wx:key="{{item.face}}" wx:for-item="items">
+            <view class='p_item'>
+              <view class='p_intro'>
+                <view class='face'>
+                  <image mode='scaleToFill' src='{{ items.face }}'></image>
+                </view>
+                <view class='p_intro_text'>
+                  <view class='p_name'>{{ items.name }}</view>
+                  <view class='p_text'>{{ items.company }}</view>
+                  <view class='p_text'>{{ items.beGoodAt }}</view>
+                </view>
+                <view class='yyBtn'>立即预约</view>
+              </view>
+              <view class='p_price'>
+                <view class='p_price_title'>费用说明：</view>
+                <view class='p_price_item'>{{ items.price_text1 }}</view>
+                <view class='p_price_item'>{{ items.price_text2 }}</view>
+                <view class='p_price_item'>{{ items.price_text3 }}</view>
+                <view class='p_price_item'>{{ items.price_text4 }}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{ item.key=='tab2' }}">
+          <!-- 法律常识 -->
+          <view class='lawSence'>
+            <wux-cell-group>
+              <block wx:for="{{ item.dataList }}" wx:key="unique" wx:for-item="items2">
+              <wux-cell title="{{ items2.text }}" is-link bind:click="{{ items2.method }}"></wux-cell>
+              </block>
+            </wux-cell-group>
+          </view>
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

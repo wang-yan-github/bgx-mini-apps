@@ -1,0 +1,15 @@
+<!--pages/fbfCenter/editPhone/index.wxml-->
+<view class='page'>
+    <view class='title'>绑定手机号</view>
+    <view class='curr_phone'>当前联系手机号：{{ org_phone }}</view>
+    <view class='notice'>变更手机号后，在自动同步新手机号为登录账号</view>
+    <view class='page_bd'>
+      <input class='phone' type="number" bindinput='onPhone' placeholder="请输入新手机号" focus='{{ phone_focus }}' />
+      <view class='yanzhengma'>
+        <input class='auth_code_input' type="number" bindinput='onYzm' placeholder="请输入验证码" />
+        <view class='auth_code' catchtap='getCode'>{{yzmTime}}</view>
+      </view>
+      <view class='divide'></view>
+      <wux-button block size="default" type="assertive" bind:click="onSave">确认修改</wux-button>
+    </view>
+</view>

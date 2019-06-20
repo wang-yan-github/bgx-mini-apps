@@ -1,0 +1,38 @@
+/* pages/bggCenter/bgg_xmjl/index.wxss */
+page {
+  font-size: 28rpx;
+}
+.page_hd {
+  font-size: 30rpx;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  background-color: #ffffff;
+}
+.home {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 26rpx;
+}
+.xm_name {
+  position: absolute;
+  left: 80rpx;
+}
+.change_xm {
+  position: absolute;
+  right: 80rpx;
+}
+.change_img {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+}
+
+.page_bd {
+  margin-top: 15rpx;
+}

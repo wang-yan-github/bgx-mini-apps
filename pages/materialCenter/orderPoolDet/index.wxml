@@ -1,0 +1,49 @@
+<!--pages/materialCenter/orderPoolDet/index.wxml-->
+<view class='page'>
+  <!-- 头部区域 -->
+  <view class='page_hd'>
+    <view class='sp_hd'>
+      <image class='sp_img' src="{{ dataDetail.sp_img }}"></image>
+      <view class='sp_name'>
+        <view class='sp_name_text'>{{ dataDetail.sp_name }}</view>
+        <view class='sp_purchase_num'>拼采数量：{{ dataDetail.sp_purchase_num }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 采购详情 -->
+  <view class='detail'>
+    <view class='detail_hd'>
+      <text class='red_line'></text>
+      <text class='detail_hd_text'>采购详情</text>
+    </view>
+    <view class='detail_desc'>
+      <view><text class='desc_name'>商品名称：</text>{{ dataDetail.sp_name }}</view>
+      <view><text class='desc_name'>所属行业：</text>{{ dataDetail.sp_industry }}</view>
+      <view><text class='desc_name'>采购数量：</text>{{ dataDetail.sp_purchase_num }} {{ dataDetail.sp_unit }}</view>
+      <view><text class='desc_name'>材料规格：</text>{{ dataDetail.sp_version }}</view>
+      <view><text class='desc_name'>材料品牌：</text>{{ dataDetail.sp_brand }}</view>
+      <view><text class='desc_name'>期望收货时间：</text>{{ dataDetail.sp_receive_time }}</view>
+      <view><text class='desc_name'>采购类型：</text>{{ dataDetail.sp_purchase_type }}</view>
+      <view>
+        <text class='desc_name'>备注：</text>
+        <view class='notice'>{{ dataDetail.sp_remark }}</view>
+      </view>
+    </view>
+    
+  </view>
+  <!-- 空白隐层 -->
+  <view class='space_hide'></view>
+    <!-- 底部固定按钮区 -->
+  <view class='fixed_bottom'>
+    <view class='shoucang' catchtap='onShoucang'>
+      <image class='bottom_img' src="{{ isShoucang ? '/pages/icons/yi_shoucang.png' : '/pages/icons/shoucang_01.png'}}"></image>
+      <view>收藏</view>
+    </view>
+    <view class='lianxi'>
+      <image class='bottom_img' src='/pages/icons/lianxi.png'></image>
+      <view>联系我</view>
+    </view>
+
+    <view class="btn {{ dataDetail.sp_order_status == '报价中' ? 'bg_green' : '' }}" hover-class='btn_active'>{{ dataDetail.sp_order_status }}</view>
+  </view>
+</view>

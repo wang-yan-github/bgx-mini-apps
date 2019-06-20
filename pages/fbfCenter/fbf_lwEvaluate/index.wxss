@@ -1,0 +1,31 @@
+page {
+  font-size: 28rpx;
+}
+
+.l-evalbox{
+  height: 200rpx;
+  padding: 0 3%;
+  margin-top: 10rpx;
+  background: #FFF;
+  line-height: 100rpx;
+}
+.l-evaltxt{
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+}
+.l-evalist image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 30rpx;
+}
+.l-evalist image:last-child{
+  margin: 0;
+}
+.weui-cells__title{
+  color: #666666;
+  font-size: 32rpx;
+}
+.weui-btn{
+  margin: 50rpx 30rpx;
+}

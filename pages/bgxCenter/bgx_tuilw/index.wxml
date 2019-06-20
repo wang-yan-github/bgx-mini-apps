@@ -1,0 +1,30 @@
+<view class="beizhu">
+  添加所需工种 
+  <text class='limit_text'>(限定最多三个)</text>
+</view>
+
+<view class='selected' wx:if="{{ consType_arr.length > 0 }}">
+  <view class='selected_title'> 已选 :</view>
+  <block wx:for="{{ consType_arr }}" wx:key="*this" >
+    <view class='item' data-index='{{ index }}' >
+      <text class='gzItem'>{{ item }}</text>
+      <!-- <image class="close" src="../../images/close_icon.png"></image> -->
+    </view>
+  </block>
+  <view>
+  </view>
+</view>
+
+<view class="selectGz" data-skey="{{ consType_skey }}"  bindtap='openGongz'>
+  {{ consType_title }}
+  <view class='triangle-right'></view>
+</view>
+
+<wux-white-space />
+<wux-white-space />
+<wux-wing-blank>
+  <wux-button block type="assertive" bind:click='onSubmit'>提交</wux-button>
+</wux-wing-blank>
+
+<!-- 所需工种 -->
+<sidebar show="{{ showGongz }}" class="sidebar" checkboxArr="{{ consType_list }}" bind:myevent="showGongzArr" sideText="{{ consType_title }}" selectNum="{{ gongzNum }}"></sidebar>

@@ -1,0 +1,71 @@
+/* pages/creditLife/priorityBook/index.wxss */
+page {
+  font-size: 28rpx;
+  color: #666666;
+}
+.item_box {
+  background-color: #ffffff;
+  margin-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx; 
+}
+.item_box:first-child {
+  margin-top: 0;
+}
+.item {
+  /* margin-top: 40rpx; */
+  position: relative;
+  width: 100%;
+}
+
+.item_hd, .item_bd {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.item_bd view {
+  line-height: 54rpx;
+}
+.titleImg {
+  width: 87rpx;
+  height: 31rpx;
+  margin-right: 20rpx;
+}
+.title {
+  display: inline-block;
+  color: #ec4141;
+  position: relative;
+  top: -6rpx;
+}
+.item_bd_title {
+  font-size: 34rpx;
+  color: #222222;
+}
+
+/* 按钮 */
+.btns{
+  width: 100%;
+  height: 54rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  position: relative;
+}
+.btn {
+  float: left;
+  width: 166rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 20rpx;
+}
+.btn1 { 
+  right: 230rpx; 
+  background-color: #ec4141;
+}
+.btn2 { 
+  right: 10rpx; 
+  background: #4F96FE;
+}

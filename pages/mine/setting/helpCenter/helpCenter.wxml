@@ -1,0 +1,34 @@
+<!--pages/mine/setting/helpCenter/helpCenter.wxml-->
+<wux-accordion-group accordion title="用户公共操作">
+  <wux-accordion title="1. 注册流程">
+    欢迎来到包工侠，未注册过的用户在登录界面点击"请注册"按钮后根据页面提示进行账户注册。</wux-accordion>
+  <wux-accordion title="2. 无法登录">
+    <view>①信息填写有误 核对手机账号或者密码是否填写正确</view>
+    <view> ②忘记密码 登录页面点击“请重置”按钮按照页面提示重新设定密码，重新登录</view>
+  </wux-accordion>
+  <wux-accordion title="3. 个人信息管理">
+    <view>①切换角色（平台有"发包方"、"包工侠"、"劳务"、"材料商"四种角色） 点击我的里“切换角色”可切换登录</view>
+    <view>②基本信息查看及修改 点击我的里"基本信息"—"审核信息"—"修改信息"就可进行资料修改</view>
+  </wux-accordion>
+  <wux-accordion title="4. 帖子管理">
+    <view>① 如何发帖 首页点击+后，点击发帖，编辑相关内容发布即可或在首页点击发现进入后点击发帖，编辑相关内容发布即可</view>
+    <view>②查看我的帖子 点击我的里我的帖子，即可看到所有已发布帖子，进行管理</view>
+  </wux-accordion>
+</wux-accordion-group>
+<wux-accordion-group accordion title="发包方常见操作">
+  <wux-accordion title="1. 发包方如何发布项目">点击我的里点击"发布项目"，按照页面填写相关信息，点击"发布"审核通过以后就可以在"项目管理"进行项目管理了。</wux-accordion>
+  <wux-accordion title="2. 发包方如何预约包工侠">首页点击“找劳务”点击适合的包工侠，在详细页点击“立即预约”即可</wux-accordion>
+  <wux-accordion title="3. 发包方如何查看预约详情">点击我的里"劳务管理"即可查看所有的劳务预约及推送信息，进行相关操作</wux-accordion>
+  <wux-accordion title="4. 发包方如何进行项目管理">点击我的里"项目管理"可以进行项目详情查询、推劳务、推项目、修改项目内容、关闭项目等操作。 </wux-accordion>
+</wux-accordion-group>
+<wux-accordion-group accordion title="包工侠常见操作">
+  <wux-accordion title="1. 包工侠如何预约项目">点击首页找项目，选择合适项目，点击进入详情后点击意向预约即可</wux-accordion>
+  <wux-accordion title="2. 包工侠如何查看预约项目">点击我的里项目管理，即可查看所有已预约项目，及系统推送项目，进行相关操作</wux-accordion>
+  <wux-accordion title="3. 包工侠如何预约劳务">点击首页找劳务，选择合适劳务，点击进入详情后，点击意向预约即可</wux-accordion>
+</wux-accordion-group>
+<wux-accordion-group accordion title="劳务常见操作">
+  <wux-accordion title="1. 如何查看预约劳务">点击我的里劳务管理，即可查看所有已预约劳务，及系统推送劳务，进行相关操作</wux-accordion>
+  <wux-accordion title="2. 劳务如何预约项目">点击首页找项目，选择合适项目，点击进入详情后点击意向预约即可</wux-accordion>
+  <wux-accordion title="3. 劳务如何预约包工侠">点击首页找劳务，选择合适包工侠，点击进入详情后，点击意向预约即可</wux-accordion>
+  <wux-accordion title="4. 劳务如何查看预约详情">点击我的里项目管理，即可查看所有已预约，及系统推送，进行相关操作</wux-accordion>
+</wux-accordion-group>

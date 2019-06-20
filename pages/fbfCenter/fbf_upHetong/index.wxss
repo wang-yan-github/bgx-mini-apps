@@ -1,0 +1,18 @@
+/* pages/fbfCenter/fbf_upHetong.wxss */
+page {
+  font-size: 28rpx;
+}
+.cell_title {
+  font-size: 32rpx;
+  line-height: 60rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.cell_text {
+  line-height: 50rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.weui-uploader__bd{
+  padding: 30rpx;
+}

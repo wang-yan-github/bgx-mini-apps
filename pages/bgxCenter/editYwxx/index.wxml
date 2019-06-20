@@ -1,0 +1,39 @@
+
+<block wx:if="{{ isLinked }}">
+<view class='page'>
+  <wux-cell-group>
+    <wux-cell hover-class="none">
+      <wux-input label="团队人数" must_text type='number' bind:change="onTeamNumber" value='{{ teamNumber }}' controlled focus="{{ team_focus }}" placeholder="请输入团队人数" extra="(人)"></wux-input>
+    </wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="从业时间" must_text type='number' bind:change="onWorkTime" value='{{ workTime }}' controlled placeholder="从业多少年" extra="(年)"></wux-input>
+    </wux-cell>
+
+    <!-- 工程类别 -->
+    <wux-cell title="{{ technicalType_title }}" must_text is-link extra="{{ technicalType_text }}" bind:click="openGclb"></wux-cell>
+
+    <!-- <view wx:if="{{region_code}}"> -->
+      <area-cascader areaNum="3" areaName="可施工地" bind:myeventArea="onGetArea" regionCode="{{region_code}}" ></area-cascader>
+    <!-- </view> -->
+
+    <wux-cell is-link title="资质证书" img="{{ certificate_arr }}" extra_img="extra_img" bind:click="onUpCertificate"></wux-cell>
+
+  </wux-cell-group>
+
+  <!-- 下一步 -->
+
+   <!-- 编辑保存 -->
+  <view class='bottom'>
+    <wux-wing-blank>
+      <wux-button block size="default" type="assertive" bind:click="onSave">保存</wux-button>
+    </wux-wing-blank>
+  </view>
+
+</view>
+<!-- 工程类别 -->
+<sidebar selectVal="{{ technicalType_text }}" checkboxArr="{{ technicalType_list }}" bind:myevent="showGclbArr" sideText="{{ technicalType_title }}" selectNum="{{ gclbNum }}" show="{{ showGclb }}" ></sidebar>
+</block>
+<!-- <block wx:else>
+  <view>不好意思，网络错误了。。</view>
+</block> -->

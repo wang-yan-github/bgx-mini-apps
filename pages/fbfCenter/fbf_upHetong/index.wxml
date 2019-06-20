@@ -1,0 +1,16 @@
+<view class='cell_title'>备注说明：</view>
+<view class="cell_text">1、请上传真实合同，发包方会审核</view>
+<view class="cell_text">2、上传合同关键页（需包含项目名称、施工范围、项目工期、双方签章）</view>
+<view class="cell_text">3、上传图片格式为jpg或png</view>
+
+<wux-white-space />
+
+<wux-upload list-type="picture-card" file-list="{{ fileList }}" url="{{fileUrl}}" formData='{{formData}}' bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview" bind:remove='onRemove'>
+  <text style='font-size:30rpx;color:#666;'>上传</text>
+</wux-upload>
+
+<wux-white-space />
+<wux-white-space />
+<wux-wing-blank>
+  <wux-button block outline disabled='{{uphetongDisabled}}' type="assertive" bind:click='uphetong'>上传</wux-button>
+</wux-wing-blank>

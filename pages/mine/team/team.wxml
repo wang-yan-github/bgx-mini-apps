@@ -1,0 +1,50 @@
+<!--pages/mine/team/team.wxml-->
+<view class='title'>
+  班组成员{{teamClass.conuts}}人，
+  <block wx:if='{{teamClass.notRegister != 0}}'>
+    {{teamClass.notRegister}}未注册信息，
+  </block>
+  <block wx:if='{{teamClass.sum != 0}}'>
+    {{teamClass.sum}}人未完善信息.
+  </block>
+</view>
+<wux-white-space />
+<view class='teamClass'>
+  <wux-grids>
+    <block wx:for="{{teamClass.list}}">
+      <wux-grid>
+        <view class='teamClass_item' data-tid='{{item.t_id}}' bindtap='searchTeam'>{{item.name}}({{item.count}}人)</view>
+      </wux-grid>
+    </block>
+    <wux-grid>
+      <view class='teamClass_item newTeamName' catchtap='newTeam'>新建班组</view>
+    </wux-grid>
+  </wux-grids>
+</view>
+
+<wux-white-space />
+<block wx:for="{{teamList}}">
+  <view class='team_item'>
+    <view class='team_item_l'>
+      <image src='{{item.head_portrait}}'></image>
+    </view>
+    <view class='team_item_r'>
+      <view class=" team_item_r_t ">
+        {{item.duty_name}}（{{item.cons_type}}/{{item.name}}）
+        <image src='/pages/icons/edit.png' data-id="{{item.id}}" catchtap='edit'></image>
+      </view>
+      <view class="team_item_r_b ">
+        {{item.duty_phone}}
+        <label class='tip'>
+          {{item.status?item.status:""}}
+        </label>
+        <view class="call" data-phone='{{item.duty_phone}}' catchtap='callphone'>立即联系</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<wux-fab-button position="bottomRight" direction="vertical" theme="assertive " buttons="{{ buttons }}" bind:change="onChange" bind:click="buttonClicked" bind:contact="onContact" bind:getuserinfo="onGotUserInfo" />
+
+<wux-dialog id="wux-dialog" />
+<wux-dialog id="wux-dialog--alert" />

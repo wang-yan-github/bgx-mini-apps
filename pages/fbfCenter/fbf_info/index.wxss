@@ -1,0 +1,58 @@
+/* pages/fbfCenter/fillInfo1/index.wxss */
+page {
+  font-size: 32rpx;
+}
+.page_title {
+  line-height: 80rpx;
+  font-weight: 600;
+  padding-left: 26rpx;
+  position: relative;
+  font-size: 32rpx;
+  background-color: #fff;
+  
+}
+.page_title2 {
+  border: 5rpx solid #ffffff;
+  margin-top: 20rpx;
+}
+.triangle-box {
+  width: 400rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 12rpx solid transparent;
+    border-right: 12rpx solid transparent;
+    border-top: 12rpx solid #666666;
+}
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 12rpx solid transparent;
+    border-right: 12rpx solid transparent;
+    border-bottom: 12rpx solid #666666;
+}
+.triangle-pos {
+  position: absolute;
+  right: 30rpx;
+  top: 36rpx;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 14rpx solid transparent;
+  border-right: 14rpx solid transparent;
+  border-bottom: 14rpx solid #666666;
+}
+
+.beizhu {
+  font-size: 24rpx;
+  text-align: right;
+  color: #888888;
+  line-height: 60rpx;
+}

@@ -1,0 +1,55 @@
+/* pages/mine/wallet/wallet.wxss */
+
+.top {
+  padding-top: 20rpx;
+  height: 260rpx;
+  background-color: #ec4141;
+}
+.swap {
+  height: 180rpx;
+}
+
+.swap image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 80rpx;
+  margin-top: 20rpx;
+}
+.swap view{
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+}
+.yue{
+  color: #fff;
+  text-align: center
+}
+
+.top2 {
+  height: 120rpx;
+  background-color: #fff;
+}
+
+.top2_1, .top2_2 {
+  width: 49.5%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.top2_1 {
+  border-right: 1rpx solid #eee;
+}
+
+.desc, .money {
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.desc {
+  color: #666;
+}
+
+.money {
+  font-size: 34rpx;
+}

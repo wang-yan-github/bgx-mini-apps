@@ -1,0 +1,190 @@
+<!--pages/materialCenter/deviceDetail/index.wxml-->
+<view class='page'>
+
+  <!-- <swiper style='height: 350rpx;' indicator-active-color="#ffffff" indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper> -->
+  <view class='page_hd'>
+    <image class='banner' src="{{ dataDetail.sp_banner }}"></image>
+  </view>
+  <view class='page_bd'>
+    <view class='price'>
+      <text class='price_big'>{{ dataDetail.sp_new_price }}</text>
+    </view>
+    <view class='device_name'>{{ dataDetail.sp_name }}</view>
+    <view class='youhui'>
+      <text class='yhtext_1'>优惠</text>
+      <text class='yhtext_2'>下单立减500</text>
+    </view>
+    <view class='fuwu'>
+      <image class='fuwu_icon' src="/pages/icons/fuwu_icon.png"></image>
+      <text class='fuwu_text1'>全国免费安装调试</text>
+      <text class='fuwu_text1'>免费设计</text>
+    </view>
+  </view>
+  <!-- 评论 -->
+  <view class='evaluate_box'>
+    <view class='evaluate_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>评价({{evaluateList.length}})</text>
+      <view class='evaluate_more' bindtap='onMOreEvaluate'>
+        <text class='evaluate_title2'>更多评论</text>
+        <image class='evaluate_img' src="/pages/icons/gengduo.png"></image>
+      </view>
+    </view>
+    <block wx:for="{{ evaluateList }}" wx:key="phone">
+      <view class='evaluate_item'>
+        <view class='item_info'>
+          <image class='item_face' src="{{ item.img }}"></image>
+          <view class='item_text'>
+            <text class='item_phone'>{{ item.phone }}</text>
+            <text class='item_score'>{{ item.score }}</text>分
+            <text class='item_level'>{{ item.rater }}</text>
+            <text class='item_time'>{{ item.time }}</text>
+          </view>
+        </view>
+        <view class='item_content'>
+          {{ item.content }}
+        </view>
+
+      </view>
+    </block>
+  </view>
+  <!-- 设备描述详情1 -->
+  <view wx:if="{{ spid == 7 }}" class='detail'>
+    <view class='detail_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>{{ detail_text1.title }}</text>
+    </view>
+    <view class='detail_text'>
+      <view class='detail_text_title'>
+        {{ detail_text1.children1.title }}
+      </view>
+      <view>
+        {{ detail_text1.children1.content }}
+      </view>
+      <view class='detail_text_title'>
+        {{ detail_text1.children2.title }}
+      </view>
+      <view>
+        {{detail_text1.children2.content }}
+      </view>
+    </view>
+
+    <view class='detail_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>{{ detail_text1.children3.title }}</text>
+    </view>
+    <view class='odd_center'>
+      <view wx:for="{{ detail_text1.children3.content }}" class="s_center {{ index%2==0 ? 'bgc_eeee': ''}}">
+        {{ item }}
+      </view>
+    </view>
+  </view>
+
+  <!-- 设备描述详情2 -->
+  <view wx:if="{{ spid == 8 }}" class='detail'>
+    <view class='detail_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>{{ detail_text2.title }}</text>
+    </view>
+    <view class='detail_text'>
+      <view class='detail_text_title'>
+        {{ detail_text2.children1.title }}
+      </view>
+      <view>
+        {{ detail_text2.children1.content }}
+      </view>
+      <view class='detail_text_title'>
+        {{ detail_text2.children2.title }}
+      </view>
+      <view>
+        {{ detail_text2.children2.content }}
+      </view>
+      <view class='detail_text_title'>
+        {{ detail_text2.children3.title }}
+      </view>
+      <view>
+        {{ detail_text2.children3.content }}
+      </view>
+      <view class='detail_text_title'>
+        {{ detail_text2.children4.title }}
+      </view>
+      <view>
+        {{detail_text2.children4.content }}
+      </view>
+      <view class='detail_text_title'>
+        {{ detail_text2.children5.title }}
+      </view>
+      <view>
+        {{detail_text2.children5.content }}
+      </view>
+
+    </view>
+
+    <view class='detail_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>{{ detail_text2.children6.title }}</text>
+    </view>
+    <view class='odd_center2'>
+      <view wx:for="{{ detail_text2.children6.content }}" class="item1 {{ index%2==0 ? 'bgc_eeee': ''}}">
+        <view wx:for="{{ item }}" class='tem' wx:for-item="tem">
+          {{ tem }}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 设备描述详情3 -->
+  <view wx:if="{{ spid == 9 }}" class='detail'>
+    <view class='detail_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>{{ detail_text3.children1.title }}</text>
+    </view>
+    <view class='detail_text'>
+      <view wx:for="{{ detail_text3.children1.content }}" wx:for-item="item1">
+        {{ item1 }}
+      </view>
+    </view>
+    <view class='detail_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>{{  detail_text3.children2.title }}</text>
+    </view>
+    <view class='odd_center3'>
+      <view wx:for="{{ detail_text3.children2.content }}" wx:for-item="item2" class="desc_item3 {{ index%2==0 ? 'bgc_eeee': ''}} {{ (item2 == '七氟丙烷气体的环境特性' || item2 == '七氟丙烷气体的灭火特性' || item2 == '七氟丙烷气体雾化性质') ? 'red_color' : '' }} ">
+        {{ item2 }}
+      </view>
+    </view>
+  </view>
+
+  <!-- 详情图片描述 -->
+  <!-- <view class='text_desc'>
+    <block wx:for="{{ dataDetail.sp_detail_imgs }}" wx:key="*this">
+      <view class='item_img_view'>
+        <image mode='widthFix' src='{{ item }}' class='item_img'></image>
+      </view>
+    </block>
+    <view class='text_desc'></view>
+  </view> -->
+
+
+
+  <!-- 留白区域 -->
+  <wux-white-space body-style="height: 55px" />
+  <!-- 底部固定按钮区 -->
+  <view class='fixed_bottom'>
+    <view class='shoucang' catchtap='onShoucang'>
+      <image class='bottom_img' src="{{ isShoucang ? '/pages/icons/yi_shoucang.png' : '/pages/icons/shoucang_01.png'}}"></image>
+      <view>收藏</view>
+    </view>
+    <view class='lianxi'>
+      <image class='bottom_img' src='/pages/icons/lianxi.png'></image>
+      <view>联系我</view>
+    </view>
+    <view class='xiadan' hover-class='xiadan_active'>锁定下单</view>
+  </view>
+</view>

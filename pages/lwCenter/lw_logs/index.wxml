@@ -1,0 +1,15 @@
+<view class='page'>
+  <wux-cell-group title="日志记录">
+    <wux-cell hover-class="none">
+      <wux-textarea rows="6" maxlength='200' hasCount="true" placeholder="请输入日志内容" />
+    </wux-cell>
+  </wux-cell-group>
+</view>
+
+
+<wux-white-space />
+<wux-white-space />
+
+<wux-wing-blank>
+  <wux-button block type="assertive">提交</wux-button>
+</wux-wing-blank>

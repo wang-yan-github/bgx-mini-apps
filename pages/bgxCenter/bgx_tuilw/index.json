@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "推劳务",
+  "usingComponents": {
+    "wux-button": "../../vux/button/index",
+    "wux-wing-blank": "../../vux/wing-blank/index",
+    "wux-white-space": "../../vux/white-space/index",
+    "sidebar": "/pages/components/sidebar/index",
+    "wux-icon": "../../vux/icon/index"
+  }
+}

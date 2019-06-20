@@ -1,0 +1,57 @@
+/* pages/message/System/index.wxss */
+
+.system_item {
+  margin: 20rpx 30rpx;
+  border: 1rpx solid #fff;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding-bottom: 60rpx;
+  position: relative;
+}
+
+.title {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+
+.time {
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 22rpx;
+  color: #ccc;
+}
+
+.content {
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+
+.btn view {
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 26rpx;
+  float: right;
+  margin-right: 10rpx;
+}
+
+.btn .know {
+  border: 1rpx solid #ec4141;
+  color: #ec4141;
+}
+
+.btn .know1 {
+  border: 1rpx solid #ccc;
+  color: #ccc;
+}
+
+.red {
+  color: red;
+}

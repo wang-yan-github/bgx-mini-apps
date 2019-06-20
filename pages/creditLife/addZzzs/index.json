@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "上传资质证书",
+  "usingComponents": {
+    "wux-upload": "../../vux/upload/index",
+    "wux-wing-blank": "../../vux/wing-blank/index",
+    "wux-white-space": "../../vux/white-space/index",
+    "wux-icon": "../../vux/icon/index",
+    "wux-button": "../../vux/button/index"
+  }
+}

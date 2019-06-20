@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "劳务管理",
+  "usingComponents": {
+    "wux-button": "../../vux/button/index",
+    "wux-search-bar": "../../vux/search-bar/index"
+  }
+}

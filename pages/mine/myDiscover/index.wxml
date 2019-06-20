@@ -1,0 +1,36 @@
+<!--pages/mine/myDiscover/index.wxml-->
+<!--常用功能按键-->
+<view class='discover_swap'>
+  <block wx:for="{{more}}">
+    <view class='dis_btn' catchtap='search_tiezi' data-index='{{index}}'>
+      <image src='{{item.image}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+  <view class='dis_btn' catchtap='more1'>
+    <image src='/pages/icons/more.png'></image>
+    <text>更多话题</text>
+  </view>
+</view>
+
+<!-- 点击更多话题 -->
+<view class='more_swap' wx:if="{{isMore}}">
+  <block wx:for="{{more1}}">
+    <view class='more_item' catchtap='search_tiezi' data-index='{{index}}'>
+      <view class='more_item_l'>
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class='more_item_r'>
+        <view class='title'>{{item.name}}</view>
+        <view class='des'>{{item.describe}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 背景幕 -->
+<wux-backdrop id="backdrop1" bindtap="hideMore" />
+
+<wux-white-space />
+<import src="/pages/discover/discover/index" />
+<template is='gyq' data='{{dataList,zhankai_index,pinglunData,pinglun_index,pinglun_content,isbottom,del,focus}}'></template>

@@ -1,0 +1,46 @@
+<!--pages/materialCenter/addMaterial/index.wxml-->
+<!-- 收货时间 -->
+<wux-calendar id="wux-calendar" />
+<!-- 所属行业-->
+<wux-select id="wux-select-hangye" />
+<!-- 采购类型 -->
+<wux-select id="wux-select-buytype" />
+
+<view class='page'>
+  <wux-cell-group>
+    <wux-cell hover-class="none">
+      <wux-input label="材料名称" bind:change="onItemName" controlled value='{{ itemName }}' bind:focus="onNameFocus" placeholder="请输入商品名称"></wux-input>
+    </wux-cell>
+
+    <wux-cell title="所属行业" is-link extra="{{ hangye }}" bind:click="openHangye"></wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="采购数量" bind:change="onBuyNum" type="number" controlled value='{{ buyNum }}' bind:focus="onNumFocus" placeholder="请输采购数量"></wux-input>
+    </wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="材料规格" bind:change="onGuige" controlled value='{{ guige }}' bind:focus="onGuigeFocus" placeholder="请输入所需材料的规格"></wux-input>
+    </wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="材料品牌" bind:change="onPinpai" controlled value='{{ pinpai }}' bind:focus="onGuigeFocus" placeholder="请输入所需材料的品牌"></wux-input>
+    </wux-cell>
+
+    <wux-cell title="收货时间" is-link extra="{{ getTime }}" bind:click="openCalendar"></wux-cell>
+
+    <wux-cell title="采购类型" is-link extra="{{ buyType }}" bind:click="openBuyType"></wux-cell>
+
+  </wux-cell-group>
+  <wux-cell-group>
+     <wux-cell title="备注" hover-class="none">
+      <wux-textarea maxlength="200" rows="4" controlled value="{{ bzText }}" bind:change="onTextarea" hasCount="true" />
+    </wux-cell>
+  </wux-cell-group>
+
+   <!-- 编辑保存 -->
+  <view class='bottom'>
+    <wux-wing-blank>
+      <wux-button block size="default" type="assertive" bind:click="onSave">提交</wux-button>
+    </wux-wing-blank>
+  </view>
+</view>

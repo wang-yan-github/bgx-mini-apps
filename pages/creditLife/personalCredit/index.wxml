@@ -1,0 +1,58 @@
+<!--pages/mine/credibility/credibility.wxml-->
+<block wx:if="{{ isLinked }}">
+  <view class='top'>
+    <image mode='scaleToFill' class='circle_bg' src='/pages/icons/score_bg.png'></image>
+    <image mode='scaleToFill' class='circle_img' src='/pages/icons/score_circle.png'></image>
+    <view class='credibility_score'>
+      <!-- <view class="text2">您的江湖信用分</view> -->
+      <view class="text1">{{ creditScore==0?"暂未计算": creditScore}}</view>
+      <view class="text2">{{ creditRating }}</view>
+      <view class='text3'>评估时间 : {{ creditTime }}</view>
+    </view>
+
+    <view class='text4'>
+      <view class='t4_l'>
+        <image mode='scaleToFill' src='/pages/icons/rocket_img.png'></image>
+      </view>
+      <view class='t4_r'>
+        <view class="t4_r_t">您已结击败了 {{ percentage }} 的江湖同辈</view>
+        <view class="t4_r_b">提升江湖信用，享受更多福利</view>
+      </view>
+    </view>
+  </view>
+  <!-- 留白区域 -->
+  <view class='white_area'></view>
+  <!-- 提升信用 -->
+  <view class='creditEnhancement'>
+    <view class='title'>
+      <image mode='scaleToFill' class='titleImg1' src="/pages/icons/tisheng.png"></image>
+      <view class='titleText'>提升江湖信用</view>
+      <!-- <image class='titleImg2' src="/pages/icons/gengduo.png"></image> -->
+    </view>
+    <wux-cell-group>
+      <wux-cell is-link title="手机号码认证" extra="{{ phoneCertification == '1' ? '已认证' : '未认证' }}" bind:click="openPhone"></wux-cell>
+      <wux-cell is-link title="实名认证" extra="{{ nameCertification_text==1?'已认证':'未认证' }}" bind:click="onUpSmrz"></wux-cell>
+    </wux-cell-group>
+    <wux-cell-group>
+      <view wx:if="{{ role == '2'}}" class='bzgm' bind:click="openTeam">
+        <wux-cell is-link title="班组规模" extra="" ></wux-cell>
+        <view class='bzgm_notice'>最高可得100分</view>
+      </view>
+      <!-- 项目经验认证 -->
+      <view bindtap="openXmAchieve" class='xmjyrz'>
+        <wux-cell is-link title="项目经验认证" extra=""></wux-cell>
+        <view class='bzgm_notice'>最高可得100分</view>
+      </view>
+    </wux-cell-group>
+    <wux-cell-group>
+      <wux-cell bind:click="openAddZzzs" is-link title="上传资质证书" extra="{{ qualificationCertification == '104' ? '未上传' : '已上传' }}"></wux-cell>
+      <wux-cell bind:click="openAddZczm" is-link title="资产证明(打白条)" extra="{{ assetsCertification_text }}"></wux-cell>
+      <wux-cell bind:click="openAddYhzx" is-link title="银行征信证明(打白条)" extra="{{ creditCertification_text }}"></wux-cell>
+
+      <!-- <wux-cell is-link title="添加项目经验" extra="去更新"></wux-cell>
+    <wux-cell is-link title="填写个人评价" extra="已评价"></wux-cell>
+     -->
+      <!-- <wux-cell is-link title="经历认证(邀请工友认证)" extra=""></wux-cell> -->
+    </wux-cell-group>
+  </view>
+</block>

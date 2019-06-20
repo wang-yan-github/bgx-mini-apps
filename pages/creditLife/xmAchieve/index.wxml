@@ -1,0 +1,41 @@
+<!--pages/creditLife/xmAchieve/index.wxml-->
+<view class='page'>
+  <view class='title'>
+    <text>我的业绩(共 <text class='numColor'>{{ dataList.length }}</text> 条)</text>
+    <text class='xmyj_add' bindtap='onAddXmyj'>添加</text>
+  </view>
+  <view class='list'>
+    <block wx:for="{{ dataList }}" wx:key="id">
+      <view class='item' data-index="{{ index }}">
+        <view class='item_title' data-index="{{ index }}" bindtap='openCurrItem'>
+          <view class='item_name'>业绩 {{index+1}} </view>
+          <view class="triangle_pos {{ item.checked ? 'triangle-up' : 'triangle-down'}}  "></view>
+        </view>
+        <view class='item_content' wx:if="{{ item.checked }}">
+          <view>
+            <text class='p_name'>项目名称：</text>{{ item.name }}</view>
+          <view>
+            <text class='p_name'>开始时间：</text>{{ item.start_time }}</view>
+          <view>
+            <text class='p_name'>结束时间：</text>{{ item.end_time }}</view>
+          <view>
+            <text class='p_name'>项目金额：</text>{{ item.project_money }}</view>
+          <view>
+            <text class='p_name'>项目地址：</text>{{ item.address }}</view>
+          <view class='sgnr'>
+            <text class='p_name'>施工内容：</text>{{ item.content }}</view>
+          <view wx:if="{{ item.pFiles.length > 0 }}">
+            <view>
+              <text class='p_name'>工作图片：</text>
+            </view>
+            <view class='workImgs'>
+              <block wx:for="{{ item.pFiles}}" wx:for-item="imgUrl" wx:key="*this">
+                <image class='imgs' src='{{ imgUrl }}'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

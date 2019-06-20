@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "工友圈",
+  "usingComponents": {
+    "wux-backdrop": "/pages/vux/backdrop/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-grids": "/pages/vux/grids/index",
+    "wux-grid": "/pages/vux/grid/index",
+    "wux-row": "/pages/vux/row/index",
+    "wux-col": "/pages/vux/col/index"
+  },
+  "enablePullDownRefresh":true
+}

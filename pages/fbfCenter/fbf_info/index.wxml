@@ -1,0 +1,53 @@
+<!--pages/fbfCenter/information/index.wxml-->
+<block wx:if="{{ isLinked }}">
+<view class='page'>
+  <view class='page_title'>个人信息：</view>
+  <wux-cell-group>
+    <wux-cell is-link title="头像" img="{{ face_arr }}" extra_img="extra_img" bind:click="onUpFace"></wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="昵称" bind:change="onNickname" value="{{ nickname }}" controlled placeholder="请输入昵称" />
+    </wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="姓名" focus="{{ name_focus }}" value="{{ name }}" controlled bind:change="onName" placeholder="请输入姓名" />
+    </wux-cell>
+
+    <!-- <wux-cell hover-class="none"  is-link title="电话号码" extra="{{ phone }}" bind:click="onEditphone">
+    </wux-cell> -->
+
+  </wux-cell-group>
+
+  <view class='page_title page_title2'>
+    <text>公司信息：</text>
+    <text hidden='{{ show }}' class='beizhu'>(注：点击可完善公司信息）</text>
+    <view class='triangle-box' catchtap='onPullDown'>
+      <view class="triangle-pos {{ show ? 'triangle-up' : ' triangle-down' }}"></view>
+    </view>
+  </view>
+  
+
+  <wux-cell-group wx:if="{{ show }}">
+    <wux-cell hover-class="none">
+      <wux-input label="公司名称" must_text bind:change="onCompName" placeholder="请输入公司名称" value="{{ compName }}" controlled focus="{{ compName_focus }}" />
+    </wux-cell>
+
+    <wux-cell is-link title="公司logo" img="{{ logo_arr }}" extra_img="extra_img" bind:click="onUpLogo"></wux-cell>
+
+    <area-cascader areaNum="3" areaName="公司区域" bind:myeventArea="onGetArea" regionCode="{{ region_code }}" ></area-cascader>
+
+    <wux-cell hover-class="none">
+      <wux-input label="详细地址" bind:change="onCompAddr"  must_text placeholder="请输入详细地址" value="{{ compAddr }}" controlled  focus='{{ compAddr_focus }}' />
+    </wux-cell>
+
+    <wux-cell is-link must_text title="营业执照" img="{{ license_arr }}" extra_img="extra_img" bind:click="onUpLicense"></wux-cell>
+  </wux-cell-group>
+</view>
+
+<view class='bottom'>
+  <wux-wing-blank>
+    <wux-button block type="assertive" bind:click="onSave" >保 存</wux-button>
+  </wux-wing-blank>
+</view>
+
+</block>

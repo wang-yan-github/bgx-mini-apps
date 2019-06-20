@@ -1,0 +1,8 @@
+<!--pages/materialCenter/secondMaterial/index.wxml-->
+<view class='page'>
+  <view class='notice_box'>
+    <image class='notice_img' src="{{ no_content }}"></image>
+    <view class='notice_text'>敬请期待...</view>
+  </view>
+  
+</view>

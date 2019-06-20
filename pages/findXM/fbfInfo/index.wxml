@@ -1,0 +1,62 @@
+<!--pages/findXM/fbfInfo/index.wxml-->
+<view class='topImage'>
+  <image src='/pages/icons/fbfInfo.png'></image>
+</view>
+
+<view class='fbfTitle'>
+  <view class='fbfLogo'>
+    <image src='{{fbfInfo.headPortrait?fbfInfo.headPortrait:"/pages/icons/touxiang.png"}}'></image>
+  </view>
+  <view class='fbfName'>
+    {{fbfInfo.dutyName}}
+    <text class="renzheng">{{fbfInfo.authentica?'企业认证':'企业未认证'}}</text>
+  </view>
+</view>
+
+<wux-white-space />
+<view>
+  <view class="tabs_title">基本资料</view>
+  <view class="tabs_content">
+    <view class='conten_item'>
+      <text decode>江湖信用：&nbsp;&nbsp;</text>{{fbfInfo.creditScore}}</view>
+    <view class='conten_item'>
+      <text decode>公司区域：&nbsp;&nbsp;</text>{{fbfInfo.region}}</view>
+    <view class='conten_item'>
+      <text decode>详细地址：&nbsp;&nbsp;</text>{{fbfInfo.address}}</view>
+    <view class='conten_item'>
+      <text decode>联&nbsp;&nbsp;系&nbsp;人：&nbsp;&nbsp;</text>{{fbfInfo.dutyName}}</view>
+    <view class='conten_item'>
+      <text decode>联系电话：&nbsp;&nbsp;</text>{{fbfInfo.dutyPhone}}</view>
+  </view>
+</view>
+
+<wux-white-space />
+<!-- 评价 -->
+<view>
+  <view class="tabs_title">评价</view>
+  <view class='noCom'>暂无评论...</view>
+  <!-- 评价标签 -->
+  <!-- <view class='pingjiaLabel'>
+    <text class='active'>全部</text>
+    <text>很好</text>
+    <text>较好</text>
+    <text>一般</text>
+    <text>较差</text>
+    <text>很差</text>
+  </view>
+  <view class='pingjiaItem'>
+    <view class='pingjia_l'>
+      <image src='/pages/icons/touxiang.png'></image>
+    </view>
+    <view class='pingjia_r'>
+      <view>苟先生</view>
+      <wux-rater disabled slot="footer" fontSize="20" default-value="{{ 3 }}" margin="{{ 5 }}" star="☻" />
+      <text class='pingjiaTime'>2018-6-12</text>
+    </view>
+    <view class="pingjia_con">这家公司有良心，按时发工资，从不拖欠劳务工资</view>
+  </view> -->
+</view>
+
+<!-- 留白 -->
+<wux-white-space />
+<wux-white-space />

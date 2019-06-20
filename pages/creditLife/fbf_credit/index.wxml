@@ -1,0 +1,36 @@
+<!--pages/mine/credibility/credibility.wxml-->
+<block wx:if="{{ isLinked }}">
+  <view class='top'>
+    <image mode='scaleToFill' class='circle_bg' src='/pages/icons/score_bg.png'></image>
+    <image mode='scaleToFill' class='circle_img' src='/pages/icons/score_circle.png'></image>
+    <view class='credibility_score'>
+      <!-- <view class="text2">您的江湖信用分</view> -->
+      <view class="text1">{{ creditScore }}</view>
+      <view class="text2">{{ creditRating }}</view>
+      <view class='text3'>评估时间 : {{ creditTime }}</view>
+    </view>
+
+    <view class='text4'>
+      <view class='t4_l'>
+        <image mode='scaleToFill' class='rocket_img' src='/pages/icons/rocket_img.png'></image>
+      </view>
+      <view class='t4_r'>
+        <view class="t4_r_b">提升江湖信用，享受更多福利！</view>
+      </view>
+    </view>
+  </view>
+  <!-- 留白区域 -->
+  <view class='white_area'></view>
+  <!-- 提升信用 -->
+  <view class='creditEnhancement'>
+    <view class='title'>
+      <image mode='scaleToFill' class='titleImg1' src="/pages/icons/tisheng.png"></image>
+      <view class='titleText'>提升江湖信用</view>
+      <!-- <image class='titleImg2' src="/pages/icons/gengduo.png"></image> -->
+    </view>
+    <wux-cell-group>
+      <wux-cell is-link title="完善信息" extra="{{ companyInfo }}" bind:click="onClickInfo"></wux-cell>
+      <wux-cell is-link title="实名认证" extra="{{ companyInfo1 }}" bind:click="onClickInfo1"></wux-cell>
+    </wux-cell-group>
+  </view>
+</block>

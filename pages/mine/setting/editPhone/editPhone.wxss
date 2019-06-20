@@ -1,0 +1,21 @@
+/* pages/mine/setting/editPhone/editPhone.wxss */
+
+/* @import '/pages/login/ipone/poneLogin.wxss'; */
+
+.yzm {
+  height: 90rpx;
+  line-height: 90rpx;
+  top: 80rpx;
+  position: absolute;
+  right: 30rpx;
+  color: #ec4141;
+  z-index: 2;
+}
+.yzmLabel{
+  position: relative;
+  top:-10rpx;
+}
+.yzmInput{
+  display: inline-block;
+  width: 430rpx;
+}

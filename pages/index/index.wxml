@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<!--banner页 -->
+<swiper indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 推广跑马灯 -->
+<wux-notice-bar loop leading="3000" speed="100" content="{{gonggao_content}}" />
+<!-- 功能按钮 -->
+<view class='icon_swap'>
+  <wux-grids col="5">
+    <block wx:for="{{grids}}">
+      <wux-grid imgs="imgs" thumb="{{item.url}}" bind:click="{{item.method}}" label="{{item.name}}" />
+    </block>
+  </wux-grids>
+
+</view>
+
+
+<!-- 我的任务 -->
+<!-- <wux-cell-group>
+  <wux-cell is-link title="我的任务"></wux-cell>
+</wux-cell-group>
+<view class='myTask'>
+  <block wx:for="{{myTask}}">
+    <view class='task'>{{index+1}}： {{item}}</view>
+  </block>
+</view> -->
+<wux-white-space />
+<!-- 推荐发现 -->
+
+<import src='/pages/findXM/findXM/index.wxml' />
+<import src='/pages/findBGX/findBGX/index.wxml' />
+<wux-cell-group>
+  <!-- <wux-cell is-link title="最新发现" bind:click="discover"></wux-cell> -->
+  <wux-cell is-link title="推荐项目" bind:click="tjXM"></wux-cell>
+</wux-cell-group>
+<!-- 项目 -->
+<view class='item' wx:for="{{xmlist}}">
+  <template is='xmlist' data='{{item1:item}}'></template>
+</view>
+
+
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <!-- <wux-cell is-link title="最新发现" bind:click="discover"></wux-cell> -->
+  <wux-cell is-link title="推荐包工侠" bind:click="tjBGX"></wux-cell>
+</wux-cell-group>
+<!-- 包工侠 -->
+<view class='item'  wx:for="{{lwList1}}">
+  <template is='lwList' data='{{item:item}}'></template>
+</view>
+
+
+<wux-white-space />
+<wux-white-space />
+<wux-cell-group>
+  <!-- <wux-cell is-link title="最新发现" bind:click="discover"></wux-cell> -->
+  <wux-cell is-link title="推荐劳务" bind:click="tjLW"></wux-cell>
+</wux-cell-group>
+<!-- 包工侠 -->
+<view class='item' wx:for="{{lwList2}}">
+  <template is='lwList' data='{{item:item}}'></template>
+</view>
+
+<!-- <import src='/pages/discover/discover/index.wxml' />
+<template is='gyq' data='{{dataList,zhankai_index,pinglunData,pinglun_index,pinglun_content,isbottom,del,focus}}'></template> -->
+
+<!-- 悬浮按钮 -->
+<wux-fab-button backdrop='false' id="wux-floating-button" visible="{{ visible }}" direction="vertical" position="{{ position }}" theme="{{ theme }}" buttons="{{ buttons }}" bind:click="buttonClicked" />
+
+
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->

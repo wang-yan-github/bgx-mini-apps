@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "全部评论",
+  "usingComponents": {
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-rater": "/pages/vux/rater/index",
+    "wux-button": "/pages/vux/button/index"
+  }
+}

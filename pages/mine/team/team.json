@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "班组管理",
+  "usingComponents": {
+    "wux-grids": "/pages/vux/grids/index",
+    "wux-grid": "/pages/vux/grid/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-fab-button": "/pages/vux/fab-button/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-dialog": "/pages/vux/dialog/index",
+    "wux-white-space": "/pages/vux/white-space/index"
+  }
+}

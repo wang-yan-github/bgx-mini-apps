@@ -1,0 +1,110 @@
+/* @import '../../teml/shaixuan_teml.wxss'; */
+
+page {
+  background-color: #eeeeee;
+  font-size: 28rpx;
+}
+.swiper-tab-list {
+  width: 33.3%;
+}
+
+swiper-item {
+  overflow: auto;
+}
+
+.item {
+  /* height: 180rpx; */
+  padding: 30rpx;
+  background-color: #ffffff;
+  position: relative;
+  margin-top: 15rpx;
+  border-radius: 10rpx;
+}
+.item:first-child {
+  margin-top: 0;
+}
+.item_l {
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+
+.item_l image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.lw_name {
+  font-size: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.laiyuan {
+  font-size: 24rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  color: #666;
+}
+
+.pro_name {
+  font-size: 24rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+  line-height: 30rpx;
+  color: #666;
+}
+
+.item_r image {
+  height: 40rpx;
+  width: 80rpx;
+  position: relative;
+  left: 30rpx;
+  vertical-align: top;
+}
+
+.status {
+  color: #009933;
+  /* width: 220rpx; */
+  position: absolute;
+  top: 36rpx;
+  right: 30rpx;
+  font-size: 28rpx;
+}
+
+.rihgtBtns {
+  position: relative;
+  right: 4rpx;
+  top: 16rpx;
+  width: 700rpx;
+  height: 50rpx;
+  text-align: right;
+  padding-right: 20rpx;
+}
+
+.btn_style {
+  position: relative;
+  font-size: 28rpx;
+  padding: 0 25rpx;
+  line-height: 38rpx;
+  /* border-radius: 60rpx; */
+  float: right;
+  color: red;
+  border: 1rpx solid #EC4141;
+  margin-right: 10rpx;
+}
+.btn_style:nth-child(2) {
+  border-color: #666666; 
+  color: #666666;
+}
+.btn_style:nth-child(1) {
+  border-color: #EC4141; 
+  color: #EC4141;
+}
+
+.notdata {
+  padding: 30rpx;
+  font-size: 30rpx;
+}

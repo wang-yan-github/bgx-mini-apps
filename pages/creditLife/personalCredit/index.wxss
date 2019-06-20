@@ -1,0 +1,161 @@
+/* pages/mine/credibility/credibility.wxss */
+page {
+  /* background-color: #ffffff; */
+}
+.top {
+  height: 380rpx;
+  /* padding-top: 20rpx; */
+  position: relative;
+}
+.circle_bg {
+  width: 100%;
+  height: 380rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.circle_img {
+  width: 400rpx;
+  height: 200rpx;
+  position: absolute;
+  left: 175rpx;
+  top: 58rpx;
+  z-index: 5;
+}
+
+.credibility_score {
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  top: 100rpx;
+  z-index: 10;
+  color: #ffffff;
+}
+
+.text1 {
+  font-size: 80rpx;
+  text-align: center;
+  /* color: #fff; */
+  font-family: "微软雅黑";
+}
+
+.text2 {
+  font-size: 30rpx;
+  text-align: center;
+  /* color: #ccc; */
+}
+
+.text3 {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.text4 {
+  width: 600rpx;
+  height: 140rpx;
+  background-color: #fff;
+  margin: 20rpx auto;
+  overflow: hidden;
+  border: 1rpx solid #eee;
+  border-radius: 100rpx;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  left: 75rpx;
+  top: 288rpx;
+  box-shadow: 0rpx 8rpx 8rpx rgba(255, 77, 77, 0.1);
+}
+
+.t4_l {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+
+.t4_l image {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 20rpx;
+}
+
+.t4_r {
+  width: 66%;
+  height: 100%;
+  float: left;
+}
+
+.t4_r_t {
+  font-size: 28rpx;
+  color: #666;
+  padding-top: 30rpx;
+}
+
+.t4_r_b {
+  font-size: 30rpx;
+  margin-top: 6rpx;
+  /* font-weight: 600; */
+}
+
+.CreditPrivileges {
+  height: 300rpx;
+  margin-top: 80rpx;
+  background-color: #fff;
+}
+
+.title {
+  /* margin-top: 45rpx; */
+  clear: both;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  background-color: #ffffff;
+  position: relative;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+}
+.titleImg1 {
+  width: 40rpx;
+  height: 32rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 35rpx;
+}
+.titleText {
+  position: absolute;
+  left: 85rpx;
+  top: 0rpx;
+  font-size: 34rpx;
+}
+.titleImg2 {
+  width: 26rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 26rpx;
+}
+/* 班组规模 */
+.bzgm, .xmjyrz {
+  position: relative;
+}
+.bzgm_notice {
+  position: absolute;
+  right: 54rpx;
+  top: 18rpx;
+  color: #ff5c33;
+}
+.bzgm {
+  margin-top: 20rpx;
+}
+.xmjyrz {
+  margin-bottom: 20rpx;
+}
+
+.white_area {
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+}

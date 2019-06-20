@@ -1,0 +1,17 @@
+/* pages/login/userAgreement/index.wxss */
+.title{
+  text-align: center;
+  font-size: 36rpx;
+}
+.title1{
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  margin-top: 30rpx;
+}
+.content{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  color: #666;
+  font-size: 30rpx;
+}

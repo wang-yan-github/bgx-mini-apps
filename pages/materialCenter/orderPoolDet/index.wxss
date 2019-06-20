@@ -1,0 +1,118 @@
+/* pages/materialCenter/orderPoolDet/index.wxss */
+/* 头部区域 */
+.page_hd {
+  background-color: #ffffff;
+  padding: 30rpx;
+}
+.sp_hd {
+  width: 680rpx;
+  height: 180rpx;
+  position: relative;
+}
+.sp_img {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #dddddd;
+}
+.sp_name {
+  width: 500rpx;
+  height: 180rpx;
+  position: absolute;
+  left: 200rpx;
+  top: 0rpx;
+}
+.sp_name_text {
+  font-size: 36rpx;
+}
+.sp_purchase_num {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+/* 采购详情 */
+.detail {
+  margin-top: 12rpx;
+  background-color: #ffffff;
+}
+.detail_hd {
+  height: 80rpx;
+  position: relative;
+  border-bottom: 1rpx solid #dddddd;
+}
+.red_line {
+  width: 0;
+  height: 28rpx;
+  border-left: 5rpx solid #ec4141;
+  position: absolute;
+  left: 30rpx;
+  top: 28rpx;
+}
+.detail_hd_text {
+  position: absolute;
+  left: 45rpx;
+  top: 21rpx;
+}
+.detail_desc {
+  padding: 0 30rpx;
+  padding-bottom: 30rpx;
+  font-size: 28rpx;
+}
+.detail_desc > view {
+  line-height: 80rpx;
+}
+.notice {
+  /* width: 100%; */
+  font-size: 26rpx;
+  padding: 5rpx 12rpx;
+  background-color: #eeeeee;
+  line-height: 50rpx;
+  border-radius: 12rpx;
+}
+/* 空白隐层 */
+.space_hide {
+  width: 100%;
+  height: 95rpx;
+}
+/* 底部按钮 */
+.fixed_bottom {
+  height: 86rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: -2rpx;
+  left: 0rpx;
+  z-index: 10;
+  border-top: 1rpx solid #dddddd;
+  background-color: #ffffff;
+}
+.bottom_img {
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 8rpx;
+}
+.shoucang, .lianxi {
+  width: 25%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24rpx;
+}
+.btn {
+  width: 50%;
+  float: left;
+  background-color:  #ec4141;
+  height: 86rpx;
+  line-height: 86rpx;
+  font-size: 32rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.btn_active {
+  background-color: #e62e00;
+}
+.bg_green {
+  background-color: #29a329;
+}

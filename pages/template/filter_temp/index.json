@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "筛选页",
+  "usingComponents": {
+    "wux-backdrop": "/pages/vux/backdrop/index"
+  }
+}

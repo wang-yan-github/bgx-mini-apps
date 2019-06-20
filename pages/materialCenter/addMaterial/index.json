@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "添加添加",
+  "usingComponents": {
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-select": "/pages/vux/select/index",
+    "wux-calendar": "/pages/vux/calendar/index",
+    "wux-input": "/pages/vux/input/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-textarea": "/pages/vux/textarea/index"
+  }
+}

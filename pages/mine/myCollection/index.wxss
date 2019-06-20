@@ -1,0 +1,43 @@
+/* pages/mine/myCollection/index.wxss */
+
+@import "/pages/discover/discover/index";
+@import "/pages/findXM/findXM/index";
+@import "/pages/findBGX/findBGX/index";
+
+
+page{
+  background-color: #eee;
+}
+.noContent {
+  background-color: #fff;
+  color: #666;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+}
+
+.top {
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+
+.label {
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #009;
+  position: relative;
+}
+
+.line_ {
+  position: absolute;
+  right: 0;
+  color: #eee;
+}
+
+.item {
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}

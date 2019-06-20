@@ -1,0 +1,37 @@
+
+<!-- 性别级别 -->
+<wux-select id="wux-select-level" />
+<!-- 期望薪资 -->
+<wux-select id="wux-select-salary" />
+<block wx:if="{{ isLinked }}">
+<view class='page'>
+  <wux-cell-group>
+    <!-- 工种 -->
+    <wux-cell title="{{ consType_title }}" must_text  is-link extra="{{ consType_text }}" bind:click="openGongz"></wux-cell>
+
+    <wux-cell title="级别" must_text is-link extra="{{ level }}" data-skey="level" bind:click="openLevel"></wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="从业时间" type='number' must_text bind:change="onWorkTime" focus='{{ workTime_focus }}' extra="(年)" controlled value='{{ workTime }}' placeholder="请输入从业多少年" />
+    </wux-cell>
+
+    <wux-cell title="期望薪资" must_text is-link extra="{{ salary }}" data-skey="salary" bind:click="openSalary"></wux-cell>
+
+   <area-cascader areaNum="3" areaName="可承接地区" bind:myeventArea="onGetArea" regionCode="{{ region_code }}" ></area-cascader>
+
+    <wux-cell is-link title="技能证书" img="{{ certificate_arr }}" extra_img="extra_img" bind:click="onUpCertificate"></wux-cell>
+    
+
+  </wux-cell-group>
+  
+    <!-- 编辑保存 -->
+   <view class='bottom'>
+    <wux-wing-blank>
+      <wux-button block size="default" type="assertive" bind:click="onSave">保存</wux-button>
+    </wux-wing-blank>
+  </view>
+</view>
+<!-- 所需工种 -->
+<sidebar show="{{ showGongz }}" selectVal="{{ consType_text }}" class="sidebar" checkboxArr="{{ consType_list }}" bind:myevent="showGongzArr" sideText="{{ consType_title }}" selectNum="{{ gongzNum }}"></sidebar>
+
+</block>

@@ -1,0 +1,20 @@
+<!--搜索  -->
+<wux-search-bar value="{{ searchText}}" auto="{{ false }}" placeholder="项目名称" bind:change="searchTextonChange" bind:clear="searchTextonClear" />
+<!--项目列表-->
+<view class='main_list'>
+  <view wx:if='{{listData.length>0}}' data-pid='{{list.pId}}' class='item' wx:for="{{listData}}" wx:key="pId" wx:for-item='list' catchtap='oprator_toggle' data-index="{{index}}">
+    <block></block>
+    <view class='item_name'>{{list.pName}}
+      <text class='new'>{{list.x_status == 0?'(最新)':''}}</text>
+    </view>
+    <view class='item_time'>
+      <text>工期：{{list.startTime}}到{{list.endTime}}</text>
+    </view>
+    <view class="item_status {{ list.status == '待审核' ? 'item_status_orange' : list.status == '未通过' ? 'item_status_red' : ''}}">{{list.status}}</view>
+    <view class='item_oprator' wx:if="{{oprator_index==index && oprator_show}}">
+      <view class='item_oprator_item' data-pid='{{list.pId}}' wx:for="{{list.oprator}}" wx:key="{{ item }}" data-text='{{item}}' catchtap='opratorTap'>{{item}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='notdata' wx:if='{{listData.length==0}}'>未查询到数据 . . .</view>

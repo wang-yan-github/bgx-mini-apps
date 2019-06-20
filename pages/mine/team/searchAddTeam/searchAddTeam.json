@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "从平台添加成员",
+  "usingComponents": {
+    "wux-search-bar": "/pages/vux/search-bar/index",
+    "wux-backdrop": "/pages/vux/backdrop/index"
+  }
+}

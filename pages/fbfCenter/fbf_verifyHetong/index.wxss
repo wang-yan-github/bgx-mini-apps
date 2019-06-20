@@ -1,0 +1,67 @@
+/* pages/fbfCenter/tsYyLW_hetongQueren.wxss */
+page{
+  font-size: 30rpx;
+}
+.title{
+  padding-left: 30rpx;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.content{
+  padding-left: 30rpx;
+  color: #666;
+  font-size: 36rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+}
+.weui-grid__icon {
+  width: 210rpx;
+  height: 210rpx;
+}
+.weui-grids{
+  background-color: #fff;
+}
+.weui-grid{
+  border: none;
+}
+.btn_warn_{
+  background-color: red;
+  color: #fff;
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: inline-block;
+  font-size: 32rpx;
+}
+.btn_primary_{
+  margin-left: 100rpx;
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: green;
+  color: #fff;
+  display: inline-block;
+  font-size: 32rpx;
+}
+.fankui_box {
+  margin-top: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.btns {
+  width: 100%;
+  /* padding-left: 30rpx;
+  padding-right: 30rpx; */
+}
+.btn1 {
+  width: 330rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.btn2 {
+  width: 330rpx;
+  float: right;
+   margin-right: 30rpx;
+}

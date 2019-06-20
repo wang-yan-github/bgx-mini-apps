@@ -1,0 +1,19 @@
+{
+  "navigationBarTitleText": "打白条",
+  "usingComponents": {
+    "wux-icon": "/pages/vux/icon/index",
+    "wux-grids": "/pages/vux/grids/index",
+    "wux-grid": "/pages/vux/grid/index",
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-select": "/pages/vux/select/index",
+    "wux-input": "/pages/vux/input/index",
+    "wux-cascader": "/pages/vux/cascader/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-row": "/pages/vux/row/index",
+    "wux-col": "/pages/vux/col/index",
+    "area-cascader": "/pages/components/getArea/index"
+  }
+}

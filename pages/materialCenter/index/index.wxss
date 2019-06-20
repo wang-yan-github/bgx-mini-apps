@@ -1,0 +1,179 @@
+/* pages/materialCenter/index/index.wxss */
+
+page {
+  font-size: 26rpx;
+  color: #555;
+}
+
+.slide-image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.item1 {
+  background: #fff;
+  height: 250rpx;
+  margin-top: 12rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.item2 {
+  background: #fff;
+  height: 200rpx;
+  margin-top: 12rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.item1:first-child, .item2:first-child {
+  margin-top: 0;
+}
+
+.item_unit {
+  width: 100%;
+  height: 240rpx;
+  position: relative;
+}
+
+.item_unit2 {
+  width: 100%;
+  position: relative;
+  height: 200rpx;
+}
+
+/* 热门商品 */
+
+.prod1_img_box {
+  width: 180rpx;
+  height: 180rpx;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 30rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #dddddd;
+  /* padding: 5rpx; */
+  /* display: flex;
+  align-items: center; */
+}
+
+.prod1_img {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.prod1_content {
+  width: 500rpx;
+  height: 180rpx;
+  position: absolute;
+  left: 200rpx;
+  top: 30rpx;
+}
+
+.prod1_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 512rpx;
+  font-size: 30rpx;
+  color: #222;
+}
+.prod1_version {
+ margin-top: 5rpx;
+}
+.prod1_sold, .prod1_area {
+  line-height: 40rpx;
+  font-size: 24rpx;
+  margin-top: 13rpx;
+}
+
+.prod1_price {
+  font-size: 24rpx;
+  min-width: 80rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 90rpx;
+}
+
+.prod1_now_p {
+  font-size: 30rpx;
+  color: #ec4141;
+}
+
+.prod1_org_price {
+  text-decoration: line-through;
+  /* font-size: 24rpx; */
+  line-height: 44rpx;
+}
+
+/* 热门订单 */
+
+.prod2_content {
+  width: 500rpx;
+  height: 140rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 30rpx;
+}
+
+.prod2_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 500rpx;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+  color: #222;
+}
+
+.prod2_buyNum, .prod2_abortTime {
+  font-size: 28rpx;
+  line-height: 46rpx;
+}
+
+.prod2_status {
+  padding: 0 30rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #ec4141;
+  border-radius: 100rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 75rpx;
+}
+
+/* 无列表单时 */
+
+.noOrder {
+  height: 450rpx;
+  text-align: center;
+}
+
+.noOrder_img {
+  margin: 0 auto;
+  margin-top: 120rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.noOrder_text {
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+/* 木有更多了 */
+.noMore {
+  color: #888888;
+  font-size: 22rpx;
+  padding-left: 30rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+.bg_green {
+  background-color: #29a329;
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "拼材料",
+  "usingComponents": {
+    "wux-icon": "/pages/vux/icon/index",
+    "wux-grids": "/pages/vux/grids/index",
+    "wux-grid": "/pages/vux/grid/index",
+    "wux-tabs": "/pages/vux/tabs/index",
+    "wux-tab": "/pages/vux/tab/index",
+    "wux-fab-button": "/pages/vux/fab-button/index"
+  }
+}

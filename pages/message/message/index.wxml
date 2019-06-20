@@ -1,0 +1,44 @@
+<!--pages/message/message/index.wxml-->
+<view class='item' bindtap='system_xiaoxi'>
+  <view class='item_l'>
+    <image src='/pages/icons/system_m.jpg'></image>
+    <block wx:if='{{info.new_x_total != 0}}'>
+      <text class='newXiaoxi'>{{info.new_x_total}}</text>
+    </block>
+  </view>
+  <view class='item_r'>
+    <view class='item_r_t'>系统消息({{info.x_total?info.x_total:'0'}}条)</view>
+    <view class='item_r_b'>{{info.x_content?info.x_content:'暂无消息'}}</view>
+  </view>
+</view>
+
+<block wx:for='{{listData}}'>
+  <view class='item' data-toid='{{item.id}}' data-dutyname='{{item.dutyName}}' data-totype='{{item.typeNum}}' catchtap='liaotian'>
+    <view class='item_l'>
+      <image src='{{item.headPortrait?item.headPortrait:"/pages/icons/touxiang.png"}}'></image>
+      <text class='count' wx:if='{{item.count !== 0}}'> {{item.count>99?'99+':item.count}}</text>
+    </view>
+    <view class='item_r'>
+      <view class='item_r_t'>
+        {{item.dutyName}}({{item.type}})
+        <text class='time'>{{item.timePast}}</text>
+      </view>
+      <view class='item_r_b'>
+        {{item.content == null? '暂无消息':item.content}}
+      </view>
+    </view>
+  </view>
+</block>
+
+<!-- <view class='item' bindtap='liaotian'>
+  <view class='item_l'>
+    <image src='/pages/icons/liaotian_m.jpg'></image>
+    <block wx:if='{{info.new_l_total != 0}}'>
+      <text class='newXiaoxi'>{{info.new_l_total>99?'99+':info.new_l_total}}</text>
+    </block>
+  </view>
+  <view class='item_r'>
+    <view class='item_r_t'>聊天消息({{info.l_total?info.l_total:'0'}}条)</view>
+    <view class='item_r_b'>{{info.l_content?info.l_content:'暂无消息'}}</view>
+  </view>
+</view> -->

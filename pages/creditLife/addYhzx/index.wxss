@@ -1,0 +1,49 @@
+/* pages/bgxCenter/bgx_upHetong.wxss */
+page {
+  font-size: 32rpx;
+}
+.cell_title {
+  font-size: 34rpx;
+  height: 60rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.cn_text {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666666;
+}
+.imgs_box {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.item_img {
+  width: 690rpx;
+  height: 400rpx;
+}
+.status {
+  margin-top: 20rpx;
+}
+.status_text {
+  color: #ff6600;
+}
+.zczm_btn {
+  width: 165rpx;
+  height: 165rpx;
+  line-height: 165rpx;
+  text-align: center;
+  background-color: #ffffff;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+.add_icon {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 52.5rpx;
+  top: 52.5rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单池",
+  "usingComponents": {
+    "wux-search-bar": "/pages/vux/search-bar/index",
+    "area-cascader": "/pages/components/topArea/index"
+  }
+}

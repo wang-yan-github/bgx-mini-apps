@@ -1,0 +1,44 @@
+<!--pages/message/page/index.wxml-->
+<view class="bottom">
+  <view class='faceInfo' hidden='{{!faceDisabled}}'>
+    <view class="wechat-emoji" wx:for='{{face}}'>
+      <view class="wechat-emoji_">
+        <image catchtap='faceTap' src="{{item.src}}" data-text="{{item.text}}" data-desc="{{item.discrible}}" />
+      </view>
+    </view>
+  </view>
+  <view class="fasong_l">
+    <image class='face' catchtap='clickFace' src='/pages/icons/face.png'></image>
+    <input class="shuru_text" placeholder="请输入内容" value='{{shuru_text}}' bindinput='shuru_text' />
+  </view>
+  <view class="fasong_r">
+    <button class="dark" catchtap='fasong'>发送</button>
+  </view>
+</view>
+
+<!-- 聊天内容 -->
+<view id='j_page'>
+  <block wx:for='{{liaotian_content}}'>
+    <view class='time' wx:if='{{item.isTime && item.add_time}}'>
+      <text>{{item.add_time}}</text>
+    </view>
+    <view class='content' wx:if='{{myId != item.bid}}'>
+      <view class='content_l'>
+        <image src='{{item.headPortrait?item.headPortrait: "/pages/icons/touxiang.png"}}'></image>
+      </view>
+      <view class='content_r'>
+        <rich-text nodes='{{item.nodes1}}'></rich-text>
+      </view>
+    </view>
+    <view class='content1' wx:else>
+      <view class='content1_l'>
+        <rich-text nodes='{{item.nodes1}}'></rich-text>
+      </view>
+      <view class='content1_r'>
+        <image src='{{item.headPortrait?item.headPortrait: touxiang}}'></image>
+      </view>
+    </view>
+  </block>
+</view>
+<view class='bottom_'></view>
+<view class=''></view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "查看文件",
+  "usingComponents": {
+    "wux-row": "/pages/vux/row/index",
+    "wux-col": "/pages/vux/col/index",
+    "wux-white-space": "/pages/vux/white-space/index"
+  }
+}

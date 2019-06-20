@@ -1,0 +1,261 @@
+/* pages/AmyTest/searchList/index.wxss */
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+
+page {
+  font-size: 28rpx;
+}
+/*上三角*/
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 10rpx solid #555555;
+}
+.triangle-up1 {
+  width: 0;
+  height: 0;
+  border-left: 6rpx solid transparent;
+  border-right: 6rpx solid transparent;
+  border-bottom: 6rpx solid #555555;
+  display: inline-block;
+  position: relative;
+  top: -11rpx;
+  left: 8rpx;
+}
+.triangle-up1-active {
+  border-bottom-color: red;
+}
+.triangle-down1 {
+  width: 0;
+  height: 0;
+  border-left: 6rpx solid transparent;
+  border-right: 6rpx solid transparent;
+  border-top: 6rpx solid #666666;
+  display: inline-block;
+  position: relative;
+  top: 1rpx;
+  left: -1rpx;
+}
+/*向下三角*/
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 10rpx solid #666666;
+  display: inline-block;
+  position: relative;
+  top: -3rpx;
+  left: 8rpx;
+}
+.triangle-down-active {
+  border-top-color: red;
+}
+.page_bar {
+  width: 100%;
+  background-color: #ffffff;
+  height: 100rpx;
+  position: relative;
+}
+.topItem {
+  width: 25%;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  float: left;
+  overflow: hidden;
+}
+.topItem_active {
+  color: red;
+}
+.t_name {
+  display: inline-block;
+}
+
+
+/* 产品列表 */
+.prod_item {
+  padding: 30rpx;
+  padding-bottom: 25rpx;
+  margin-top: 12rpx;
+  background-color: #ffffff;
+  /* border: salmon 1rpx solid; */
+  /* border-radius: 12rpx; */
+}
+.prod_item:first-child {
+  margin-top: 0;
+  border-top: 1rpx solid #dddddd;
+}
+.prod_img_box {
+  width: 180rpx;
+  height: 180rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  border: 1rpx solid #dddddd;
+  /* padding: 5rpx; */
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.prod_img {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+.prod_c {
+  width: 468rpx;
+  height: 180rpx;
+  display: inline-block;
+  position: relative;
+  top: 0rpx;
+}
+.prod_name {
+  width: 450rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+}
+.prod_price {
+  font-size: 22rpx;
+  position: absolute;
+  top: 100rpx;
+  left: 0rpx;
+}
+.price_red {
+  color: red;
+  font-size: 32rpx;
+}
+.org_price {
+  font-size: 24rpx;
+  position: absolute;
+  top: 148rpx;
+  left: 0rpx;
+  text-decoration:line-through;
+}
+.prod_flags {
+  font-size: 22rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 0rpx;
+}
+.prod_flag {
+  padding: 0rpx 15rpx;
+  border: 1rpx solid #ff944d;
+  border-radius: 5rpx;
+  line-height: 28rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.price_sm {
+  font-size: 22rpx;
+}
+.prod_sold {
+  font-size: 24rpx;
+  padding: 0 15rpx;
+  line-height: 40rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0rpx;
+}
+
+/*品名弹出层*/
+.pm_modal_mask {
+  width: 100%;
+  height: 1150rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 100rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+.pm_modal {
+  font-size: 26rpx;
+  height: 500rpx;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 2rpx solid #eeeeee;
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  z-index: 999;
+}
+.scroll-view_H {
+  height: 414rpx;
+  box-sizing: border-box;
+}
+.scroll-view_H1 {
+  border-right: 1rpx solid #eeeeee;
+}
+.scroll-view{
+  float: left;
+}
+.pm_left {
+  width: 100%;
+  box-sizing: border-box;
+}
+.pm_right {
+  width: 100%;
+  box-sizing: border-box;
+}
+.pm_item {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.pm_left_item {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #eeeeee;
+  line-height: 68rpx;
+}
+.pm_btns {
+  clear: both;
+  width: 100%;
+  height: 86rpx;
+  border-top: 1rpx solid #aaaaaa;
+}
+.pm_btn {
+  width: 50%;
+  float: left;
+  line-height: 86rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.pm_btn1 {
+  color: #666666;
+}
+.pm_btn2 {
+  color: #ffffff;
+  background-color: red;
+}
+.color_red {
+  color: red;
+}
+
+/* 木有更多了 */
+.noMore {
+  color: #888888;
+  font-size: 22rpx;
+  padding-left: 30rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+
+/* 底层content控制 */
+.bodyLock{
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 0;
+}

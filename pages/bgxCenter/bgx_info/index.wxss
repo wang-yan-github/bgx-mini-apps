@@ -1,0 +1,185 @@
+/* pages/bgxCenter/fillInfo1/index.wxss */
+page {
+  background: #ffffff;
+  font-size: 30rpx;
+}
+.page {
+  padding-left: 10rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  
+}
+.personInfo {
+  /* border-radius: 20rpx; */
+  /* border-top: 4rpx solid #ec4141; */
+  background: #ffffff;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-bottom: 30rpx;
+  /* border-bottom: 1rpx solid #eeeeee; */
+}
+.gexxShowInfo {
+  min-height: 160rpx;
+}
+
+.showInfo {
+  position: relative;
+  /* padding-top: 10rpx; */
+  padding-left: 20rpx;
+  /* padding-bottom: 20rpx; */
+  padding-right: 10rpx;
+}
+
+.showInfo view {
+  line-height: 60rpx;
+}
+.editPhone {
+  width: 280rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  background-color: #eeeeee;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  border-radius: 50rpx;
+  border: 1rpx solid transparent;
+  position: relative;
+}
+.editPhone_active {
+  border: 1rpx solid #ec4141;
+  color: #ec4141;
+}
+.phone {
+  font-size: 34rpx;
+}
+.phone_img {
+  width: 52rpx;
+  height: 52rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 12rpx;
+}
+
+.common_title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+  position: relative;
+  /* border-bottom: 1rpx solid #bbbbbb; */
+}
+.common_title .title_img {
+  position: absolute;
+  top: 16rpx;
+  left: 0rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.common_title .title {
+  position: absolute;
+  left: 45rpx;
+}
+.common_title .link_you {
+  position: absolute;
+  top: 22rpx;
+  right: 0rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+.face {
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 10rpx;
+}
+.face_image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+/* 业务信息 */
+.yewuInfo, .projectInfo {
+  margin-top: 20rpx;
+  /* border-top: 4rpx solid #ec4141; */
+  background: #ffffff;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-bottom: 30rpx;
+}
+.projectInfo {
+  padding-right: 0;
+}
+.certificate {
+  padding-top: 15rpx;
+}
+.certificate_img{
+  width: 155rpx;
+  height: 155rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+}
+.zhengshu {
+  /* border-top: 1rpx solid #dddddd; */
+  border-bottom: 1rpx solid #dddddd;
+}
+.showYwxx {
+  /* font-size: 26rpx; */
+  color: #666666;
+  position: absolute;
+  left: 170rpx;
+  font-weight: normal;
+}
+
+/* 项目业绩 */
+.yj_line {
+  clear: both;
+  margin-top: 30rpx;
+  padding-left: 12rpx;
+}
+
+.common_title .xmyj_img {
+  width: 36rpx;
+  height: 36rpx;
+  position: absolute;
+  top: 22rpx;
+  left: 8rpx;
+}
+.common_title .xmyj_text {
+  position: absolute;
+  left: 46rpx;
+}
+.common_title text.xmyj_add {
+  width: 100rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  font-weight: normal;
+  font-size: 34rpx;
+  color: #ec4141;
+}
+
+.xm_name {
+  position: relative;
+  font-size: 32rpx;
+}
+.xm_name .link_you {
+  position: absolute;
+  top: 15rpx;
+  right: 10rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.showInfo_yj {
+  padding-left: 0rpx;
+}
+
+/*空格处理*/
+.white_pre {
+  white-space:pre-wrap;
+}

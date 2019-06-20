@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "编辑业务信息",
+  "usingComponents": {
+    "wux-icon": "/pages/vux/icon/index",
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-button": "/pages/vux/button/index",
+    "wux-select": "/pages/vux/select/index",
+    "wux-calendar": "/pages/vux/calendar/index",
+    "wux-input": "/pages/vux/input/index",
+    "area-cascader": "/pages/components/getArea/index",
+    "wux-segmented-control": "/pages/vux/segmented-control/index",
+    "sidebar": "/pages/components/sidebar/index"
+  }
+}

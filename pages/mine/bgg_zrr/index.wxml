@@ -1,0 +1,15 @@
+<!--pages/bggCenter/bgg_xmjl/index.wxml-->
+<view class='page_hd'>
+  <image class='home' src="../../icons/index_select.png"></image>
+  <text class='xm_name'>青岛地铁1号线文明路三段</text>
+  <text class='change_xm'>切换项目</text>
+  <image class='change_img' src="../../icons/qiehuan.png"></image>
+</view>
+
+<view class='page_bd'>
+  <wux-grids col="4">
+    <block wx:for="{{ listData }}">
+      <wux-grid data-index="{{ index }}" thumb="{{ item.img }}" label="{{ item.text }}" bind:click="onThetap" />
+    </block>
+  </wux-grids>
+</view>

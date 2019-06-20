@@ -1,0 +1,87 @@
+<!-- <image class='not_more' src='/pages/images/not_more.png'></image> -->
+
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 功能介绍 -->
+<wux-row>
+  <wux-col span="6">
+    <view class="item">
+      <view class='item_l'>
+        <image src='/pages/icons/dbt1.png'></image>
+      </view>
+      <view class='item_r'>
+        <text class='text title'>信用借款</text>
+        <view class='text'>江湖信用抵钱用</view>
+      </view>
+    </view>
+  </wux-col>
+  <wux-col span="6">
+    <view class="item">
+      <view class='item_l'>
+        <image src='/pages/icons/dbt2.png'></image>
+      </view>
+      <view class='item_r'>
+        <text class='text title'>超值优惠</text>
+        <view class='text'>多种分期,0手续费</view>
+      </view>
+    </view>
+  </wux-col>
+  <wux-col span="6">
+    <view class="item">
+      <view class='item_l'>
+        <image src='/pages/icons/dbt3.png'></image>
+      </view>
+      <view class='item_r'>
+        <text class='text title'>超高额度</text>
+        <view class='text'>专人服务,全程跟踪</view>
+      </view>
+    </view>
+  </wux-col>
+  <wux-col span="6">
+    <view class="item">
+      <view class='item_l'>
+        <image src='/pages/icons/dbt4.png'></image>
+      </view>
+      <view class='item_r'>
+        <text class='text title'>申请方便</text>
+        <view class='text'>所需材料少,更方便</view>
+      </view>
+    </view>
+  </wux-col>
+</wux-row>
+
+<wux-cell-group>
+  <wux-cell isLink title="借款用途" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>
+  <wux-cell isLink title="借款金额" extra="{{ title2 }}" bind:click="onClick2"></wux-cell>
+  <wux-cell hover-class="none">
+    <wux-input label="您的称呼" bind:change="name" placeholder='请输入你的姓名' />
+  </wux-cell>
+  <wux-cell hover-class="none">
+    <wux-input label="您的电话" placeholder='请输入你的电话' value="{{ value }}" controlled error="{{ error }}" type="number" bind:change="onChange" bind:focus="onFocus" bind:blur="onBlur" bind:confirm="onConfirm" bind:clear="onClear" bind:error="onError" />
+  </wux-cell>
+</wux-cell-group>
+
+
+
+<wux-select id="wux-select1" />
+<wux-select id="wux-select2" />
+<!-- <wux-cascader visible="{{ visible3 }}" default-value="{{ value3 }}" title="所在地区" options="{{ options3 }}" bind:close="onClose3" bind:change="onChange3" /> -->
+  <area-cascader areaNum="3" areaName="户籍" bind:myeventArea="onGetArea" regionCode="{{ region_code }}" ></area-cascader>
+
+
+<wux-white-space />
+<wux-white-space />
+<view class='bottom'>
+  <wux-wing-blank>
+    <wux-button block type="assertive" bind:click="banli">一键申请预约办理</wux-button>
+  </wux-wing-blank>
+</view>
+<wux-white-space />
+<wux-white-space />

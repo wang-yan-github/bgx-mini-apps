@@ -1,0 +1,92 @@
+/* pages/mine/mine.wxss */
+
+.header {
+  height: 200rpx;
+  width: 100%;
+  background-color: #ec4141;
+  overflow: hidden;
+}
+
+.fl {
+  float: left;
+  height: 100%;
+  width: 30%;
+}
+
+.fl image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 40rpx;
+  margin-top: 25rpx;
+  border: 2rpx solid #eee;
+  border-radius: 10rpx;
+}
+
+.fr {
+  float: left;
+  height: 100%;
+  width: 70%;
+}
+
+.fr_t {
+  height: 100rpx;
+  /* background-color: #fff; */
+}
+
+.fr_b {
+  height: 100rpx;
+  position: relative;
+}
+
+.name {
+  position: relative;
+  top: 40rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+
+.tel {
+  position: relative;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.margin_t_40 {
+  margin-top: 40rpx;
+}
+
+.info_more {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: -20rpx;
+}
+
+.tip {
+  position: absolute;
+  right: 65rpx;
+  top: -22rpx;
+  color: yellow;
+}
+
+wux-grid image {
+  width: 91rpx;
+  height: 91rpx;
+}
+.wux-grid{
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  display: block;
+  top: 20rpx;
+  right: 40rpx;
+  border-radius: 40rpx;
+  background-color: red;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  padding: 2rpx 12rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "系统设备",
+  "usingComponents": {
+    "wux-search-bar": "/pages/vux/search-bar/index",
+    "area-cascader": "/pages/components/topArea/index"
+  }
+}

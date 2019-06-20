@@ -1,0 +1,138 @@
+/* pages/mine/credibility/credibility.wxss */
+
+.top {
+  height: 540rpx;
+  background-color: #444;
+  padding-top: 20rpx;
+}
+
+.circle {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.credibility_score {
+  width: 300rpx;
+  height: 200rpx;
+  position: absolute;
+  top: 35rpx;
+  left: 33rpx;
+  padding-top: 80rpx;
+}
+
+.text1 {
+  font-size: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-family: "微软雅黑";
+}
+
+.text2 {
+  font-size: 30rpx;
+  text-align: center;
+  color: #ccc;
+}
+
+.text3 {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #ccc;
+}
+
+.text4 {
+  width: 90%;
+  height: 140rpx;
+  background-color: #fff;
+  margin: 20rpx auto;
+  overflow: hidden;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  z-index: 2;
+}
+
+.t4_l {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.t4_l image {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 20rpx;
+}
+
+.t4_r {
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+.t4_r_t {
+  font-size: 28rpx;
+  color: #666;
+  padding-top: 30rpx;
+}
+
+.t4_r_b {
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.CreditPrivileges {
+  height: 300rpx;
+  margin-top: 80rpx;
+  background-color: #fff;
+}
+
+.title {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  background-color: #f9f9f9;
+}
+
+.Privileges {
+  overflow: hidden;
+  border: 1rpx solid #eee;
+  padding: 10rpx;
+}
+
+.Privileges_item {
+  width: 50%;
+  height: 100rpx;
+  float: left;
+  overflow: hidden;
+}
+
+.Privileges_l {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.Privileges_l image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 25rpx;
+  margin-top: 10rpx;
+}
+
+.Privileges_r {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.Privileges_r_t1 {
+  font-size: 28rpx;
+  padding-top: 18rpx;
+}
+
+.Privileges_r_t2 {
+  font-size: 22rpx;
+  color: #666;
+}

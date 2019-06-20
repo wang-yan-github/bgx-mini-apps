@@ -1,0 +1,11 @@
+<!--pages/fbfCenter/selectFbfs/index.wxml-->
+<view class='page'>
+  <view class='weituofb' hover-class='active' bindtap='onWeituofb'>
+    <view class='text1'>委托发包</view>
+    <view class='text2'>联系平台委托发包，方便快捷</view>
+  </view>
+  <view class='zizhufb' hover-class='active' bindtap='onZizhufb'>
+    <view class='text1'>自主发包</view>
+    <view class='text2'>自己发包内容可控，找人更精准</view>
+  </view>
+</view>

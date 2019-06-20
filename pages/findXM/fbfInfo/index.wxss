@@ -1,0 +1,127 @@
+/* pages/findXM/fbfInfo/index.wxss */
+.topImage{
+  height: 235rpx;
+  width: 100%;
+  background-color: #ccc;
+}
+.topImage image{
+  height: 235rpx;
+  width: 100%;
+}
+.fbfLogo{
+  height: 80rpx;
+  background-color: #fff;
+  position: relative
+}
+.fbfLogo image{
+  width: 120rpx;
+  height: 120rpx;
+  border: 1rpx solid #ec4141;
+  background-color: #eee;
+  position: absolute;
+  top:-50rpx;
+  left: 100rpx;
+}
+.fbfName{
+  font-size: 36rpx;
+  padding-left: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+}
+
+.renzheng{
+  font-size: 26rpx;
+  color: #ec4141;
+  padding: 5rpx 15rpx;
+  background-color: #fff3ee;
+}
+
+.tabs_title {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+  font-size: 30rpx;
+  background-color: #fffcec;
+  color: #666;
+}
+
+.tabs_content {
+  background-color: #fff;
+  padding: 30rpx 40rpx;
+}
+
+.conten_item {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.pingjiaLabel {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fff;
+  padding: 40rpx 40rpx 0;
+}
+
+.pingjiaLabel text {
+  background-color: #fff3ee;
+  padding: 5rpx 20rpx;
+  border-radius: 20rpx;
+  margin-right: 15rpx;
+}
+
+.pingjiaLabel .active {
+  background-color: #ec4141;
+  color: #fff;
+}
+
+.pingjiaItem {
+  background-color: #fff;
+  padding: 40rpx 40rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #eee;
+}
+
+.pingjia_l {
+  width: 15%;
+  height: 80rpx;
+  float: left;
+}
+
+.pingjia_l image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.pingjia_r {
+  width: 85%;
+  height: 80rpx;
+  float: left;
+  position: relative;
+}
+
+.pingjiaTime {
+  position: absolute;
+  font-size: 22rpx;
+  color: #666;
+  right: 0;
+  top: 0;
+}
+
+.pingjia_con{
+  clear: both;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.noCom{
+  padding: 40rpx;
+  font-size: 26rpx;
+}

@@ -1,0 +1,41 @@
+<!--pages/bgxCenter/fillInfo1/index.wxml-->
+<!-- 性别选择id -->
+<wux-select id="wux-select-sex" />
+<!-- 出生日期id -->
+<wux-calendar id="wux-calendar" />
+<!-- 民族 -->
+<wux-select id="wux-select-nation" />
+<!-- 学历 -->
+<wux-select id="wux-select-edu" />
+<block wx:if="{{ isLinked }}">
+<view class='page'>
+  <wux-cell-group>
+    <wux-cell is-link title="头像" img="{{ face_arr }}" extra_img="extra_img" bind:click="onUpFace"></wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="昵称" bind:change="onNickname" controlled value='{{ nickname }}' placeholder="请输入昵称"></wux-input>
+    </wux-cell>
+
+    <wux-cell hover-class="none">
+      <wux-input label="姓名" must_text bind:change="onName" focus='{{ name_focus }}' controlled value='{{ name }}' placeholder="请输入姓名"></wux-input>
+    </wux-cell>
+
+    <wux-cell title="性别" must_text is-link extra="{{ sex }}" bind:click="openSex"></wux-cell>
+
+    <wux-cell title="出身日期" is-link extra="{{ birthday }}" bind:click="openCalendar"></wux-cell>
+
+    <wux-cell title="民族" is-link extra="{{ nation }}" bind:click="openNation"></wux-cell>
+
+    <wux-cell title="文化程度" is-link extra="{{ education }}" bind:click="openEdu"></wux-cell>
+    <view class='line'></view>
+    <area-cascader areaNum="3" areaName="户籍" bind:myeventArea="onGetArea" regionCode="{{ region_code }}" ></area-cascader>
+  </wux-cell-group>
+
+  <!-- 编辑保存 -->
+  <view class='bottom'>
+    <wux-wing-blank>
+      <wux-button block size="default" type="assertive" bind:click="onSave">保存</wux-button>
+    </wux-wing-blank>
+  </view>
+</view>
+</block>

@@ -1,0 +1,28 @@
+<!--pages/mine/setting/setting.wxml-->
+<wux-cell-group>
+  <wux-cell is-link title="修改手机" bind:click="editPhone"></wux-cell>
+  <block wx:if="{{type != 1}}">
+    <wux-cell is-link title="工作状态" bind:click="workerStatus" bind:click="onClick1"></wux-cell>
+  </block>
+</wux-cell-group>
+
+<wux-white-space />
+<wux-white-space />
+
+<wux-cell-group>
+  <wux-cell is-link title="意见反馈" bind:click="feedback"></wux-cell>
+  <wux-cell is-link title="帮助中心" bind:click="helpCenter"></wux-cell>
+  <wux-cell is-link title="联系我们" bind:click="contactUs"></wux-cell>
+</wux-cell-group>
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+
+
+<wux-wing-blank>
+  <wux-button block type="dark" bind:click="logOut">退出登录</wux-button>
+</wux-wing-blank>
+
+
+<wux-select id="wux-select1" />

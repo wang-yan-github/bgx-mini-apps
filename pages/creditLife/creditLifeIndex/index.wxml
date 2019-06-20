@@ -1,0 +1,48 @@
+<!--pages/creditLife/creditLifeIndex/index.wxml-->
+<view class='page'>
+  <view class='top'>
+    <image class='top_bg' src='/pages/icons/xysh_bg.png'></image>
+    <view class='top_text1'>
+      <view class='top_text2'>嗨，{{userName}}！</view>
+      <!-- <view class='top_text2'>
+        您有
+        <text class='top_num'>56个</text>信用服务可使用
+      </view> -->
+      <!-- <view class='top_ck_box'>
+        <view class='top_ck'>点击查看</view>
+        <view class='triangle_pos triangle-right'></view>
+      </view> -->
+    </view>
+    <view class='circle_area'>
+      <view class='cirlce'>
+        <wux-circle sAngle="100" percent="{{score/1000*100}}" background-color="#dddddd" color="#FD7C1F" size="92" strokeWidth="8"></wux-circle>
+        <view class='score'>{{score}}</view>
+        <view class='level'>{{creditRating}}</view>
+      </view>
+
+      <view class='circle_text1' catchtap='upCredit'>提升信用</view>
+      <view class='circle_text2'>我的江湖积分</view>
+      <view class='circle_text3'>关于我 ></view>
+    </view>
+  </view>
+  <!-- 留白区域 -->
+  <view class='white_area'></view>
+  <!-- 主体区域 -->
+  <view class='mainList'>
+    <block wx:for="{{ mainList }}" wx:key="*this.name">
+      <view class='item' data-index='{{ index }}'>
+        <image class='item_img' src='{{ item.img }}'></image>
+        <view class='item_text'>
+          <view class='item_title1'>{{ item.name }}</view>
+          <view class='item_title2'>{{ item.name_ss }}</view>
+          <view class='item_title3'>
+            <text class='xin_flag'>信</text>
+            <text class='xin_text'>{{ item.intro }}</text>
+          </view>
+        </view>
+        <view class='qianwang' data-index='{{ index }}' bindtap='onItemClick'>{{ item.text }}</view>
+      </view>
+    </block>
+  </view>
+
+</view>

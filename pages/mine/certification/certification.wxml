@@ -1,0 +1,49 @@
+<!--pages/mine/setting/certification/certification.wxml-->
+<wux-white-space />
+<wux-wing-blank>
+  <wux-alert closable theme="assertive" label="证件由系统自动审核完成，并且会对用户信息严格保密" />
+</wux-wing-blank>
+<wux-white-space />
+<wux-white-space />
+
+<view class='title'>
+  <text>添加头像</text>
+  <text class='title_discrible'>请上传本人正面免冠头像照片</text>
+</view>
+
+<wux-wing-blank>
+  <view class='touxiang' catchtap='uploadHead1'>
+    <image src='{{uploadHead?uploadHead:"/pages/icons/touxiang.png"}}'></image>
+    <text>点击上传</text>
+  </view>
+</wux-wing-blank>
+
+<view class='title'>
+  <text>添加身份证</text>
+</view>
+
+<wux-wing-blank>
+  <view class='swap'>
+    <view class='card' style='margin-left:{{marLeft}}rpx' bindtap='uploadFront1'>
+      <image src='/pages/icons/idcard_z.png'> </image>
+      <text>身份证正面</text>
+      <image class='image_' src='{{uploadFront}}'></image>
+    </view>
+    <view class='card' bindtap='uploadReverse1'>
+      <image src='/pages/icons/idcard_f.png'></image>
+      <text>身份证反面</text>
+      <image class='image_' src='{{uploadReverse}}'></image>
+    </view>
+    <!-- <view class='point'>
+      <view class='point_l {{turn=="right"?"active":""}}'></view>
+      <view class='point_r {{turn=="left"?"active":""}}'></view>
+    </view> -->
+  </view>
+</wux-wing-blank>
+<view wx:if="{{shenheDisabled}}" class="shenheInfo">审核结果：{{shenheInfo}}</view>
+
+<view class="bottom">
+  <wux-wing-blank>
+    <wux-button disabled="{{btnDisabled}}" block type="assertive" bind:click='submit'>提交</wux-button>
+  </wux-wing-blank>
+</view>

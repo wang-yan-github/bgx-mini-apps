@@ -1,0 +1,20 @@
+<!--pages/mine/setting/contactUs/contactUs.wxml-->
+<view class='logo'>
+  <image src='/pages/icons/logo.png'></image>
+  <text>2.2.4版本</text>
+</view>
+
+<wux-cell-group title="">
+  <wux-cell thumb="" title="客服专线" extra="028-88702845"></wux-cell>
+  <wux-cell thumb="" title="客服QQ" extra="3235046695"></wux-cell>
+  <wux-cell thumb="" title="官方邮箱" extra="baogongxia@qq.com"></wux-cell>
+  <wux-cell thumb="" title="QQ交流群" extra="213724825"></wux-cell>
+  <wux-cell thumb="" title="微信公众号" extra="包工侠"></wux-cell>
+</wux-cell-group>
+
+<view class="bottom">
+  <view class="bgx_describe">
+    包工侠-国内首家施工业劳务征信运营平台
+  </view>
+  <view class="bgx_record">京ICP备16032010号</view>
+</view>

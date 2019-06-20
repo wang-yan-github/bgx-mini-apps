@@ -1,0 +1,90 @@
+<!-- 性别级别 -->
+<wux-select id="wux-select-rank" />
+<!-- 期望薪资 -->
+<wux-select id="wux-select-salary" />
+<!-- 工期开始日期 -->
+<wux-calendar id="wux-calendar1" />
+<!-- 工期结束日期 -->
+<wux-calendar id="wux-calendar2" />
+<!-- 招标截止 -->
+<wux-calendar id="wux-calendar3" />
+<!-- 进场时间 -->
+<wux-calendar id="wux-calendar4" />
+
+<block wx:if="{{ isLinked }}">
+  <view class='page'>
+
+    <wux-cell-group>
+      <wux-cell hover-class="none">
+        <wux-input label="项目名称" controlled value="{{ pName }}" bind:change="onPname" focus='{{ pName_focus }}' must_text placeholder="请输入项目名称" />
+      </wux-cell>
+
+      <wux-cell title="发布主体" class="fazhuti" bind:click="openFbzt">
+        <view class='zhutiText'>{{ projectType_text }}</view>
+        <view class='triangle-down zhutipos'></view>
+      </wux-cell>
+
+      <view class='zhuti_select' wx:if="{{ fbzhuti }}">
+        <view class="zhuti_item {{ currProjectType ==  selectFB[0].id ? 'zhuti_active' : '' }}" data-text="{{ selectFB[0].text }}" data-id="{{ selectFB[0].id }}" catchtap='onFbzt'>{{ selectFB[0].text }}</view>
+        <view class="zhuti_item {{ currProjectType ==  selectFB[1].id ? 'zhuti_active' : '' }} " data-text="{{ selectFB[1].text }}" data-id="{{ selectFB[1].id }}" catchtap='onFbzt'>{{ selectFB[1].text }}</view>
+      </view>
+      <!-- 工程类别 -->
+      <wux-cell title="{{ technicalType_title }}" data-skey="{{ technicalType_skey }}" must_text is-link extra="{{ technicalType_text }}" bind:click="openGclb"></wux-cell>
+      <!-- 所需工种 -->
+      <wux-cell title="{{ consType_title }}" data-skey="{{ consType_skey }}" is-link extra="{{ consType_text }}" bind:click="openGongz"></wux-cell>
+
+      <wux-cell class="workTime" must_text title="项目工期">
+        <view class='workTime_pos'>
+          <view class='workTimeStart fl' bindtap='openCalendar1'>
+            <image class='rili' src='/pages/icons/start_time.png'></image>
+            <text class='gongqi_pos'>{{ startTime }}</text>
+            <view class='triangle-down triangle-time triangle-time1'></view>
+          </view>
+          <view class='workTimeEnd fl' bindtap='openCalendar2'>
+            <image class='rili' src='/pages/icons/end_time.png'></image>
+            <text class='gongqi_pos'>{{ endTime }}</text>
+            <view class='triangle-down triangle-time'></view>
+          </view>
+        </view>
+      </wux-cell>
+
+      <wux-cell hover-class="none">
+        <wux-input label="项目预算" type="digit" bind:change="onMoney" controlled value='{{ money }}' focus='{{ money_focus }}' placeholder="请输入项目预算" extra="(万)" />
+      </wux-cell>
+      <block wx:if="{{ isLinked }}">
+        <area-cascader areaNum="3" areaName="施工区域" bind:myeventArea="onGetArea" regionCode="{{ region_code }}"></area-cascader>
+      </block>
+
+
+      <wux-cell hover-class="none">
+        <wux-input label="项目地址" value='{{ pAddress }}' bind:change="onAddress" focus='{{ pAddress_focus }}' controlled must_text placeholder="请输入项目详细地址" />
+      </wux-cell>
+
+      <wux-cell is-link must_text title="招标截止" bind:click="openCalendar3" extra="{{ abortTime }}"></wux-cell>
+      <wux-cell is-link must_text title="进场时间" bind:click="openCalendar4" extra="{{ enterTime }}"></wux-cell>
+
+      <wux-cell is-link title="项目附件" img="{{ fujian_arr }}" extra_img="extra_img" bind:click="onUpFujian"></wux-cell>
+
+      <wux-cell hover-class="none">
+        <wux-input label="项目备案号" controlled value='{{ recordNumber }}' bind:change="onRecordNumber" placeholder="请输入项目备案号" />
+      </wux-cell>
+
+      <wux-cell>
+        <wux-input must_text label="项目描述" maxlength="200" controlled value='{{ pDescribe }}' bind:change="onDescribe" placeholder="请输入项目描述" />
+        <!-- <textarea auto-height cursor-spacing="15" maxlength='200' bindinput="onDescribe" value='{{ pDescribe }}' focus='{{ pDescribe_focus }}' placeholder="请输入项目描述..." /> -->
+        <!-- <view class='calcLen'>{{ desTextLen }}/200</view> -->
+      </wux-cell>
+    </wux-cell-group>
+
+    <view class='fbbtn'>
+      <wux-wing-blank>
+        <wux-button block size="default" type="assertive" bind:click="onIssue">确认修改</wux-button>
+      </wux-wing-blank>
+    </view>
+  </view>
+  <!-- 工程类别 -->
+  <sidebar show="{{ showGclb }}" selectVal="{{ technicalType_text }}" checkboxArr="{{ technicalType_list }}" bind:myevent="showGclbArr" sideText="{{ technicalType_title }}" selectNum="{{ gclbNum }}"></sidebar>
+
+  <!-- 所需工种 -->
+  <sidebar show="{{ showGongz }}" selectVal="{{ consType_text }}" class="sidebar" checkboxArr="{{ consType_list }}" bind:myevent="showGongzArr" sideText="{{ consType_title }}" selectNum="{{ gongzNum }}"></sidebar>
+</block>

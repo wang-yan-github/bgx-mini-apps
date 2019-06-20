@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "项目详情",
+  "usingComponents": {
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-circle": "/pages/vux/circle/index",
+    "wux-row": "/pages/vux/row/index",
+    "wux-col": "/pages/vux/col/index",
+    "wux-button": "/pages/vux/button/index"
+  }
+}

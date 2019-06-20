@@ -1,0 +1,19 @@
+/* pages/materialCenter/secondMaterial/index.wxss */
+.page {
+  text-align: center;
+}
+.notice_box {
+  width: 300rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  margin-top: 320rpx;
+}
+.notice_img {
+  width: 240rpx;
+  height: 240rpx;
+}
+.notice_text {
+  font-size: 28rpx;
+  margin-top: 12rpx;
+  color: #444444;
+}

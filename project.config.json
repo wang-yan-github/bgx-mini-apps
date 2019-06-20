@@ -1,0 +1,482 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"uglifyFileName": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wx969a0bc85be1ccf2",
+	"projectname": "bgx2.52",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 72,
+			"list": [
+				{
+					"id": -1,
+					"name": "登录页",
+					"pathName": "pages/login/ipone/poneLogin",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "切换页面",
+					"pathName": "pages/login/role_select",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "微信登录",
+					"pathName": "pages/login/wx/wxLogin",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "个人中心",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "江湖信用",
+					"pathName": "pages/mine/credibility/credibility",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "征信证明",
+					"pathName": "pages/mine/credibility/creditCertificate/creditCertificate",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "实名认证",
+					"pathName": "pages/mine/certification/certification",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "发现",
+					"pathName": "pages/discover/discover/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "帮助中心",
+					"pathName": "pages/mine/setting/helpCenter/helpCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "联系我们",
+					"pathName": "pages/mine/setting/contactUs/contactUs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "江湖信用",
+					"pathName": "pages/mine/credibility/credibility",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "江湖信用",
+					"pathName": "pages/mine/credibility/credibility",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "班组管理",
+					"pathName": "pages/mine/team/team",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "班组管理",
+					"pathName": "pages/mine/team/team",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "征信证明",
+					"pathName": "pages/mine/credibility/credibility",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "征信证明",
+					"pathName": "pages/mine/credibility/credibility",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "班组管理",
+					"pathName": "pages/mine/team/team",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "推广",
+					"pathName": "pages/mine/expand/expand",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "班组管理",
+					"pathName": "pages/mine/team/team",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建班组",
+					"pathName": "pages/mine/team/team",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建班组用户",
+					"pathName": "pages/mine/team/newTeam/newTeam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建班组",
+					"pathName": "pages/mine/team/team",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建班组",
+					"pathName": "pages/mine/team/newTeam/newTeam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "侧边栏",
+					"pathName": "pages/components/sidebar/sidebar",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "十大",
+					"pathName": "pages/mine/expand/expand",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "十大",
+					"pathName": "pages/mine/team/newTeam/newTeam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "十大",
+					"pathName": "pages/components/sidebar/sidebar",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建班组",
+					"pathName": "pages/mine/team/newTeam/newTeam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "从平台添加成员",
+					"pathName": "pages/mine/team/searchAddTeam/searchAddTeam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "消息",
+					"pathName": "pages/message/message",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "消息",
+					"pathName": "pages/message/message/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "消息",
+					"pathName": "pages/message/System/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "聊天消息",
+					"pathName": "pages/message/System/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "聊天消息",
+					"pathName": "pages/message/liaotian/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "找项目",
+					"pathName": "pages/findXM/findXM/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "找包工侠",
+					"pathName": "pages/findBGX/findBGX/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "筛选页",
+					"pathName": "pages/template/filter_temp/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠",
+					"pathName": "pages/findBGX/findBGX/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠",
+					"pathName": "pages/template/filter_temp/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠",
+					"pathName": "pages/findBGX/findBGX/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠",
+					"pathName": "pages/template/filter_temp/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠",
+					"pathName": "pages/findBGX/findBGX/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠详情",
+					"pathName": "pages/findBGX/bgxInfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "萨芬",
+					"pathName": "pages/mine/team/newTeam/newTeam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠详情页",
+					"pathName": "pages/findBGX/findBGX/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "包工侠详情页",
+					"pathName": "pages/findBGX/bgxInfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "找项目列表页",
+					"pathName": "pages/findXM/findXM/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "筛选模板",
+					"pathName": "pages/template/filter_temp/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "找项目列表页",
+					"pathName": "pages/findXM/findXM/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "项目详情",
+					"pathName": "pages/findXM/xmInfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "企业详情页",
+					"pathName": "pages/findXM/fbfInfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "企业详情页",
+					"pathName": "pages/findBGX/findBGX/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "企业详情页",
+					"pathName": "pages/findXM/xmInfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "企业详情页",
+					"pathName": "pages/findXM/fbfInfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发帖",
+					"pathName": "pages/discover/discover_fabu/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的钱包",
+					"pathName": "pages/mine/wallet/wallet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的帖子",
+					"pathName": "pages/mine/myDiscover/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/mine/myCollection/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录页",
+					"pathName": "pages/login/ipone/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "工友圈",
+					"pathName": "pages/discover/discover/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "上传图片页面",
+					"pathName": "pages/upload/upload",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发帖",
+					"pathName": "pages/discover/discover_fabu/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "实名认证",
+					"pathName": "pages/mine/certification/certification",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "聊天页面",
+					"pathName": "pages/message/page/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "系统消息",
+					"pathName": "pages/message/System/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "从平台添加",
+					"pathName": "pages/mine/team/searchAddTeam/searchAddTeam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改密码",
+					"pathName": "pages/mine/setting/editPhone/editPhone"
+				}
+			]
+		}
+	}
+}

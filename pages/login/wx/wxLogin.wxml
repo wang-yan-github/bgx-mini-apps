@@ -1,0 +1,23 @@
+<!--pages/login/wx/wxLogin.wxml-->
+<wux-cell-group>
+  <wux-cell hover-class="none">
+    <!-- <wux-input bindinput='phone' clear  label="手机号：" /> -->
+    <input type='number' bindinput='phone' placeholder='请输入手机号'></input>
+  </wux-cell>
+  <wux-cell hover-class="none">
+    <!-- <wux-input  bindinput='yzm' clear label="验证码：" /> -->
+    <input type='number' bindinput='yzm' placeholder='请输入验证码'></input>
+  </wux-cell>
+</wux-cell-group>
+
+<view class='yzm' catchtap='getCode'>{{yzmTime}}</view>
+
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-wing-blank>
+  <wux-button block type="assertive" bindclick="bind">绑定</wux-button>
+</wux-wing-blank>

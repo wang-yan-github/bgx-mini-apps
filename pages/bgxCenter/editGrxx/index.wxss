@@ -1,0 +1,11 @@
+/* pages/bgxCenter/fillInfo1/index.wxss */
+page {
+  background: #ffffff;
+  font-size: 32rpx;
+}
+.line{
+  width: 100%;
+  height: 1rpx;
+  background-color: #eee;
+}
+

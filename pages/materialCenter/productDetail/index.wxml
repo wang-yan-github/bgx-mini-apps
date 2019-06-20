@@ -1,0 +1,189 @@
+<!--pages/materialCenter/deviceDetail/index.wxml-->
+<view class="page {{ isMorePd || isTccShow || isQupindan ? 'bodyLock' : ''}}">
+  <!-- 头部区域 -->
+  <view class='page_hd'>
+    <view class='sp_hd'>
+      <image class='sp_img' src="{{ dataDetail.sp_img }}"></image>
+      <view class='sp_name'>{{ dataDetail.sp_name }}</view>
+      <view class='sp_comp_name'>{{ dataDetail.sp_supplier }}</view>
+      <view class='sp_price'>￥{{ dataDetail.sp_new_price }}</view>
+    </view>
+  </view>
+  <!-- 拼单 -->
+  <view class='pindan_box'>
+    <view class='evaluate_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>{{ billList.length }}人正在拼单，可直接参与</text>
+      <view class='evaluate_more' bindtap='onMorePd'>
+        <text class='evaluate_title2'>查看更多</text>
+        <image class='evaluate_img' src="/pages/icons/gengduo.png"></image>
+      </view>
+    </view>
+    <view class='pindan_item_box'>
+      <swiper style='width: 690rpx; max-height: 260rpx;' display-multiple-items="{{ displayMultipleItems }}"  vertical="{{ vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{ circular }}">
+        <block wx:for="{{billList}}" wx:key="{{c_name}}">
+          <swiper-item>
+            <view class='pindan_item'>
+              <view class='pindan_info'>
+                <image class='item_face' src="{{ item.img }}"></image>
+                <view class='item_p_text'>
+                  <text class='item_comp'>{{ item.c_name }}</text>
+                  <view class='item_md'>
+                    <view class='item_md1'>还差{{ item.cha_num }}件拼成</view>
+                    <view class='item_md2'>剩余{{ countDown }}</view>
+                  </view>
+                  <view class='item_qu' data-name='{{ item.c_name }}' data-face="{{ item.img }}" bindtap='onQupindan'>去拼单</view>
+                </view>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- <view class='pindan_item_box'>
+      <block wx:for="{{ billList }}" wx:key="c_name">
+        <view class='pindan_item'>
+          <view class='pindan_info'>
+            <image class='item_face' src="{{ item.img }}"></image>
+            <view class='item_p_text'>
+              <text class='item_comp'>{{ item.c_name }}</text>
+              <view class='item_md'>
+                <view class='item_md1'>还差{{ item.cha_num }}件拼成</view>
+                <view class='item_md2'>剩余{{ countDown }}</view>
+              </view>
+              <view class='item_qu' data-name='{{ item.c_name }}'  data-face="{{ item.img }}" bindtap='onQupindan'>去拼单</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view> -->
+  </view>
+  <!-- 评论 -->
+  <view class='evaluate_box'>
+    <view class='evaluate_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>评价({{evaluateList.length}})</text>
+      <view class='evaluate_more' bindtap='onMOreEvaluate'>
+        <text class='evaluate_title2'>更多评论</text>
+        <image class='evaluate_img' src="/pages/icons/gengduo.png"></image>
+      </view>
+    </view>
+    <block wx:for="{{ evaluateList }}" wx:key="phone">
+      <view class='evaluate_item'>
+        <view class='item_info'>
+          <image class='item_face' src="{{ item.img }}"></image>
+          <view class='item_text'>
+            <text class='item_phone'>{{ item.phone }}</text>
+            <text class='item_score'>{{ item.score }}</text>分
+            <text class='item_level'>{{ item.rater }}</text>
+            <text class='item_time'>{{ item.time }}</text>
+          </view>
+        </view>
+        <view class='item_content'>
+          {{ item.content }}
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 设备描述详情 -->
+  <view class='detail'>
+    <view class='detail_title'>
+      <text class='red_line'></text>
+      <text class='evaluate_title1'>商品详情</text>
+    </view>
+    <view class='detail_text'>
+      <view class='detail_c'>商品名称：{{ dataDetail.sp_name }}</view>
+      <view class='detail_c'>商品型号：{{ dataDetail.sp_version }}</view>
+      <view class='detail_c'>品牌：{{ dataDetail.sp_brand }}</view>
+      <view class='detail_c'>所属行业：{{ dataDetail.sp_industry }}</view>
+      <view class='detail_c'>供货商：{{ dataDetail.sp_supplier }}</view>
+      <view class='detail_c'>库存地：{{ dataDetail.sp_storage_location }}</view>
+      <view class='detail_c'>供货区域：{{ dataDetail.sp_offer_area }}</view>
+      <view class='detail_c'>发货周期：{{ dataDetail.sp_send_period }}</view>
+      <view class='detail_c'>物流服务：{{ dataDetail.sp_delivery_service }}</view>
+      
+    </view>
+  </view>
+  <wux-white-space body-style="height: 55px"/>
+  <!-- 底部固定按钮区 -->
+  <view class='fixed_bottom'>
+    <view class='shoucang' catchtap='onShoucang'>
+      <image class='bottom_img' src="{{ isShoucang ? '/pages/icons/yi_shoucang.png' : '/pages/icons/shoucang_01.png'}}"></image>
+      <view>收藏</view>
+    </view>
+    <view class='lianxi'>
+      <image class='bottom_img' src='/pages/icons/lianxi.png'></image>
+      <view>联系我</view>
+    </view>
+    <view class='dancai' data-danpin='0' bindtap='onClickBuy'>
+      <view class='price_1'>￥{{ dataDetail.sp_old_price }}</view>
+      <view class='price_type'>单采价</view>
+    </view>
+    <view class='pintuan' data-danpin='1' bindtap='onClickBuy'>
+      <view class='price_1'>￥{{ dataDetail.sp_new_price }}</view>
+      <view class='price_type'>拼团价</view>
+      <view class='tuan_num'>200件团</view>
+    </view>
+  </view>
+
+  <!-- 拼单品弹出层 -->
+  <view class='more_pd_mask' wx:if="{{ isTccShow }}" style="height: {{ windowHeight }}px;" catchtap='onCloseBuy'>
+    <view class='pd_tcc'>
+      <view class='tcc_img_box'>
+        <image class='tcc_img' src="{{ dataDetail.sp_img }}"></image>
+      </view>
+      <view class='tcc_price'>￥{{ danpin == '0' ? dataDetail.sp_old_price : dataDetail.sp_new_price}}</view>
+      <view class='input_num' catchtap='onInputNum'>
+        <wux-cell-group>
+          <wux-cell title="数量" hover-class="none">
+            <wux-input-number color="assertive" disabled="{{ false }}" longpress min="0" shape="circle" slot="footer" />
+          </wux-cell>
+        </wux-cell-group>
+      </view>
+      <image class='close_icon' catchtap='onCloseBuy' src="/pages/icons/close_icon.png"></image>
+      <view class='tcc_btn'>确定</view>
+    </view>
+  </view>
+</view>
+
+<!-- 查看更多拼单 -->
+<view wx:if="{{ isMorePd }}" class='more_pd_mask' style="height: {{ windowHeight }}px;" catchtap='onCloseMorePd'>
+  <view class='more_pd'>
+    <view class='pd_title'>正在拼单</view>
+    <image class='guanbi_cir' catchtap='onCloseMorePd' src='/pages/icons/guanbi_cir.png'></image>
+    <scroll-view class='more_list_box' scroll-y scroll-with-animation>
+      <block wx:for="{{ billList }}" wx:key="c_name">
+        <view class='pd_item'>
+          <view class='pindan_info'>
+            <image class='item_face' src="{{ item.img }}"></image>
+            <view class='pd_box'>
+              <view class='pd_text1'>{{ item.c_name }}</view>
+              <view class='pd_text2'>还差{{ item.cha_num }}</view>
+            </view>
+            <view class='pd_text3'>剩余{{ countDown }}</view>
+            <view class='pd_text4' data-name='{{  item.c_name }}' data-face="{{ item.img }}" bindtap='onQupindan'>去拼单</view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 去拼单弹窗 -->
+<view wx:if="{{ isQupindan }}" class='more_pd_mask' style="height: {{ windowHeight }}px;" catchtap='onClosePindan'>
+  <view class='qupindan'>
+    <view class='pindan_title'>参与
+      <text>{{firstName}}</text> 的拼单</view>
+    <image class='guanbi_cir' catchtap='onClosePindan' src='/pages/icons/guanbi_cir.png'></image>
+    <view class='pin_content'>
+      <view class='residue'>仅剩
+        <text>1</text>个名额，{{ countDown }}后结束</view>
+    </view>
+    <view class='pindan_person'>
+      <image class='pindan_person_face' src="{{ firstFace }}"></image>
+      <view class='who_pindan'>?</view>
+    </view>
+    <view class='cypd_btn'>参与拼单</view>
+  </view>
+</view>

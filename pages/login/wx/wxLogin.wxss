@@ -1,0 +1,10 @@
+/* pages/login/wx/wxLogin.wxss */
+
+/* @import '../ipone/poneLogin.wxss'; */
+.yzm {
+  top: 105rpx;
+  position: absolute;
+  right: 30rpx;
+  color: #ec4141;
+  z-index: 2;
+}

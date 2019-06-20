@@ -1,0 +1,16 @@
+<!--pages/findXM/lookFuJian/index.wxml-->
+<view class="file_warn">注意：当前是临时目录,保存请长按图片进行保存</view>
+<!-- 留白 -->
+<wux-white-space />
+<view class='imags'>
+  <wux-row>
+    <block wx:for='{{fileList}}'>
+      <wux-col span="3">
+        <view class='image_item'>
+          <image src='{{item.filePath}}' id="{{item.filePath}}" catchtap='previewImage'></image>
+          <text>{{item.time}}</text>
+        </view>
+      </wux-col>
+    </block>
+  </wux-row>
+</view>

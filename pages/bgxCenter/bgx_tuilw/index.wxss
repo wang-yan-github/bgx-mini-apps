@@ -1,0 +1,65 @@
+page {
+  font-size: 30rpx;
+}
+.beizhu {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 30rpx;
+}
+.limit_text {
+  font-size: 24rpx;
+  color: #ff8c1a;
+}
+.selectGz {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  line-height: 80rpx;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.selected {
+  padding-left: 20rpx;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
+}
+.selected_title {
+  padding-left: 10rpx;
+  margin-top: 20rpx;
+}
+.item {
+  display: inline-block;
+  margin-left: 10rpx; 
+  position: relative;
+  font-size: 28rpx;
+  color: #555555;
+  margin-bottom: 15rpx;
+}
+.gzItem {
+  border: 1rpx solid #bbbbbb;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 6rpx;
+  padding-bottom: 8rpx;
+  /* position: relative; */
+  border-radius: 10rpx;
+
+}
+.close {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 15rpx;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 12rpx solid transparent;
+    border-left: 12rpx solid #aaaaaa;
+    border-bottom: 12rpx solid transparent;
+    position: absolute;
+    right: 30rpx;
+    top: 31rpx;
+}

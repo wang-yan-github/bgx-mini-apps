@@ -1,0 +1,473 @@
+/* pages/discover/discover/index.wxss */
+
+.discover_swap {
+  height: 160rpx;
+  background-color: #fff;
+}
+
+.dis_btn {
+  height: 80rpx;
+  line-height: 70rpx;
+  width: 33%;
+  float: left;
+  border-bottom: 1rpx solid #eee;
+  border-right: 1rpx solid #eee;
+}
+
+.dis_btn image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+}
+
+.dis_btn text {
+  font-size: 30rpx;
+  position: relative;
+  top: -12rpx;
+  left: 20rpx;
+  color: #666;
+}
+
+.more_swap {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  overflow: auto;
+  background-color: #eee;
+}
+
+.more_item {
+  height: 120rpx;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #eee;
+  background-color: #fff;
+}
+
+.more_item image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+
+.more_item_l {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.more_item_r {
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+.more_item_r .title {
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  padding-top: 20rpx;
+}
+
+.more_item_r .des {
+  font-size: 28rpx;
+  color: #888;
+  margin-left: 30rpx;
+}
+
+/* 旧版css */
+
+.info_item {
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 30rpx;
+  top: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.close image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.info_item_l {
+  float: left;
+  width: 20%;
+}
+
+.info_item_l image {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border: 1rpx solid #eee;
+  background-color: #eee;
+  border-radius: 10rpx;
+}
+
+.info_item_r {
+  float: left;
+  width: 80%;
+  background-color: #fff;
+}
+
+.info_item_r .name {
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  color: #1c4587;
+}
+
+.info_item_r .content {
+  font-size: 28rpx;
+  max-height: 120rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  position: relative;
+  padding-right: 20rpx;
+}
+
+.elliptical {
+  position: absolute;
+  width: 85rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #1c4587;
+  text-align: center;
+  background-color: #fff;
+  bottom: 0;
+  right: 20rpx;
+}
+
+.elliptical1 {
+  display: inline-block;
+  height: 0;
+  overflow: hidden;
+}
+
+.zhankan {
+  width: 90rpx;
+  height: 40rpx;
+  text-align: left;
+  background-color: #fff;
+  font-size: 26rpx;
+  color: #1c4587;
+}
+
+.content_text {
+  position: relative;
+}
+
+.info_item_r .zhankai {
+  max-height: none;
+  height: auto;
+}
+
+.info_item_r .time {
+  height: 40rpx;
+  font-size: 26rpx;
+  color: #666;
+  padding-top: 10rpx;
+}
+
+.info_item_r .oprator {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-right: 30rpx;
+}
+
+.oprator_item {
+  font-size: 26rpx;
+  color: #666;
+  padding-right: 20rpx;
+  float: right;
+}
+
+.oprator_item image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  position: relative;
+  top: -2rpx;
+  margin-right: 10rpx;
+}
+
+.oprator_item button {
+  font-size: 26rpx;
+  outline: none;
+  border: 0;
+  padding: 10rpx 5rpx;
+  background-color: #fff;
+  display: inline;
+  color: #666;
+  position: relative;
+  top: -1rpx;
+}
+
+.images_ {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.pinglun1 {
+  height: 0;
+  overflow: hidden;
+}
+
+.pinglun {
+  height: auto;
+  background-color: #eee;
+  margin-right: 30rpx;
+  position: relative;
+  font-size: 28rpx;
+  padding: 20rpx 100rpx 20rpx 20rpx;
+  line-height: 40rpx;
+}
+
+.pinglun::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15rpx;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #eee;
+}
+
+.pinglun .name {
+  color: #1c4587;
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+
+.pinglun .content {
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+
+.shuru {
+  height: 60rpx;
+  padding: 10px;
+  background-color: #eee;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.shuru .input {
+  display: block;
+  background-color: #fff;
+  width: 65%;
+  padding-left: 20rpx;
+  height: 56rpx;
+  font-size: 26rpx;
+  border-radius: 56rpx;
+  z-index: 2;
+  float: left;
+}
+
+.shuru .btn {
+  width: 27%;
+  display: block;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 26rpx;
+  background-color: #ccc;
+  color: #fff;
+  float: right;
+  border-radius: 56rpx;
+}
+
+.class_ {
+  color: #1c4587;
+}
+
+.fabu {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ec414c;
+  color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.14), 0 8rpx 16rpx rgba(0, 0, 0, 0.28);
+  z-index: 2;
+  right: 20px;
+  bottom: 20px;
+}
+
+.isbottom {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #ec414c;
+}
+
+button::after {
+  border: none;
+}
+
+.oprator_item image.fenxiang {
+  top: -2rpx;
+}
+
+.huati {
+  overflow: hidden;
+}
+
+.huati_l {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.huati_l image {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.huati_r {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.discover_imgs {
+  margin-top: 40rpx;
+}
+
+.weui-cells {
+  margin-top: 0;
+}
+
+/* 调整banner */
+
+swiper {
+  height: 350rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-container .swiper {
+  height: 300rpx;
+}
+
+.swiper-container .swiper .img {
+  width: 100%;
+  height: 100%;
+}
+
+.imagsSwap {
+  padding-right: 30rpx;
+  padding-top: 5rpx;
+}
+
+.imagsSwap image {
+  width: 184rpx;
+  height: 186rpx;
+}
+
+.dianzan {
+  width: 120rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+  text-align: right;
+}
+
+.dianzan text {
+  color: #666;
+  font-size: 26rpx;
+}
+
+.dianzan image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+  position: relative;
+  top: 5rpx;
+}
+
+.pinlun_time {
+  font-size: 20rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+
+.pinlun_time text {
+  color: #fff;
+  padding: 0 10rpx;
+  border-radius: 5rpx;
+  background-color: #ccc;
+  margin-left: 20rpx;
+}
+
+.huifu {
+  line-height: 40rpx;
+  min-height: 40rpx;
+  padding: 0rpx 20rpx;
+  background-color: #ccc;
+  border-radius: 10rpx;
+  width: 110%;
+}
+
+.huifu_item {
+  position: relative;
+}
+
+.huifu_more {
+  text-align: right;
+  height: 40rpx;
+  font-size: 22rpx;
+  color: #1c4587;
+}
+
+.focus {
+  float: right;
+  font-size: 22rpx;
+  margin-right: 30rpx;
+  display: block;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 2rpx 10rpx;
+  border: 1rpx solid #eee;
+  color: #ec4141;
+  border-radius: 10rpx;
+}
+
+.pinlun_more {
+  background-color: #eee;
+  font-size: 22rpx;
+  color: #1c4587;
+  line-height: 40rpx;
+  padding-left: 20rpx;
+  margin-right: 30rpx;
+}

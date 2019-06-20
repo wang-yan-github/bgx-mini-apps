@@ -1,0 +1,490 @@
+/* pages/materialCenter/deviceDetail/index.wxss */
+page {
+  font-size: 26rpx;
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+/* 头部区域 */
+.page_hd {
+  background-color: #ffffff;
+  padding: 30rpx;
+}
+.sp_hd {
+  width: 680rpx;
+  height: 180rpx;
+  position: relative;
+}
+.sp_img {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #dddddd;
+  /* border-radius: 10rpx; */
+}
+.sp_name {
+  font-size: 30rpx;
+  position: absolute;
+  left: 200rpx;
+  top: 2rpx;
+}
+.sp_comp_name {
+  position: absolute;
+  left: 200rpx;
+  top: 145rpx;
+}
+.sp_price {
+  color: #ec4141;
+  font-size: 40rpx;
+  position: absolute;
+  left: 194rpx;
+  top: 80rpx;
+  font-weight: 600;
+}
+/* 拼单 */
+.pindan_box {
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  padding: 0 30rpx;
+}
+.pindan_item_box {
+  max-height: 260rpx;
+  overflow: hidden;
+}
+.pindan_item {
+  border-top: 1rpx solid #dddddd;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+.pindan_info {
+  height: 100rpx;
+  position: relative;
+}
+.item_p_text {
+  position: absolute;
+  left: 90rpx;
+  width: 600rpx;
+  line-height: 100rpx;
+} 
+.item_comp {
+  display: inline-block;
+  max-width: 260rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.item_md {
+  width: 200rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 300rpx;
+  top: 0rpx;
+}
+.item_md1, .item_md2 {
+  line-height: 50rpx;
+}
+.item_md2 {
+  font-size: 22rpx;
+  color: #666666;
+}
+.item_qu {
+  line-height: 44rpx;
+  padding: 0rpx 14rpx;
+  background-color: #ec4141;
+  color: #ffffff;
+  border-radius: 6rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 28rpx;
+}
+/* 评论区 */
+.evaluate_box {
+  max-height: 495rpx;
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  padding: 30rpx;
+  padding-top: 0rpx;
+  overflow: hidden;
+}
+.evaluate_title {
+  line-height: 80rpx;
+  height: 80rpx;
+  position: relative;
+}
+.red_line {
+  width: 0;
+  height: 26rpx;
+  border-left: 5rpx solid red;
+  position: absolute;
+  left: 0;
+  top: 28rpx;
+}
+.evaluate_title1 {
+  position: absolute;
+  left: 15rpx;
+  font-size: 30rpx;
+}
+.evaluate_more {
+  width: 130rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  right: 0rpx;
+}
+.evaluate_title2 {
+  position: absolute;
+  left: 0rpx;
+}
+.evaluate_img {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 27rpx;
+}
+.evaluate_item {
+  border-top: 1rpx solid #dddddd;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+.item_info {
+  height: 100rpx;
+  position: relative;
+}
+.item_face {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 10rpx;
+}
+.item_text {
+  position: absolute;
+  left: 90rpx;
+  width: 600rpx;
+  line-height: 100rpx;
+}
+.item_score, .item_level {
+  margin-left: 15rpx;
+}
+.item_score {
+  margin-left: 15rpx;
+  color: #FA8300;
+}
+.item_level {
+  margin-left: 15rpx;
+  color: #ff3333;
+}
+.item_time {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  color: #666666;
+}
+
+.item_content {
+  margin-top: 10rpx;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  display: -webkit-box;    
+  -webkit-box-orient: vertical;    
+  -webkit-line-clamp: 2;    
+  overflow: hidden;
+}
+
+/* 设备详情 */
+.detail {
+  background-color: #ffffff;
+  padding-left: 30rpx;
+  margin-top: 20rpx;
+  padding-bottom: 10rpx;
+}
+.detail_title {
+  line-height: 80rpx;
+  height: 80rpx;
+  position: relative;
+}
+.detail_text {
+  line-height: 60rpx;
+}
+
+/* 底部按钮 */
+.fixed_bottom {
+  height: 86rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: -2rpx;
+  left: 0rpx;
+  z-index: 5;
+  border-top: 1rpx solid #dddddd;
+  background-color: #ffffff;
+}
+.bottom_img {
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 8rpx;
+}
+.shoucang, .lianxi {
+  width: 20%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24rpx;
+}
+.dancai,.pintuan {
+  height: 86rpx;
+  width: 30%;
+  float: left;
+  background-color: red;
+  font-size: 32rpx;
+  color: #ffffff;
+  position: relative;
+}
+.dancai {
+  background: #ffb366;
+}
+.price_1 {
+  margin-left: 10rpx;
+}
+.price_type {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  line-height: 48rpx;
+}
+.tuan_num {
+  position: absolute;
+  right: 10rpx;
+  bottom: 5rpx;
+  font-size: 24rpx;
+}
+/* 拼单品弹出层 */
+.pd_tcc {
+  width: 100%;
+  height: 360rpx;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: -2rpx;
+  left: 0rpx;
+  z-index: 10;
+}
+.tcc_img_box {
+  width: 180rpx;
+  height: 180rpx;
+  position: absolute;
+  left: 30rpx;
+  top: -120rpx;
+  overflow: hidden;
+  border-radius: 15rpx;
+  /* padding: 5rpx; */
+  border: 1rpx solid #dddddd;
+  box-shadow:0px 12px 8px -12px #888888;
+}
+.tcc_img {
+  width: 180rpx;
+  height: 180rpx;
+  /* border-radius: 15rpx; */
+}
+.tcc_price {
+  color: #ec4141;
+  font-size: 36rpx;
+  position: absolute;
+  left: 240rpx;
+  top: 25rpx;
+}
+.input_num {
+  width: 100%;
+  height: 92rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 122rpx;
+  
+}
+.tcc_btn {
+  width: 100%;
+  height: 86rpx;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  background-color: #ec4141;
+  text-align: center;
+  line-height: 86rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+}
+.close_icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+/* 查看更多拼单 */
+.more_pd_mask {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+.more_pd {
+  font-size: 26rpx;
+  border-radius: 15rpx;
+  width: 650rpx;
+  height: 750rpx;
+  /* padding: 25rpx; */
+  background-color: #ffffff;
+  position: absolute;
+  left: 50rpx;
+  top: 200rpx;
+  /* overflow: hidden; */
+}
+.more_list_box {
+  padding: 25rpx;
+  padding-right: 20rpx;
+  height: 620rpx;
+  width: 600rpx;
+  position: relative;
+}
+.guanbi_cir {
+  width: 64rpx;
+  height: 64rpx;
+  position: absolute;
+  top: -30rpx;
+  right: -30rpx;
+}
+.pd_title {
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 86rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.pd_box {
+  width: 400rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  position: absolute;
+  left: 100rpx;
+  top: 0rpx;
+}
+.pd_text1 {
+  float: left;
+  max-width: 246rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.pd_text2 {
+  float: left;
+  margin-left: 15rpx;
+}
+.pd_text3 {
+  position: absolute;
+  left: 100rpx;
+  top: 56rpx;
+  font-size: 22rpx;
+  color: #666666;
+}
+.pd_text4 {
+  line-height: 44rpx;
+  padding: 0rpx 14rpx;
+  background-color: #ec4141;
+  color: #ffffff;
+  border-radius: 6rpx;
+  position: absolute;
+  right: 5rpx;
+  top: 28rpx;
+  font-size: 24rpx;
+}
+.pd_item {
+  border-bottom: 1rpx solid #dddddd;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+
+/* 底层content控制 */
+.bodyLock{
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 0;
+}
+
+/*去拼单*/
+.qupindan {
+  font-size: 26rpx;
+  border-radius: 15rpx;
+  width: 550rpx;
+  height: 480rpx;
+  /* padding: 25rpx; */
+  background-color: #ffffff;
+  position: absolute;
+  left: 100rpx;
+  top: 200rpx;
+  /* overflow: hidden; */
+}
+
+.pindan_title {
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+}
+.pindan_title text{
+  color: #FA8300;
+}
+.pin_content {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+.residue{
+  line-height: 60rpx;
+  text-align: center;
+}
+.residue text {
+  color: #ec4141;
+}
+.pindan_person {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.pindan_person_face {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+}
+.who_pindan {
+  width: 88rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 50%;
+  border: #888888 1rpx dashed;
+  font-weight: 600;
+  font-size: 32rpx;
+  color: #aaaaaa;
+}
+.cypd_btn {
+  width: 430rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ec4141;
+  border-radius: 12rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 60rpx;
+}

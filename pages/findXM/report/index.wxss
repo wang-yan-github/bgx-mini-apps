@@ -1,0 +1,14 @@
+/* pages/findXM/report/index.wxss */
+
+.title {
+  background-color: #fff;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  color: #666;
+}
+
+.content{
+  padding: 20rpx;
+  background-color: #fff;
+}

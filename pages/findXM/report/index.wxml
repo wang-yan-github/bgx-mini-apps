@@ -1,0 +1,13 @@
+<!--pages/findXM/report/index.wxml-->
+<wux-white-space />
+<view class='title'>小提示：您所举报的内容，一经核实，我们会对发布人进行惩罚；涉及触犯法律的，我们会主动报案并协助公安机关调查。此外举报核实的请关注消息板块的推送消息，联系我们的客服人员还能领取100元现金奖励。</view>
+<wux-white-space />
+<view class='content'>
+  <wux-textarea hasCount maxlength="400" rows="8" cursorSpacing="80" bind:change="content" placeholder="请输入举报内容" />
+</view>
+
+<view class="bottom">
+  <wux-wing-blank>
+    <wux-button block type="assertive" bind:click="report">提交</wux-button>
+  </wux-wing-blank>
+</view>

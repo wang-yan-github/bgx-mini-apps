@@ -1,0 +1,22 @@
+<!-- 日历 -->
+<wux-calendar id="wux-calendar" />
+<block wx:if="{{ isLinked }}">
+<view class='page'>
+  <!-- 传已有参数进行显示 -->
+  <add-project 
+    token="{{ token }}"
+    type="{{ type }}"
+    name="{{ name }}"
+    startTime="{{ startTime }}"
+    endTime="{{ endTime }}"
+    money="{{ money }}"
+    region_code="{{ region_code }}"
+    content="{{ content }}"
+    itemId="{{ itemId }}"
+    workImgs_arr="{{ workImgs_arr }}" 
+    workImgsUid_str="{{ workImgsUid_str }}"
+    isNewAdd="{{ isNewAdd }}"
+    >
+  </add-project>
+</view>
+</block>

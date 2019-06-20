@@ -1,0 +1,26 @@
+<!--pages/mine/team/searchAddTeam/searchAddTeam.wxml-->
+<wux-search-bar clear value="{{ name_phone }}" controlled placeholder="请输入手机号或姓名" bind:change="onChange" bind:focus="onFocus" bind:blur="onBlur" bind:confirm="onConfirm" bind:clear="onClear" bind:cancel="onCancel" />
+
+<block wx:for="{{List}}">
+  <view class='item'>
+    <view class='item_l'>
+      <image src='{{item.head_portrait?item.head_portrait:"/pages/icons/touxiang.png"}}'></image>
+    </view>
+    <view class='item_r'>
+      <view class="item_r_title">{{item.duty_name}}({{item.cons_type}})</view>
+      <view class="item_r_phone">{{item.duty_phone}}
+        <text class='item_r_add' data-wid="{{item.w_id}}" catchtap='addteam'>+</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+
+<view class="teamClass" wx:if='{{show}}'>
+  <view class='title'>请选择班组</view>
+  <block wx:for="{{teamClass}}">
+    <view class="item_" data-tid='{{item.t_id}}' catchtap="addteam1">{{item.name}}</view>
+  </block>
+</view>
+
+<wux-backdrop id="wux-backdrop" />

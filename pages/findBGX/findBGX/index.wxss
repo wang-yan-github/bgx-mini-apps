@@ -1,0 +1,126 @@
+/* pages/findBGX/findBGX/index.wxss */
+@import "../../template/filter_temp/index.wxss";
+
+.lw_item {
+  min-height: 242rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+
+.lw_t {
+  height: 100rpx;
+  overflow: hidden;
+  padding: 10rpx 0;
+  border-bottom: 1rpx dotted #eee;
+}
+
+.lw_t_l {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.lw_t_l image {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  background-color: #eee;
+  border-radius: 6rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.lw_t_r_t, .lw_t_r_b {
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  position: relative;
+}
+
+.lw_t_r_b {
+  font-size: 26rpx;
+}
+
+.line {
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  color: #eee;
+}
+
+.nbsp {
+  margin: 0 20rpx;
+}
+
+.lw_t_r {
+  float: left;
+  width: 80%;
+  height: 100%;
+}
+
+.lw_b {
+  min-height: 100rpx;
+  padding: 10rpx 30rpx;
+  position: relative;
+}
+
+.lw_b_t, .lw_b_b {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #444;
+}
+
+.yirenzheng, .weirenzheng {
+  margin-left: 30rpx;
+  font-size: 18rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  padding: 2rpx 5rpx;
+  border-radius: 5rpx;
+  position: absolute;
+  top: 12rpx;
+}
+
+.yirenzheng {
+  color: #52c41a;
+  background-color: #f6ffed;
+  border: 1rpx solid #b7eb8f;
+  right: 20rpx;
+}
+
+.weirenzheng {
+  right: 20rpx;
+  color: #666;
+  background-color: #eee;
+  border: 1rpx solid #ccc;
+}
+
+.isbottom {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #ec414c;
+}
+
+.info {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 45rpx;
+  right: 30rpx;
+}
+
+/* 底层content控制 */
+.bodyLock {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 0;
+}

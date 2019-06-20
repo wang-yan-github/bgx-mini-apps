@@ -1,0 +1,22 @@
+<!--pages/mine/setting/editPhone/editPhone.wxml-->
+<wux-cell-group>
+  <wux-cell>
+    <wux-input type="number" clear label="现手机："  bind:change="nPhone"/>
+  </wux-cell>
+  <wux-cell>
+    <label class='yzmLabel'>验证码：</label>
+    <input class='yzmInput' type="number"  bindinput="yzm"/>
+  </wux-cell>
+</wux-cell-group>
+
+<view class='yzm' catchtap='getCode'>{{yzmTime}}</view>
+
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-wing-blank>
+  <wux-button block type="assertive" bind:click="submit">提交</wux-button>
+</wux-wing-blank>

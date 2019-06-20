@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的收藏",
+  "usingComponents": {
+    "wux-row": "/pages/vux/row/index",
+    "wux-col": "/pages/vux/col/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index"
+  }
+}

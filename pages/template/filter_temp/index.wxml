@@ -1,0 +1,154 @@
+<view id="swiper-tab">
+  <!-- tab展示 -->
+  <template is='swiper-tab' data='{{tabList,currentTab}}'> </template>
+  <swiper current="{{currentTab}}" duration="1000" class="swiper-item" style='display:{{displays}}'>
+    <!--左右结构-->
+    <template is="shaixuan_lr" data="{{selected0,selected1,selected2,shaixuan_lr_l,selected_index,_sum,_mum,gc_type,gz_type}}"></template>
+    <!--左中右结构-->
+    <template is='citys' data='{{selected_index1,selected_index2,selected_index3,cityleft,citycenter,cityright}}'></template>
+    <!--单项选择-->
+    <template is='tab_item' data='{{tab_item1,_res1,clickOne1}}'></template>
+
+    <swiper-item>
+      <view class="shaixuankuang">
+        <template is="shaixuan_item" data='{{shaixuan,shaixuan_}}'></template>
+        <view class="qingkong">
+          <span  bindtap="qingchu">清除条件</span>
+          <p  bindtap="queren">确认</p>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view id="swiper-tab">
+  <!-- tab展示 -->
+  <template is='swiper-tab' data='{{tabList,currentTab}}'> </template>
+  <swiper current="{{currentTab}}" duration="1000" class="swiper-item" style='display:{{displays}}'>
+    <!--左右结构-->
+    <template is="shaixuan_lr" data="{{selected0,selected1,selected2,shaixuan_lr_l,selected_index,_sum,_mum,gc_type,gz_type}}"></template>
+    <!--左中右结构-->
+    <template is='citys1' data='{{selected_index1,selected_index2,cityleft,citycenter}}'></template>
+    <!--单项选择-->
+    <template is='tab_item' data='{{tab_item1,_res1,clickOne1}}'></template>
+
+    <swiper-item>
+      <view class="shaixuankuang">
+        <template is="shaixuan_item" data='{{shaixuan,shaixuan_}}'></template>
+        <view class="qingkong">
+          <span  bindtap="qingchu">清除条件</span>
+          <p  bindtap="queren">确认</p>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 背景幕 -->
+<wux-backdrop id="backdrop" bindtap="hideNav" />
+
+<!--筛选左右结构-->
+<template name="shaixuan_lr">
+  <swiper-item>
+    <view>
+      <view class='qiehuannier'>
+        <view class="nav bc_white">
+          <view wx:for="{{shaixuan_lr_l}}" data-index='{{index}}' class="default {{selected_index==index?'red':''}}" bindtap="selected">{{item}}</view>
+        </view>
+        <view id="rights">
+          <view class="{{selected0}}">
+            <view wx:for="{{gc_type}}" class="default {{_sum == index?'red':''}}" data-num="{{index}}" bindtap="clickSum" data-name="{{item}}">{{item}}</view>
+          </view>
+          <view class="{{selected1}}">
+            <view wx:for='{{gz_type}}' class="default {{_mum == index?'red':''}}" data-num="{{index}}" bindtap="clickMum" data-name="{{item}}">{{item}}</view>
+          </view>
+          <view class="{{selected2}}">
+            <view class="default {{_cum == 1?'red':''}}" data-num="1" bindtap="clickCum" data-name="不限">不限</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</template>
+
+<!--筛选头部展示  -->
+<template name='swiper-tab'>
+  <view class="swiper-tab">
+    <view wx:for="{{tabList}}" class="swiper-tab-list {{currentTab==index ? 'on' : ''}}" data-current="{{index}}" bindtap="tabNav" data-item="{{item.itemhide}}">{{item.itemshow}}
+      <i></i>
+    </view>
+  </view>
+</template>
+<!--筛选左中右结构区域-->
+<template name='citys'>
+  <swiper-item>
+    <!--左中右结构-->
+    <view class='quyu'>
+      <view class="qy">
+        <view class="default {{selected_index1 == index ? 'red' : ''}}" data-index='{{index}}' wx:for="{{cityleft}}" bindtap="selectleft" data-code='{{item.value}}'>
+          {{item.label}}
+        </view>
+      </view>
+      <view class="qy">
+        <view class="default {{selected_index2 == index ? 'red' : ''}}" data-index='{{index}}' wx:for="{{citycenter}}" bindtap="selectcenter" data-code='{{item.value}}' data-name='{{item.label}}'>
+          {{item.label}}
+        </view>
+      </view>
+      <view class="qy">
+        <view class="default {{selected_index3 == index ? 'red' : ''}}" data-index='{{index}}' wx:for="{{cityright}}" bindtap="selectaddr" data-code='{{item.value}}' data-name='{{item.label}}'>
+          {{item.label}}
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</template>
+<!-- 区域左右 -->
+<template name='citys1'>
+  <swiper-item>
+    <!--左右结构-->
+    <view class='quyu'>
+      <view class="qy qy1">
+        <view class="default {{selected_index1 == index ? 'red' : ''}}" data-index='{{index}}' wx:for="{{cityleft}}" bindtap="selectleft" data-code='{{item.value}}'>
+          {{item.label}}
+        </view>
+      </view>
+      <view class="qy qy1">
+        <view class="default {{selected_index2 == index ? 'red' : ''}}" data-index='{{index}}' wx:for="{{citycenter}}" bindtap="selectcenter" data-code='{{item.value}}' data-name='{{item.label}}'>
+          {{item.label}}
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</template>
+
+
+
+<!--筛选单项选择-->
+<template name='tab_item1'>
+  <swiper-item>
+    <view class="location_bottom">
+      <view wx:for='{{tab_item1}}' class="default one {{_res1 == index?'red':''}}" data-index="{{index}}" bindtap="{{clickOne1}}" data-name="{{item}}">{{item}}</view>
+    </view>
+  </swiper-item>
+</template>
+
+<!--筛选单项选择-->
+<template name='tab_item2'>
+  <swiper-item>
+    <view class="location_bottom">
+      <view wx:for='{{tab_item2}}' class="default one {{_res2 == index?'red':''}}" data-index="{{index}}" bindtap="{{clickOne2}}" data-name="{{item}}">{{item}}</view>
+    </view>
+  </swiper-item>
+</template>
+
+<!--筛选项-->
+<template name='shaixuan_item'>
+  <view class="shaixuan" wx:for="{{shaixuan}}">
+    <span class="shuaixuantiaojian">{{item.title}}</span>
+    <block wx:for='{{item.name}}' wx:for-item="item_" wx:for-index="idx">
+      <view class="chose-txt {{shaixuan_[index]== idx?' shaixuan_item_select':'shaixuan_item'}}" data-type='{{item_.type}}' data-index="{{idx}}" bindtap="shuanxuan_click">
+        <text class="chose-p">{{item_.name}}</text>
+      </view>
+    </block>
+  </view>
+</template>

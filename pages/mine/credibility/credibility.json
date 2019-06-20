@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "江湖信用",
+  "usingComponents": {
+    "wux-button": "/pages/vux/button/index",
+    "wux-circle": "/pages/vux/circle/index",
+    "wux-cell-group": "/pages/vux/cell-group/index",
+    "wux-cell": "/pages/vux/cell/index",
+    "wux-white-space": "/pages/vux/white-space/index"
+  }
+}

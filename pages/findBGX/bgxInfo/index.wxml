@@ -1,0 +1,197 @@
+<!--pages/findBGX/bgxInfo/index.wxml-->
+<view class='topImage'>
+  <image src='/pages/icons/bgxInfo.png'></image>
+</view>
+<view class='title'>
+  <view class='touxiang' data-src='{{lwInfo.head_portrait?lwInfo.head_portrait:"/pages/icons/touxiang.png"}}' catchtap='previewImage'>
+    <image src='{{lwInfo.head_portrait?lwInfo.head_portrait:"/pages/icons/touxiang.png"}}'></image>
+  </view>
+  <view class='name'>{{lwInfo.dutyname}}</view>
+  <view class='label'>
+    <text>{{lwInfo.authentica?"已实名":"未实名"}}</text>
+    <text>江湖信用：{{lwInfo.creditscore}}</text>
+    <text>{{lwInfo.agelabel}}</text>
+  </view>
+
+  <view class='label'>
+    <image src='/pages/icons/time.png'></image>
+    <text class='text2'>{{lwInfo.credit_rating}}</text>
+    <image src='/pages/icons/gzzt.png'></image>
+    <text class="text2 ">{{lwInfo.woker_status==0?'空闲':'忙碌'}}</text>
+  </view>
+</view>
+<!-- 留白 -->
+<wux-tabs current="{{current}}" theme="assertive" bindchange="onChange">
+  <wux-tab key="tab1" title="基本信息"></wux-tab>
+  <wux-tab key="tab2" title="项目经验"></wux-tab>
+  <wux-tab key="tab3" title="资质证书"></wux-tab>
+  <wux-tab key="tab4" title="雇主评价"></wux-tab>
+</wux-tabs>
+
+<!-- 基本信息 -->
+<block wx:if="{{current=='tab1'}}">
+  <view class='space'></view>
+  <view class="tabs_title ">个人简介</view>
+  <view class="tabs_content ">
+    <view class='conten_item1'>{{lwInfo.basicinfo.content}}</view>
+  </view>
+  <view class="tabs_title ">基本资料</view>
+  <view class="tabs_content">
+    <view wx:if="{{lwInfo.basicinfo.wokertime}}" class='conten_item'>
+      <text decode>工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：&nbsp;&nbsp;</text>{{lwInfo.basicinfo.wokertime}}年</view>
+    <view wx:if="{{lwInfo.basicinfo.hometown}}" class='conten_item'>
+      <text decode>家&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乡：&nbsp;&nbsp;</text>{{lwInfo.basicinfo.hometown}}</view>
+    <block wx:if="{{lwInfo.basicinfo.wokeraddress}}">
+      <view class='conten_item'>
+        <text decode>可施工地：&nbsp;&nbsp;</text>{{lwInfo.basicinfo.wokeraddress}}</view>
+    </block>
+    <view wx:if="{{lwInfo.basicinfo.education}}" class='conten_item'>
+      <text decode>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历：&nbsp;&nbsp;</text>{{lwInfo.basicinfo.education}}</view>
+  </view>
+  <!-- 包工侠展示班组 -->
+  <block wx:if="{{type==2}}">
+    <view class="tabs_title ">我的班组</view>
+    <view class="tabs_content ">
+      <view class='conten_item'>熟悉行业：{{lwInfo.basicinfo.technicalType}}</view>
+      <view class='conten_item'>队伍人数：{{lwInfo.basicinfo.teamnum}}人</view>
+      <!-- <view class='team_title'>
+        <text>焊工（2人）</text>
+        <text>木工（2人）</text>
+        <text>焊工（2人）</text>
+        <text>水电工（2人）</text>
+      </view> -->
+    </view>
+    <wux-grids col='5'>
+      <block wx:if="{{lwInfo.basicinfo.teaminfo.length>0}}">
+        <block wx:for="{{lwInfo.basicinfo.teaminfo}}" wx:for-item="idx">
+          <wux-grid thumb="{{idx.headimage+'?x-oss-process=style/thumb'}}" label="{{idx.constype}}" />
+        </block>
+      </block>
+      <view class="noContent" wx:else>暂无班组数据...</view>
+    </wux-grids>
+  </block>
+</block>
+<!-- 项目经验 -->
+<block wx:if="{{current=='tab2'}}">
+  <view class='space'></view>
+  <view class="tabs_title ">项目经验</view>
+  <block wx:if="{{lwInfo.achieves.length>0}}">
+    <view class="xmExp ">
+      <wux-timeline>
+        <block wx:for="{{lwInfo.achieves}}" wx:for-item="item_">
+          <wux-timeline-item content="{{item_.endtime}} 到 {{item_.starttime}}" dotStyle="border-color: #ec4141; color: #ec4141 ">
+            <view class='yejiItem'>
+              <view class='yeji_item'>
+                <text decode class="yeji_title ">项目名称：&nbsp;&nbsp;</text>{{item_.projectname}}</view>
+              <view class='yeji_item'>
+                <text decode class="yeji_title ">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：&nbsp;&nbsp;</text>{{item_.address}}</view>
+              <view class='yeji_item'>
+                <text decode class="yeji_title ">施工内容：&nbsp;&nbsp;</text>
+                <!-- <wux-white-space /> -->
+                <view class='yeji_con'>{{item_.content}}</view>
+                <wux-white-space />
+              </view>
+              <view class='yeji_item' wx:if="{{item_.images.length>0}}">
+                <text decode class="yeji_title ">工作图片：&nbsp;&nbsp;</text>
+                <wux-row>
+                  <block wx:for='{{item_.images}}' wx:for-item="item2">
+                    <wux-col span="4 ">
+                      <image class='yeji_image' data-src='{{item2}}' data-images='{{item_.images}}' src='{{item2+"?x-oss-process=style/thumb"}}' catchtap='previewImage1'></image>
+                    </wux-col>
+                  </block>
+                </wux-row>
+              </view>
+            </view>
+          </wux-timeline-item>
+        </block>
+      </wux-timeline>
+    </view>
+  </block>
+  <view class='noContent' wx:else>暂无项目经验...</view>
+</block>
+
+<!-- 资质证书 -->
+<block wx:if="{{current=='tab3'}}">
+  <view class='space'></view>
+  <view class="tabs_title ">资质证书</view>
+  <block wx:if="{{lwInfo.certificates.length>0}}">
+    <view class='lisense'>
+      <wux-row>
+        <block wx:for="{{lwInfo.certificates}}" wx:for-item="item3">
+          <wux-col span="4 ">
+            <image class='yeji_image' data-src='{{item3}}' data-images='{{lwInfo.certificates}}' src='{{item3}}' catchtap='previewImage2'></image>
+          </wux-col>
+        </block>
+      </wux-row>
+    </view>
+  </block>
+  <view class='noContent' wx:else>暂无资质证书...</view>
+</block>
+
+<!-- 甲方评价 -->
+<block wx:if="{{current=='tab4'}}">
+  <!-- 评价标签 -->
+  <!-- <view class='pingjiaLabel'>
+    <text class='active'>全部</text>
+    <text>很好</text>
+    <text>较好</text>
+    <text>一般</text>
+    <text>较差</text>
+    <text>很差</text>
+  </view> -->
+  <block wx:for="{{lwInfo.review}}" wx:for-item="item4">
+    <view class='pingjiaItem'>
+      <view class='pingjia_l'>
+        <image src='{{item4.headpicture}}'></image>
+      </view>
+      <view class='pingjia_r'>
+        <view>{{item4.name}}</view>
+        <wux-rater disabled slot="footer " fontSize="20 " default-value="{{ item4.firstScore/20 }} " margin="{{ 5 }} " star="☻ " />
+        <text class='pingjiaTime'>{{item4.firstTime}}</text>
+      </view>
+      <view class="pingjia_con ">{{item4.firstComment}}</view>
+    </view>
+  </block>
+</block>
+
+
+<!-- 留白 -->
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+
+<view class='bottom'>
+  <view class='bottom_swap'>
+    <wux-row>
+      <wux-col span="2">
+        <view class="shoucang">
+          <image src="{{lwInfo.isCollection?'/pages/icons/shoucang2.png':'/pages/icons/shoucang1.png'}}"></image>
+          <text>{{lwInfo.isCollection?'已收藏':'收藏'}}</text>
+          <button data-wid='{{lwInfo.w_id}}' data-shoucang='{{lwInfo.isCollection}}' catchtap='shoucang'></button>
+        </view>
+      </wux-col>
+      <wux-col span="2">
+        <view class="shoucang">
+          <image src="/pages/icons/fenxiang1.png"></image>
+          <text>分享</text>
+          <button data-pid='{{xmInfo.p_id}}' open-type='share'></button>
+        </view>
+      </wux-col>
+      <wux-col span="4">
+        <view class="ljlx" data-bsid='{{lwInfo.w_id}}' data-lwname='{{lwInfo.dutyname}}' catchtap='lianxi'>立即联系</view>
+      </wux-col>
+      <wux-col span="4">
+        <view class="msyy" data-bsid='{{lwInfo.w_id}}' catchtap='yuyue'>意向预约</view>
+      </wux-col>
+    </wux-row>
+  </view>
+</view>
+
+
+<!-- 上拉菜单 -->
+<wux-actionsheet id="wux-actionsheet" />
+<view class="page__bd page__bd_spacing" wx:if='{{visible}}'>
+  <wux-button block type="light" bind:click="showActionSheet2">请选择项目</wux-button>
+</view>

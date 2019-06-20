@@ -1,0 +1,12 @@
+/* pages/bgxCenter/fillInfo2/index.wxss */
+/* 隐藏滚动条(点击呼出侧边栏时可能产生滚动条) */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  border: 0;
+}
+
+page {
+  background-color: #ffffff;
+  font-size: 32rpx;
+}

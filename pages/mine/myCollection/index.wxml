@@ -1,0 +1,53 @@
+<!--pages/mine/myCollection/index.wxml-->
+
+<wux-wing-blank>
+  <view class='top'>
+    <wux-row>
+      <wux-col span="3">
+        <view class="label" data-type='2' catchtap='labelClick'>项目
+          <text class='line_'>|</text>
+        </view>
+      </wux-col>
+      <wux-col span="3">
+        <view class="label" data-type='1' catchtap='labelClick'>帖子
+          <text class='line_'>|</text>
+        </view>
+      </wux-col>
+      <wux-col span="3">
+        <view class="label" data-type='4' catchtap='labelClick'>包工侠
+          <text class='line_'>|</text>
+        </view>
+      </wux-col>
+      <wux-col span="3">
+        <view class="label" data-type='5' catchtap='labelClick'>劳务</view>
+      </wux-col>
+    </wux-row>
+  </view>
+</wux-wing-blank>
+
+<import src='/pages/discover/discover/index.wxml' />
+<import src='/pages/findXM/findXM/index.wxml' />
+<import src='/pages/findBGX/findBGX/index.wxml' />
+<wux-wing-blank>
+  <block wx:for="{{list}}">
+    <!--帖子 -->
+    <view wx:if="{{item.type == 1}}" class='item'>
+      <template is='gyq' data='{{dataList:[item],zhankai_index,pinglunData,pinglun_index,pinglun_content,isbottom,del,focus}}'></template>
+    </view>
+
+    <!-- 项目 -->
+    <view wx:elif="{{item.type == 2}}" class='item'>
+      <template is='xmlist' data='{{item1:item}}'></template>
+    </view>
+
+    <!-- 包工侠 -->
+    <view wx:else class='item'>
+      <template is='lwList' data='{{item:item}}'></template>
+    </view>
+  </block>
+</wux-wing-blank>
+<wux-white-space />
+<wux-white-space />
+<view wx:if='{{list.length == 0}}' class="noContent">暂无收藏内容...</view>
+<wux-white-space />
+<wux-white-space />

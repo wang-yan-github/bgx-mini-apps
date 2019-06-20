@@ -1,0 +1,33 @@
+/* pages/components/addProject/index.wxss */
+.confirm {
+  width: 100%;
+  margin-top: 50rpx;
+  font-size: 32rpx;
+}
+.bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.calcLen {
+  text-align: right;
+  color: #666666;
+  font-size: 28rpx;
+}
+textarea {
+  width: 100%;
+}
+.bottomBtns1 {
+  float: left;
+}
+.bottomBtns2 {
+  float: right;
+}
+.width_49 {
+  width: 49%;
+}
+.width_100 {
+  width: 100%;
+}
+
+

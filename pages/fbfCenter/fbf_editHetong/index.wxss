@@ -1,0 +1,37 @@
+page{
+  font-size: 30rpx;
+}
+.title{
+  padding-left: 30rpx;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  background-color: #eee;
+}
+.content{
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+}
+.weui-grid__icon {
+  width: 210rpx;
+  height: 210rpx;
+}
+.weui-grids{
+  background-color: #fff;
+}
+.weui-grid{
+  border: none;
+}
+.weui-uploader__bd{
+  padding: 30rpx;
+  background-color: #fff;
+}
+.weui-cells__title{
+  color: #666;
+  font-size: 30rpx;
+}
+.edit{
+  margin-top: 80rpx;
+}

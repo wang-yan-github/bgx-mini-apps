@@ -1,0 +1,5 @@
+<!--pages/mine/expand/expand.wxml-->
+<wux-cell-group>
+  <wux-cell  is-link title="申请成为推广大使"  extra="" bind:click="certification"></wux-cell>
+  <wux-cell  is-link title="分享获得现金奖励"  extra="" bind:click="certification"></wux-cell>
+</wux-cell-group>

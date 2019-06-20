@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "包管管",
+  "usingComponents": {
+    "wux-grids": "../../vux/grids/index",
+    "wux-grid": "../../vux/grid/index"
+  }
+}

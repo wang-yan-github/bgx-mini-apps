@@ -1,0 +1,74 @@
+/* pages/creditLife/insurance/index.wxss */
+page {
+  font-size: 28rpx;
+  color: #666666;
+}
+.page {
+  background-color: #ffffff;
+  padding: 0rpx 30rpx;
+}
+.item {
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  position: relative;
+  height: 210rpx;
+  width: 100%;
+  /* border: 1rpx solid red; */
+  border-bottom: 1rpx solid #dddddd;
+  
+}
+.item:first-child {
+  margin-top: 0rpx;
+}
+
+.face {
+  width: 200rpx;
+  height: 170rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 27rpx;
+}
+.face image {
+  width: 200rpx;
+  height: 170rpx;
+}
+.p_intro_text {
+  height: 170rpx;
+  width: 480rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 220rpx;
+  /* border: 1rpx solid greenyellow; */
+}
+.p_name {
+  font-size: 34rpx;
+  color: #222222;
+  line-height: 60rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.p_text1 {
+  position: absolute;
+  left: 0;
+  top: 60rpx;
+}
+.p_text2 {
+  position: absolute;
+  left: 0;
+  bottom: 0rpx;
+  color: #F0914B;
+}
+/* 预约按钮 */
+.yyBtn {
+  width: 160rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ec4141;
+  border-radius: 8rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 10rpx;
+}

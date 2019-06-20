@@ -1,0 +1,47 @@
+<!--pages/loginPage/index.wxml-->
+<view class='page'>
+  <view class='page_hd'>
+    <!-- <view class='logo_view'>
+      <image class='logo' src="/pages/icons/logo.png"></image>
+    </view> -->
+    <!-- <view class='welcome'>
+      <text>包工侠 国内首家施工业征信运营平台</text>
+    </view> -->
+    <view class='title'>
+      <image src='/pages/icons/logo.png'></image>
+    </view>
+    <view class='welcome'>国内首家施工业征信运营平台</view>
+  </view>
+  <view class='page_bd'>
+    <input class='phone' type="number" bindinput='phone' placeholder="请输入手机号" />
+    <view class='yanzhengma'>
+      <input class='auth_code_input' type="number" bindinput='yzm' placeholder="请输入验证码" />
+      <view class='auth_code' catchtap='getCode'>{{yzmTime}}</view>
+    </view>
+    <view class='login_btn' bindtap='login'>登 录</view>
+  </view>
+
+  <wux-white-space />
+  <wux-white-space />
+  <wux-white-space />
+  <wux-white-space />
+  <wux-white-space />
+  <wux-white-space />
+  <!-- <wux-wing-blank>
+    <wux-divider size="large" dashed text="快捷登录" />
+  </wux-wing-blank> -->
+
+  <view class='wxlogin'>
+    <view class='wx_logo_view'>
+      <image class='wx_logo' src="/pages/icons/weixin1.png"></image>
+      <button class="wx_btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+    </view>
+  </view>
+
+  <view class='agree bottom'>
+    <view class='select_xieyi' bindtap='onSelected'>
+      <text>登录即代表你同意:</text>
+    </view>
+    <text class='xieyi' catchtap='userAgreement'>《<text class='xieyi1'>包工侠用户协议</text>》</text>
+  </view>
+</view>

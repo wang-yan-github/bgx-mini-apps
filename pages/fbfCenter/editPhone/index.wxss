@@ -1,0 +1,55 @@
+/* pages/fbfCenter/editPhone/index.wxss */
+page {
+  font-size: 32rpx;
+  background-color: #ffffff;
+}
+.page {
+  padding: 0 30rpx;
+}
+.curr_phone, .notice {
+  font-size: 26rpx;
+}
+.title {
+  margin-top: 60rpx;
+  font-size: 34rpx;
+}
+.phone {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+input {
+  height: 60rpx;
+  font-size: 34rpx;
+}
+.curr_phone, .notice {
+  font-size: 28rpx;
+  color: #333333;
+}
+/* .curr_phone {
+  margin-top: 20rpx;
+} */
+.notice {
+  margin-top: 85rpx;
+}
+/* .page_bd {
+  margin-top: 20rpx;
+} */
+.auth_code_input {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 60%;
+  display: inline-block;
+}
+.auth_code {
+  float: right;
+  padding-right: 25rpx;
+  line-height: 100rpx;
+  color: #ec4141;
+}
+.divide {
+  width: 100%;
+  /* margin-top: 10rpx; */
+  margin-bottom: 50rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}

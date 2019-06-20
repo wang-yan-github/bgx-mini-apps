@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "项目列表",
+  "usingComponents": {
+    "wux-search-bar": "/pages/vux/search-bar/index",
+    "wux-wing-blank": "/pages/vux/wing-blank/index",
+    "wux-white-space": "/pages/vux/white-space/index",
+    "wux-backdrop": "/pages/vux/backdrop/index"
+  }
+}

@@ -1,0 +1,108 @@
+/* pages/bgxCenter/fillInfo2/index.wxss */
+/* 隐藏滚动条(点击呼出侧边栏时可能产生滚动条) */
+page {
+  background: #ffffff;
+  font-size: 32rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  border: 0;
+}
+/* 装修工期 */
+.fl {
+  float: left;
+}
+.workTime, .fazhuti {
+  position: relative;
+}
+.workTime_pos {
+  position: absolute;
+  right: 0rpx;
+  top: 21rpx;
+  color: #888888;
+}
+.zhutipos {
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+}
+.zhutiText {
+  position: absolute;
+  right: 60rpx;
+  top: 22rpx;
+  color: #888888;
+}
+.workTimeStart, .workTimeEnd {
+  position: relative;
+}
+.triangle-time {
+  display: inline-block;
+  margin-right: 30rpx;
+  position: relative;
+  top: -12rpx;
+}
+.triangle-time1 {
+  margin-right: 15rpx;
+}
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 12rpx solid transparent;
+    border-right: 12rpx solid transparent;
+    border-top: 12rpx solid #666666;
+}
+.triangle-pos {
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+}
+.sidebar {
+  position: absolute;
+  left: 375px;
+  top: 0;
+}
+/* 发布主体 */
+.zhuti_select {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 30rpx;
+  padding-bottom: 40rpx;
+}
+.zhuti_item {
+  background: #eeeeee;
+  width: 310rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  color: #888888;
+  border-radius: 10rpx;
+  border: 1rpx solid #dddddd;
+  margin-left: 50rpx;
+  box-sizing: border-box;
+}
+.zhuti_item:first-child {
+  margin-left: 0;
+}
+
+.zhuti_active {
+  border-color: red;
+}
+.calcLen {
+  text-align: right;
+  color: #666666;
+  font-size: 28rpx;
+}
+textarea {
+  width: 100%;
+}
+
+.rili {
+  width: 45rpx;
+  height: 45rpx;
+}
+.gongqi_pos {
+  position: relative;
+  top: -8rpx;
+}

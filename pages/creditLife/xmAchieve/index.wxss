@@ -1,0 +1,91 @@
+/* pages/creditLife/xmAchieve/index.wxss */
+page {
+  font-size: 28rpx;
+}
+.title {
+  line-height: 100rpx;
+  font-size: 34rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.xmyj_add  {
+  width: 128rpx;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  font-size: 34rpx;
+  color: #ec4141;
+}
+.item {
+  background-color: #ffffff;
+}
+.item_title {
+  height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  line-height: 100rpx;
+  border-top: 1rpx solid #cccccc;
+  border-bottom: 1rpx solid #cccccc;
+  position: relative;
+}
+.item_title:first-child {
+  border-top: 2rpx solid #cccccc;
+}
+.item_name {
+  font-size: 32rpx;
+  color: #FF4081;
+}
+.item_content {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.item_content view {
+  line-height: 56rpx;
+}
+.triangle-down{
+  width: 0;
+  height: 0;
+  border-right: 16rpx solid transparent;
+  border-top: 16rpx solid  #666666;
+  border-left: 16rpx solid transparent;
+}
+.triangle-up{
+  width: 0;
+  height: 0;
+  border-right: 16rpx solid transparent;
+  border-bottom: 16rpx solid #666666;
+  border-left: 16rpx solid transparent;
+}
+.triangle_pos {
+  position: absolute;
+  right: 30rpx;
+  top: 46rpx;
+}
+.p_name {
+  font-size: 30rpx;
+}
+.imgs {
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+}
+.sgnr {
+  margin-top: 10rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin-bottom: 10rpx;
+  border-top: 1rpx dashed #cccccc; 
+  border-bottom: 1rpx dashed #cccccc; 
+}
+.numColor {
+  font-weight: 600;
+  color: #FF4081;
+}

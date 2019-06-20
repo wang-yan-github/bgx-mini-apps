@@ -1,0 +1,35 @@
+/* pages/fbfCenter/selectFbfs/index.wxss */
+page {
+  font-size: 28rpx;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+.weituofb, .zizhufb {
+  width: 70%;
+  height: 180rpx;
+  background: #ec4141;
+  border-radius: 15rpx;
+}
+.weituofb {
+  margin-top: 40%;
+}
+.zizhufb {
+  margin-top: 28%;
+}
+.text1 {
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 40rpx;
+  font-weight: 600;
+}
+.text2 {
+  text-align: center;
+  margin-top: 20rpx;
+}
+.active {
+  background-color: #ff0000;
+}

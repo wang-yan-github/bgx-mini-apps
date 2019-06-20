@@ -1,0 +1,105 @@
+/* pages/materialCenter/fabuOrder/index.wxss */
+/*向下三角*/
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 8rpx solid transparent;
+  border-right: 8rpx solid transparent;
+  border-top: 8rpx solid #aaaaaa;
+  display: inline-block;
+  position: relative;
+  top: -3rpx;
+  left: 8rpx;
+}
+/*上三角*/
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 8rpx solid transparent;
+  border-right: 8rpx solid transparent;
+  border-bottom: 8rpx solid #aaaaaa;
+  display: inline-block;
+  position: relative;
+  top: -3rpx;
+  left: 8rpx;
+}
+
+.list_title {
+  margin-top: 12rpx;
+  background-color: #ffffff;
+  font-size: 32rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.list_title view {
+  display: inline-block;
+}
+.red_line {
+  width: 0;
+  height: 30rpx;
+  border-left: 7rpx solid #ec4141;
+  position: relative;
+  top: 5rpx;
+}
+.list_title_text {
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-left: 15rpx;
+  font-weight: 600;
+}
+.addcl {
+  color: #ec4141;
+  float: right;
+}
+/* 采购列表 */
+.buyList {
+  border-top: 2rpx solid #cccccc;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.buyItem {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  margin-top: 10rpx;
+}
+.buyItemTitle {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx dashed #dddddd;
+  background-color: #ffffff;
+}
+.borderDashed {
+  border-bottom: 1rpx dashed #dddddd;
+}
+.noBorderDashed {
+  border-bottom: 1rpx dashed transparent;
+}
+.cl_name {
+  padding-right: 40rpx;
+  float: left;
+}
+.edit_item {
+  float: right;
+  color: #ff751a;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  font-size: 28rpx;
+}
+.delete_item {
+  font-size: 28rpx;
+  float: right;
+  color: #888888;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+.buyItemDetail view {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}

@@ -1,0 +1,15 @@
+<!--pages/message/System/index.wxml-->
+<block wx:for='{{list}}'>
+  <view class="system_item">
+    <view class='title'>{{item.title}}
+      <text class='red'>{{item.status == 0?'新':''}}</text>
+    </view>
+    <view class='time'>{{item.addTime}}</view>
+    <view class='content'>{{item.content}}</view>
+    <view class='btn'>
+      <block wx:for="{{item.oprator}}" wx:for-item="idx">
+        <view class='{{item.status == 0?"know":"know1"}}' data-text='{{idx}}' data-status='{{item.x_status}}' catchtap='know' data-id='{{item.id}}'>{{idx}}</view>
+      </block>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,114 @@
+<!--pages/findXM/xmInfo/index.wxml-->
+<view class="titleBg">
+  <image src='/pages/icons/xmInfo.jpg'></image>
+  <text class='title'>{{xmInfo.p_name}}</text>
+  <text class='title title2'>{{xmInfo.p_technical_type}}<text class='line' decode>&nbsp;&nbsp;|&nbsp;&nbsp;</text>{{xmInfo.p_region}}</text>
+  <text wx:if="{{xmInfo.end_date}}" class='title title3'>截至时间：{{xmInfo.end_date}}</text>
+</view>
+<view class='info_title'>基本信息</view>
+<view class='info_item'>项目金额：{{xmInfo.p_column_price == 0?"面议":xmInfo.p_column_price}}
+  <text wx:if="{{xmInfo.p_column_price>0}}">万</text>
+</view>
+<view class='info_item'>项目周期：{{xmInfo.start_time}}到{{xmInfo.end_time}}</view>
+<view wx:if="{{xmInfo.end_date}}" class='info_item'>进场时间：{{xmInfo.end_date}}</view>
+<view class='info_item'>详细地址：{{xmInfo.p_address}}</view>
+<view wx:if="{{xmInfo.p_cons_type.length>0}}" class='info_item'>所需工种：{{xmInfo.p_cons_type}}</view>
+<view class='info_item'>
+  <view class='xm_title'>项目描述：</view>
+  <view class="xm_desc">{{xmInfo.p_remark}}</view>
+</view>
+<block wx:if="{{xmInfo.record_number}}">
+  <view class='info_item'>
+    <text decode>备&nbsp;&nbsp;案&nbsp;号：</text>{{xmInfo.record_number}}</view>
+</block>
+<view class="fabu_time">发布时间：{{xmInfo.add_time}}
+  <text class='pageCount'>浏览次数：{{xmInfo.visitors}}</text>
+</view>
+
+<wux-white-space />
+<view class='info_title'>项目附件
+  <text class="lookFujian" catchtap='lookFujian'>查看附件</text>
+</view>
+<block wx:for="{{xmInfo.p_files}}">
+  <view class='info_item'>附件{{index+1}}：
+    <text data-url='{{item.p_file}}' class="download" catchtap='fujiantap'>下载</text>
+  </view>
+</block>
+
+<wux-white-space />
+<view class='info_title'>竞争热度</view>
+<view class='info_item'>竞争人数：{{xmInfo.head_portrait_list.length}}人</view>
+<view class='info_item'>
+  <wux-row>
+    <block wx:for="{{xmInfo.head_portrait_list}}">
+      <wux-col span="1">
+        <image class='jinzengTX' src='{{item.head_portrait?item.head_portrait+"?x-oss-process=style/thumb":"/pages/icons/touxiang.png"}}'></image>
+      </wux-col>
+    </block>
+  </wux-row>
+</view>
+
+<wux-white-space />
+<view class='info_title'>发包方
+  <text class="lookFujian" data-cid="{{xmInfo.p_companyid}}" catchtap='lookFbf'>查看详情</text>
+</view>
+
+<view class='company'>
+  <view class='company_swap'>
+    <view class='company_l'>
+      <image src='{{xmInfo.head_portrait?xmInfo.head_portrait:"/pages/icons/touxiang.png"}}'></image>
+    </view>
+    <view class='company_c1'>
+      <view class='name'>{{xmInfo.duty_name}}</view>
+      <view class='addr'>{{xmInfo.c_region}}/{{xmInfo.c_authentica==0?'未认证':'已认证'}}</view>
+      <view class='addr'>已有{{xmInfo.commentsNum}}条评论</view>
+    </view>
+    <view class='company_c2'>
+      <wux-circle size="70" sAngle="6" percent="{{xmInfo.credit_score/1000*100}}" color="#ec4141" strokeWidth="3">
+        <text class="jhxy">江湖信用</text>
+        <br/>
+        <text class="score">{{xmInfo.credit_score}}</text>
+      </wux-circle>
+    </view>
+    <view class='company_r'>
+      <!-- <image src='/pages/icons/gengduo.png'></image> -->
+    </view>
+  </view>
+</view>
+
+<wux-white-space />
+<view class="info_warn"> 防骗警示: 在对接项目的过程中,请不要缴纳任何费.如遇无效、虚假诈骗信息、请立即举报!
+  <text class="warn_btn" data-pid='{{xmInfo.p_id}}' catchtap='report'>举报有奖</text>
+</view>
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<wux-white-space />
+<view class='bottom'>
+  <view class='bottom_swap'>
+    <wux-row>
+      <wux-col span="2">
+        <view class="shoucang">
+          <image src="{{xmInfo.collection==0?'/pages/icons/shoucang1.png':'/pages/icons/shoucang2.png'}}"></image>
+          <text data-pid='{{xmInfo.p_id}}' data-shoucang='{{xmInfo.collection}}' catchtap='shoucang'>{{xmInfo.collection==0?'收藏':'已收藏'}}</text>
+          <button data-pid='{{xmInfo.p_id}}' data-shoucang='{{xmInfo.collection}}' catchtap='shoucang'></button>
+        </view>
+      </wux-col>
+      <wux-col span="2">
+        <view class="shoucang">
+          <image src="/pages/icons/fenxiang1.png"></image>
+          <text>分享</text>
+          <button data-pid='{{xmInfo.p_id}}' open-type='share'></button>
+        </view>
+      </wux-col>
+      <wux-col span="4">
+        <view class="ljlx" data-bsid='{{xmInfo.p_companyid}}' data-fbfname='{{xmInfo.duty_name}}' catchtap='lianxi'>立即联系</view>
+      </wux-col>
+      <wux-col span="4">
+        <view class="msyy" data-bsid='{{xmInfo.p_companyid}}' data-pid='{{xmInfo.p_id}}' catchtap='yuyue'>意向预约</view>
+      </wux-col>
+    </wux-row>
+  </view>
+</view>

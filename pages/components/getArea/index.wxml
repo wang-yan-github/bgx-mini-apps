@@ -1,0 +1,6 @@
+<wux-cascader visible="{{ visible }}" default-value="{{ defaultValue }}" title="所在地区" options="{{ options }}" bind:close="onClose" bind:change="onChange" />
+
+
+<!-- <wux-cell-group> -->
+  <wux-cell title="{{ areaName }}" must_text is-link extra="{{ address_text }}" bind:click="onOpen"></wux-cell>
+<!-- </wux-cell-group> -->

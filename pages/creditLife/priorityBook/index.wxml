@@ -1,0 +1,23 @@
+<!--pages/creditLife/priorityBook/index.wxml-->
+<view class='page'>
+  <block wx:for="{{ dataList }}">
+    <view class='item_box'>
+      <view class='item'>
+        <view class='item_hd'>
+          <image class='titleImg' src="/pages/icons/xy_icon.png"></image>
+          <view class='title'>{{ item.p_text}}</view>
+        </view>
+        <view class='item_bd'>
+          <view class='item_bd_title'>{{ item.p_name }}</view>
+          <view>金额：{{ item.p_money }}万</view>
+          <view>区域：{{ item.p_address }}</view>
+          <view>截止日期：{{ item.abortTime }}</view>
+        </view>
+        <view class='btns'>
+          <view class='btn btn1'>马上申请</view>
+          <view class='btn btn2'>提升信用</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

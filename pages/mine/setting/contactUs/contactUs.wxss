@@ -1,0 +1,30 @@
+/* pages/mine/setting/contactUs/contactUs.wxss */
+
+.logo {
+  height: 350rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #666;
+}
+
+.logo image {
+  height: 200rpx;
+  width: 200rpx;
+  display: block;
+  margin: 30rpx auto;
+}
+
+.bgx_describe {
+  background-color: #f9f9f9;
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+}
+
+.bgx_record {
+  background-color: #f9f9f9;
+  font-size: 28rpx;
+  text-align: center;
+  color: #999;
+  padding-bottom: 30rpx;
+}

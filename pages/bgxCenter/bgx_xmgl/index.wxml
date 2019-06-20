@@ -1,0 +1,55 @@
+<!--pages/bgxCenter/bgx_tsYyXM.wxml-->
+<!--搜索  -->
+<wux-search-bar value="{{ searchText}}" auto="{{ false }}" placeholder="项目名称" bind:change="searchTextonChange" bind:clear="searchTextonClear" />
+<!--头部筛选  -->
+<!-- <import src='../teml/shaixuan_teml.wxml' />
+<view id="swiper-tab"> -->
+<!-- tab展示 -->
+<!-- <template is='swiper-tab' data='{{tabList,currentTab}}'> </template>
+  <swiper current="{{currentTab}}" duration="1000" class="swiper-item" style='display:{{displays}}'> -->
+<!--单项选择-->
+<!-- <template is='tab_item' data='{{tab_item,_res}}'></template> -->
+<!--单项选择-->
+<!-- <swiper-item>
+      <view class="location_bottom" hidden="">
+        <view wx:for='{{tab_item1}}' wx:key="*this" class="{{_res1 == index?'add_House':'add_city'}}" data-index="{{index}}" bindtap="clickHouse1" data-name="{{item}}">{{item}}</view>
+      </view>
+    </swiper-item> -->
+<!--单项选择-->
+<!-- <swiper-item>
+      <view class="location_bottom" hidden="">
+        <view wx:for='{{tab_item2}}' wx:key="*this" class="{{_res2 == index?'add_House':'add_city'}}" data-index="{{index}}" bindtap="clickHouse2" data-name="{{item}}">{{item}}</view>
+      </view>
+    </swiper-item>
+
+  </swiper>
+</view>
+<view class="swiper-beijing" bindtap="hideNav" style='display:{{displays}}'></view> -->
+
+<!--推送预约劳务列表-->
+<view class='main_list'>
+  <view class='item' data-bid='{{list.b_id}}' wx:if='{{listData.length>0}}' wx:for="{{listData}}" wx:key="*this.id" wx:for-item='list' bindtap='opratorTap' data-text="详情" data-pid='{{list.p_id}}' data-index="{{index}}">
+    <view class='item_t'>
+      <text class='item_title'>{{list.b_name}}<text class='new'>{{list.status == 0?'(最新)':''}}</text></text>
+      <!-- <image src='/pages/images/yirenzheng1.png'></image> -->
+      <text class='yirenzheng'>已认证</text>
+    </view>
+    <view class='item_c'>
+      <text>地址：{{list.p_addresss}}</text>
+    </view>
+    <view class='laiyuan'>来源：{{list.b_type}}</view>
+
+    <view class='status'>{{list.status}}</view>
+    <!-- 每个项目的右下角按钮 -->
+    <view class='rihgtBtns' wx:if="{{ list.oprator.length > 0}}">
+      <block wx:for="{{ list.oprator }}" wx:key="{{ item }}">
+        <view class="btn_style" data-bstatus='{{list.b_status}}' data-wpid='{{list.w_pid}}' data-laiyuan='{{list.b_type}}' data-bid='{{list.b_id}}' data-wid='{{list.w_id}}' data-pid='{{list.p_id}}' data-text='{{ item }}' data-status='{{list.status}}' catchtap='opratorTap'>
+          {{ item }}
+        </view>
+      </block>
+    </view>
+
+  </view>
+</view>
+
+<view class='notdata' wx:if='{{listData.length==0}}'>未查询到数据 . . .</view>

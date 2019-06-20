@@ -1,0 +1,90 @@
+page {
+  font-size: 28rpx;
+}
+.evaluate {
+  background-color: #ffffff;
+}
+.evaluate_type_box {
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+  color: #666666;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #dddddd;
+}
+.evaluate_type {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.evaluate_item {
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  padding-right: 10rpx;
+  line-height: 58rpx;
+  color: #666666;
+  border-radius: 50rpx;
+  margin-left: 10rpx;
+  margin-top: 15rpx;
+  background-color:  #FFEBED;
+}
+.item_active {
+  background-color: #FFEBED;
+  color: #ffffff;
+  background: -webkit-linear-gradient(right, #FA8300 , #ff3333); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #FA8300, #ff3333); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #FA8300, #ff3333); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #FA8300 , #ff3333); /* 标准的语法 */
+}
+
+/* 评论列表 */
+.list_item {
+  padding: 20rpx 30rpx;
+  background-color: #ffffff;
+  margin-top: 15rpx;
+}
+.list_item:first-child {
+  margin-top: 0;
+}
+.item_info {
+  height: 80rpx;
+  position: relative;
+}
+.item_face {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+}
+.item_text {
+  position: absolute;
+  left: 90rpx;
+  width: 600rpx;
+  line-height: 80rpx;
+}
+.item_score, .item_level {
+  margin-left: 15rpx;
+}
+.item_score {
+  margin-left: 15rpx;
+  color: #FA8300;
+}
+.item_level {
+  margin-left: 15rpx;
+  color:#ff3333;
+}
+.item_time {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  color: #666666;
+}
+
+.item_content {
+  margin-top: 10rpx;
+  line-height: 50rpx;
+  font-size: 26rpx;
+}

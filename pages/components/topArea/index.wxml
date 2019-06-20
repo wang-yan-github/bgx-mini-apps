@@ -1,0 +1,6 @@
+<wux-cascader position="{{ position }}" visible="{{ visible }}" default-value="{{ defaultValue }}" title="{{ title }}" options="{{ options }}" bind:close="onClose" bind:change="onChange" />
+
+<!-- <block wx:if="{{ isOpen }}">
+ <wux-cell title="{{ areaName }}" is-link extra="{{ address_text }}" bind:click="onOpen"></wux-cell>
+</block> -->
+

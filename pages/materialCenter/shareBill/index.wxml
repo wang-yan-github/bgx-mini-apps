@@ -1,0 +1,72 @@
+<!--pages/AmyTest/cascader/index.wxml-->
+<view class="page {{ pm_show ? 'bodyLock' : ''}}">
+  <!-- 搜索栏 -->
+  <wux-search-bar clear value="{{ value }}" controlled placeholder="搜索" bind:change="onChange" bind:focus="onFocus" bind:blur="onBlur" bind:confirm="onConfirm" bind:clear="onClear" bind:cancel="onCancel" />
+  <!-- 顶部选项 -->
+  <view class='page_bar'>
+    <block wx:for="{{ topList }}" wx:key="id">
+      <view data-index="{{ index }}" class="topItem {{ item.id == currTopItem ? 'topItem_active' : ''}}" bindtap='onTopItem'>
+        <view class='t_name'>{{ item.label }}</view>
+        <view wx:if="{{ item.type == 'oneTrg' }}" class="triangle-down {{ item.id == currTopItem ? 'triangle-down-active' : '' }}"></view>
+        <view wx:if="{{ item.type == 'twoTrg' }}" class="triangle-up1 {{ item.id == currTopItem && priceUpDown ? 'triangle-up1-active' : '' }}"></view>
+        <view wx:if="{{ item.type == 'twoTrg' }}" class="triangle-down1 {{ item.id == currTopItem && !priceUpDown ? 'triangle-down-active' : '' }}"></view>
+      </view>
+    </block>
+    <!-- 品名弹出层 -->
+      <view catchtap='onPmMask' class='pm_modal_mask' wx:if="{{ pm_show }}">
+        <view class='pm_modal'>
+          <scroll-view class="scroll-view_H scroll-view_H1 scroll-view" scroll-y style="width: 50%;">
+            <!-- 一级菜单 -->
+            <view class='pm_left'>
+              <block wx:for="{{ pmList }}" wx:key="name">
+                <view class='pm_item'>
+                  <view class="pm_left_item {{ item.checked ? 'color_red' : ''}}" data-index='{{ index }}' catchtap='onOneItem'>{{ item.name }}</view>
+                </view>
+              </block>
+            </view>
+          </scroll-view>
+          <scroll-view class="scroll-view_H scroll-view" scroll-y style="width:50%;">
+            <!-- 二级菜单 -->
+            <view class='pm_right'>
+              <block wx:for="{{ pmchildrenList }}" wx:key="name">
+                <view class='pm_item'>
+                  <view class="pm_left_item {{ item.checked ? 'color_red' : ''}}" data-index='{{ index }}' catchtap='onTwoItem'>{{ item.name }}</view>
+                </view>
+              </block>
+            </view>
+          </scroll-view>
+          <!-- 重置 确定 -->
+          <view class='pm_btns'>
+            <view catchtap="onPmReset" class='pm_btn pm_btn1'>重置</view>
+            <view catchtap="onPmComfirm" class='pm_btn pm_btn2'>确定</view>
+          </view>
+        </view>
+      </view>
+  </view>
+
+  <!-- 产品列表 -->
+  <view class='prod_list'>
+    <block wx:for="{{ prodList }}" wx:key="name">
+      <view class="prod_item" data-spid="{{ item.sp_id}}" bindtap='onClickItem'>
+        <view class='prod_img_box'>
+          <image class='prod_img' src="{{ item.sp_img }}"></image>
+        </view>
+        <view class='prod_c'>
+          <view class='prod_name'>{{ item.sp_name }}</view>
+          <view class='prod_flags'>
+            <block wx:for="{{ item.sp_types }}" wx:for-item="flag" wx:key="*this">
+              <view class='prod_flag'>{{ flag }}</view>
+            </block>
+          </view>
+          <view class='prod_price'>
+            <text class='price_red'>¥{{ item.sp_new_price }}</text> 
+          </view>
+          <view class='org_price'>¥{{ item.sp_old_price }}</view>
+          <view class='prod_sold'>已拼{{ item.sp_sold }}件</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='noMore'>------没有更多了------</view>
+  <area-cascader visible="{{ visible }}" position="{{ position }}" areaNum="2" areaName="区域" bind:myeventArea="onGetArea" regionCode="{{ region_code }}"></area-cascader>
+</view>

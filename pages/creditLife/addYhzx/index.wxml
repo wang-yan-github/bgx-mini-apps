@@ -1,0 +1,22 @@
+<view class='cell_title'>添加银行征信证明：</view>
+<wux-white-space />
+
+<view class='imgs_box'>
+    <!-- <block wx:for="{{  imgArr }}" wx:key="{{ item }}"> -->
+      <image bindtap='onUpFiles' class='item_img' src="{{ imgStr ?  imgStr : img_default }}" bindtap='onUpYhzx'></image>
+      <view class='status'>
+        状态：<text class='status_text'>{{ imgStr_status }}</text>
+      </view>
+    <!-- </block> -->
+</view>
+
+<!-- <view class='zczm_btn' bindtap='onUpZczm'>
+  <image class='add_icon' src='/pages/icons/add_icon.png'></image>
+</view> -->
+
+<wux-white-space />
+<wux-white-space />
+<wux-wing-blank>
+  <wux-button block type="assertive" bind:click='onSubmit' disabled="{{ disabled }}">提 交</wux-button>
+  <view class='cn_text'>我们承诺您提供的照片将予以保护，不会用于其他用途。</view>
+</wux-wing-blank>
